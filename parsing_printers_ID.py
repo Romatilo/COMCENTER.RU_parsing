@@ -19,6 +19,7 @@ printers_output_file = os.path.join(output_dir, "Laser_Printers.json")
 compatibility_output_file = os.path.join(output_dir, "PRINTERS_compatibility.json")
 compatibility_actual_output_file = os.path.join(output_dir, "PRINTERS_compatibility_actual.json")
 cartridges_parts_output_file = os.path.join(output_dir, "DATABASE_cartridges&Parts.json")
+all_cartridges_parts_output_file = os.path.join(output_dir, "DATABASE_all_cartridges&Parts.json")
 
 def setup_session():
     """Настройка сессии с учетом сертификата и авторизации"""
@@ -378,6 +379,99 @@ def parse_cartridges_and_parts(session, headers):
     else:
         print("Не удалось собрать данные")
 
+def parse_all_cartridges_and_parts(session, headers):
+    """Парсинг данных о ВСЕХ картриджах и запчастях из PRINTERS_compatibility.json"""
+    if not os.path.exists(compatibility_output_file):
+        print(f"Файл {compatibility_output_file} не найден")
+        return
+
+    try:
+        with open(compatibility_output_file, 'r', encoding='utf-8') as f:
+            compatibility_data = json.load(f)
+    except Exception as e:
+        print(f"Ошибка при чтении файла {compatibility_output_file}: {e}")
+        return
+
+    if not compatibility_data:
+        print("Данные о совместимости пусты")
+        return
+
+    # Собираем все уникальные ID картриджей и запчастей
+    all_ids = set()
+    for printer_id, data in compatibility_data.items():
+        all_ids.update(data.get("cartridges", []))
+        all_ids.update(data.get("parts", []))
+
+    if not all_ids:
+        print("Нет ID картриджей или запчастей для парсинга")
+        return
+
+    print(f"Найдено {len(all_ids)} уникальных ID для парсинга")
+
+    # Словарь для хранения данных
+    parsed_data = {}
+
+    for product_id in all_ids:
+        url = f'https://comcenter.ru/Store/Details/{product_id}'
+        print(f"Обрабатывается ID: {product_id}")
+
+        try:
+            response = session.get(url, headers=headers, timeout=10, verify=cert_path)
+            response.raise_for_status()
+            soup = BeautifulSoup(response.text, 'html.parser')
+
+            # Извлечение наименования товара
+            name_element = soup.select_one('div.grid-body.text-left.space-top-tiny h1')
+            product_name = name_element.text.strip() if name_element else ""
+
+            # Извлечение наличия
+            availability_element = soup.select_one('span.product-count')
+            availability = int(availability_element.text.strip()) if availability_element and availability_element.text.strip().isdigit() else 0
+
+            # Извлечение характеристик
+            characteristics = {}
+            characteristics_table = soup.select_one('div.product-properties-container table.price-list')
+            if characteristics_table:
+                for row in characteristics_table.select('tr'):
+                    cells = row.select('td')
+                    if len(cells) == 2:
+                        key = cells[0].text.strip()
+                        value = cells[1].text.strip()
+                        characteristics[key] = value
+
+            # Извлечение описания товара
+            description_section = soup.select_one('div.grid.space-top div.grid-body.text-left.space-top-tiny')
+            description = ""
+            if description_section:
+                description = ' '.join(description_section.get_text(strip=True).split())
+                description = re.sub(r'\s+', ' ', description).strip()
+
+            # Формирование данных для текущего ID
+            parsed_data[product_id] = {
+                "name": product_name,
+                "availability": availability,
+                "characteristics": characteristics,
+                "description": description
+            }
+
+            print(f"ID {product_id}: успешно обработан")
+
+        except requests.exceptions.RequestException as e:
+            print(f"Ошибка при загрузке страницы для ID {product_id}: {e}")
+            continue
+        except Exception as e:
+            print(f"Ошибка при парсинге данных для ID {product_id}: {e}")
+            continue
+
+    # Сохранение данных в JSON
+    if parsed_data:
+        os.makedirs(output_dir, exist_ok=True)
+        with open(all_cartridges_parts_output_file, 'w', encoding='utf-8') as f:
+            json.dump(parsed_data, f, ensure_ascii=False, indent=4)
+        print(f"Данные для {len(parsed_data)} элементов сохранены в '{all_cartridges_parts_output_file}'.")
+    else:
+        print("Не удалось собрать данные")
+
 def show_menu():
     """Отображение меню"""
     print("\nМеню:")
@@ -386,6 +480,7 @@ def show_menu():
     print("3. Парсинг совместимости принтера")
     print("4. Совместимость только по товарам в наличии")
     print("5. Парсинг картриджей и запчастей")
+    print("6. Парсинг ВСЕХ картриджей и запчастей")
     print("0. Выход")
 
 def main():
@@ -399,7 +494,7 @@ def main():
 
     while True:
         show_menu()
-        choice = input("Выберите действие (0-5): ")
+        choice = input("Выберите действие (0-6): ")
         
         if choice == "1":
             print("Получение базы данных лазерных принтеров...")
@@ -421,12 +516,16 @@ def main():
             print("Парсинг картриджей и запчастей...")
             parse_cartridges_and_parts(session, headers)
         
+        elif choice == "6":
+            print("Парсинг ВСЕХ картриджей и запчастей...")
+            parse_all_cartridges_and_parts(session, headers)
+        
         elif choice == "0":
             print("Программа завершена")
             break
         
         else:
-            print("Неверный выбор. Пожалуйста, выберите 0, 1, 2, 3, 4 или 5")
+            print("Неверный выбор. Пожалуйста, выберите 0, 1, 2, 3, 4, 5 или 6")
 
 if __name__ == "__main__":
     main()
