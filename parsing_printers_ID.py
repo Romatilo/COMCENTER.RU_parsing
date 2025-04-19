@@ -117,8 +117,9 @@ for a_tag in soup.select('a.cells-wrapper'):
 # Удаляем дубли
 product_ids = list(set(product_ids))
 
-# Сохраняем в JSON
-with open('Laser_Printers.json', 'w', encoding='utf-8') as f:
+# Создаем папку и сохраняем файл в JSON
+os.makedirs('COMCENTER.ru_database', exist_ok=True)
+with open('COMCENTER.ru_database/Laser_Printers.json', 'w', encoding='utf-8') as f:
     json.dump(product_ids, f, ensure_ascii=False, indent=4)
 
 print(f"Найдено {len(product_ids)} товаров. ID сохранены в 'Laser_Printers.json'.")
