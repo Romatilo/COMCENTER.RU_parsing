@@ -7,12 +7,15 @@ import os
 import re
 from bs4 import BeautifulSoup
 import uuid
+from tqdm import tqdm
+import datetime
 
 # Путь к файлу сертификата
 cert_path = "C:/!Work/COMCENTER/fullchain.pem"
 
 # Путь для сохранения данных
 output_dir = "COMCENTER.ru_database"
+log_file = "comcenter_parser.log"
 xls_url = "https://comcenter.ru/Content/PriceList/price.xls"
 xls_output_file = os.path.join(output_dir, "DATABASE_recent.json")
 printers_output_file = os.path.join(output_dir, "Laser_Printers.json")
@@ -23,9 +26,28 @@ all_cartridges_parts_output_file = os.path.join(output_dir, "DATABASE_all_cartri
 comcenter_products_output_file = os.path.join(output_dir, "DATABASE_comcenter_products.json")
 
 class ConsoleOutputHandler:
-    """Обработчик вывода для консоли"""
+    """Обработчик вывода для консоли с записью в файл"""
     def log(self, message):
         print(message)
+        timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        with open(log_file, 'a', encoding='utf-8') as f:
+            f.write(f"[{timestamp}] {message}\n")
+
+    def progress(self, current, total):
+        """Обработка прогресса для консоли"""
+        percentage = (current / total) * 100
+        print(f"Прогресс: {current}/{total} ({percentage:.1f}%)")
+
+class CancelFlag:
+    """Флаг для отслеживания отмены операции"""
+    def __init__(self):
+        self.cancelled = False
+
+    def cancel(self):
+        self.cancelled = True
+
+    def is_cancelled(self):
+        return self.cancelled
 
 def setup_session(output_handler):
     """Настройка сессии с учетом сертификата и авторизации"""
@@ -82,7 +104,7 @@ def setup_session(output_handler):
         output_handler.log(f"Ошибка при авторизации: {e}")
         return None
 
-def get_laser_printers_database(session, headers, output_handler):
+def get_laser_printers_database(session, headers, output_handler, cancel_flag):
     """Получение базы данных лазерных принтеров"""
     url = 'https://comcenter.ru/Store/Browse/400000006580/printery-lazernye-i-mfu'
 
@@ -93,6 +115,9 @@ def get_laser_printers_database(session, headers, output_handler):
 
         product_ids = []
         for a_tag in soup.select('a.cells-wrapper'):
+            if cancel_flag.is_cancelled():
+                output_handler.log("Операция отменена")
+                return
             href = a_tag.get('href')
             if href and '/Store/Details/' in href:
                 match = re.search(r'/Store/Details/(\d{12})', href)
@@ -107,7 +132,7 @@ def get_laser_printers_database(session, headers, output_handler):
     except requests.exceptions.RequestException as e:
         output_handler.log(f"Ошибка при загрузке страницы: {e}")
 
-def download_xls_file(session, headers, output_handler):
+def download_xls_file(session, headers, output_handler, cancel_flag):
     """Скачивание xls-файла с использованием сессии"""
     try:
         response = session.get(xls_url, headers=headers, verify=cert_path, timeout=10)
@@ -120,12 +145,15 @@ def download_xls_file(session, headers, output_handler):
         output_handler.log(f"Ошибка при скачивании файла: {e}")
         return False
 
-def process_xls_file(output_handler):
+def process_xls_file(output_handler, cancel_flag):
     """Обработка xls-файла для поиска 12-значных номеров"""
     try:
         xls = pd.ExcelFile("temp_price.xls")
         twelve_digit_numbers = []
         for sheet_name in xls.sheet_names:
+            if cancel_flag.is_cancelled():
+                output_handler.log("Операция отменена")
+                return None
             df = pd.read_excel(xls, sheet_name=sheet_name, dtype=str)
             for column in df.columns:
                 for value in df[column]:
@@ -147,10 +175,10 @@ def save_to_json(data, filename, output_handler):
     except Exception as e:
         output_handler.log(f"Ошибка при сохранении JSON: {e}")
 
-def process_xls_database(session, headers, output_handler):
+def process_xls_database(session, headers, output_handler, cancel_flag):
     """Получение базы данных из xls-файла"""
-    if download_xls_file(session, headers, output_handler):
-        numbers = process_xls_file(output_handler)
+    if download_xls_file(session, headers, output_handler, cancel_flag):
+        numbers = process_xls_file(output_handler, cancel_flag)
         if numbers:
             save_to_json(numbers, "DATABASE_recent.json", output_handler)
             try:
@@ -158,7 +186,7 @@ def process_xls_database(session, headers, output_handler):
             except:
                 pass
 
-def parse_printer_compatibility(session, headers, output_handler):
+def parse_printer_compatibility(session, headers, output_handler, cancel_flag):
     """Парсинг совместимости для всех принтеров из Laser_Printers.json"""
     if not os.path.exists(printers_output_file):
         output_handler.log(f"Файл {printers_output_file} не найден")
@@ -176,8 +204,15 @@ def parse_printer_compatibility(session, headers, output_handler):
         return
 
     compatibility_data = {}
+    total = len(printer_ids)
+    current = 0
 
     for printer_id in printer_ids:
+        if cancel_flag.is_cancelled():
+            output_handler.log("Операция отменена")
+            return
+        current += 1
+        output_handler.progress(current, total)
         url = f'https://comcenter.ru/Store/Details/{printer_id}'
         output_handler.log(f"Обрабатывается принтер ID: {printer_id}")
 
@@ -242,7 +277,7 @@ def parse_printer_compatibility(session, headers, output_handler):
     else:
         output_handler.log("Не удалось собрать данные о совместимости")
 
-def filter_compatibility_by_stock(output_handler):
+def filter_compatibility_by_stock(output_handler, cancel_flag):
     """Фильтрация совместимости по товарам в наличии"""
     if not os.path.exists(compatibility_output_file):
         output_handler.log(f"Файл {compatibility_output_file} не найден")
@@ -270,8 +305,16 @@ def filter_compatibility_by_stock(output_handler):
         return
 
     filtered_data = {}
+    total = len(compatibility_data)
+    current = 0
 
-    for printer_id, data in compatibility_data.items():
+    for printer_id in compatibility_data.keys():
+        if cancel_flag.is_cancelled():
+            output_handler.log("Операция отменена")
+            return
+        current += 1
+        output_handler.progress(current, total)
+        data = compatibility_data[printer_id]
         filtered_cartridges = [cid for cid in data.get("cartridges", []) if cid in stock_ids]
         filtered_parts = [pid for pid in data.get("parts", []) if pid in stock_ids]
 
@@ -292,7 +335,7 @@ def filter_compatibility_by_stock(output_handler):
     else:
         output_handler.log("Нет данных для сохранения после фильтрации")
 
-def parse_cartridges_and_parts(session, headers, output_handler):
+def parse_cartridges_and_parts(session, headers, output_handler, cancel_flag):
     """Парсинг данных о актуальных картриджах и запчастях из PRINTERS_compatibility_actual.json"""
     if not os.path.exists(compatibility_actual_output_file):
         output_handler.log(f"Файл {compatibility_actual_output_file} не найден")
@@ -323,8 +366,15 @@ def parse_cartridges_and_parts(session, headers, output_handler):
 
     # Словарь для хранения данных
     parsed_data = {}
+    total = len(all_ids)
+    current = 0
 
     for product_id in all_ids:
+        if cancel_flag.is_cancelled():
+            output_handler.log("Операция отменена")
+            return
+        current += 1
+        output_handler.progress(current, total)
         url = f'https://comcenter.ru/Store/Details/{product_id}'
         output_handler.log(f"Обрабатывается ID: {product_id}")
 
@@ -385,7 +435,7 @@ def parse_cartridges_and_parts(session, headers, output_handler):
     else:
         output_handler.log("Не удалось собрать данные")
 
-def parse_all_cartridges_and_parts(session, headers, output_handler):
+def parse_all_cartridges_and_parts(session, headers, output_handler, cancel_flag):
     """Парсинг данных о ВСЕХ картриджах и запчастях из PRINTERS_compatibility.json"""
     if not os.path.exists(compatibility_output_file):
         output_handler.log(f"Файл {compatibility_output_file} не найден")
@@ -416,8 +466,15 @@ def parse_all_cartridges_and_parts(session, headers, output_handler):
 
     # Словарь для хранения данных
     parsed_data = {}
+    total = len(all_ids)
+    current = 0
 
     for product_id in all_ids:
+        if cancel_flag.is_cancelled():
+            output_handler.log("Операция отменена")
+            return
+        current += 1
+        output_handler.progress(current, total)
         url = f'https://comcenter.ru/Store/Details/{product_id}'
         output_handler.log(f"Обрабатывается ID: {product_id}")
 
@@ -478,7 +535,7 @@ def parse_all_cartridges_and_parts(session, headers, output_handler):
     else:
         output_handler.log("Не удалось собрать данные")
 
-def parse_comcenter_products(session, headers, output_handler):
+def parse_comcenter_products(session, headers, output_handler, cancel_flag):
     """Парсинг данных о актуальных товарах Comcenter из DATABASE_recent.json"""
     if not os.path.exists(xls_output_file):
         output_handler.log(f"Файл {xls_output_file} не найден")
@@ -499,8 +556,15 @@ def parse_comcenter_products(session, headers, output_handler):
 
     # Словарь для хранения данных
     parsed_data = {}
+    total = len(product_ids)
+    current = 0
 
     for product_id in product_ids:
+        if cancel_flag.is_cancelled():
+            output_handler.log("Операция отменена")
+            return
+        current += 1
+        output_handler.progress(current, total)
         url = f'https://comcenter.ru/Store/Details/{product_id}'
         output_handler.log(f"Обрабатывается ID: {product_id}")
 
@@ -561,7 +625,7 @@ def parse_comcenter_products(session, headers, output_handler):
     else:
         output_handler.log("Не удалось собрать данные")
 
-def run_action(choice, output_handler):
+def run_action(choice, output_handler, cancel_flag):
     """Запуск выбранного действия"""
     session_info = setup_session(output_handler)
     if not session_info:
@@ -572,31 +636,31 @@ def run_action(choice, output_handler):
 
     if choice == "1":
         output_handler.log("Получение базы данных лазерных принтеров...")
-        get_laser_printers_database(session, headers, output_handler)
+        get_laser_printers_database(session, headers, output_handler, cancel_flag)
     
     elif choice == "2":
         output_handler.log("Получение базы данных из xls-файла...")
-        process_xls_database(session, headers, output_handler)
+        process_xls_database(session, headers, output_handler, cancel_flag)
     
     elif choice == "3":
         output_handler.log("Парсинг совместимости для всех принтеров...")
-        parse_printer_compatibility(session, headers, output_handler)
+        parse_printer_compatibility(session, headers, output_handler, cancel_flag)
     
     elif choice == "4":
         output_handler.log("Фильтрация совместимости по товарам в наличии...")
-        filter_compatibility_by_stock(output_handler)
+        filter_compatibility_by_stock(output_handler, cancel_flag)
     
     elif choice == "5":
         output_handler.log("Парсинг актуальных картриджей и запчастей...")
-        parse_cartridges_and_parts(session, headers, output_handler)
+        parse_cartridges_and_parts(session, headers, output_handler, cancel_flag)
     
     elif choice == "6":
         output_handler.log("Парсинг ВСЕХ картриджей и запчастей...")
-        parse_all_cartridges_and_parts(session, headers, output_handler)
+        parse_all_cartridges_and_parts(session, headers, output_handler, cancel_flag)
     
     elif choice == "7":
         output_handler.log("Парсинг актуальных товаров Comcenter...")
-        parse_comcenter_products(session, headers, output_handler)
+        parse_comcenter_products(session, headers, output_handler, cancel_flag)
     
     else:
         output_handler.log("Неверный выбор. Пожалуйста, выберите 0, 1, 2, 3, 4, 5, 6 или 7")
@@ -622,7 +686,8 @@ def console_main():
             output_handler.log("Программа завершена")
             break
         
-        run_action(choice, output_handler)
+        cancel_flag = CancelFlag()
+        run_action(choice, output_handler, cancel_flag)
 
 if __name__ == "__main__":
     console_main()
