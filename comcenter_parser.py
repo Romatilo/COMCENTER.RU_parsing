@@ -335,6 +335,43 @@ def filter_compatibility_by_stock(output_handler, cancel_flag):
     else:
         output_handler.log("Нет данных для сохранения после фильтрации")
 
+def load_in_transit_data(output_handler):
+    """Чтение данных о товарах в пути из temp_price.xls"""
+    in_transit_data = {}
+    try:
+        if not os.path.exists("temp_price.xls"):
+            output_handler.log("Файл temp_price.xls не найден")
+            return in_transit_data
+
+        xls = pd.ExcelFile("temp_price.xls")
+        for sheet_name in xls.sheet_names:
+            df = pd.read_excel(xls, sheet_name=sheet_name, dtype=str)
+            # Проверяем наличие колонок 3 ("Код") и 6 ("В пути")
+            if len(df.columns) >= 6:
+                for _, row in df.iterrows():
+                    product_id = row.iloc[2]  # Колонка 3 (индекс 2)
+                    in_transit = row.iloc[5]  # Колонка 6 (индекс 5)
+                    if isinstance(product_id, str) and re.match(r'^\d{12}$', product_id):
+                        # Проверяем, является ли in_transit числом
+                        try:
+                            in_transit_value = int(float(in_transit)) if pd.notna(in_transit) else 0
+                        except (ValueError, TypeError):
+                            in_transit_value = 0
+                        in_transit_data[product_id] = in_transit_value
+        output_handler.log(f"Загружено {len(in_transit_data)} записей о товарах в пути")
+        return in_transit_data
+    except Exception as e:
+        output_handler.log(f"Ошибка при чтении temp_price.xls: {e}")
+        return in_transit_data
+
+def ensure_xls_file(session, headers, output_handler, cancel_flag):
+    """Проверяет наличие temp_price.xls и скачивает его, если отсутствует"""
+    if os.path.exists("temp_price.xls"):
+        output_handler.log("Файл temp_price.xls уже существует")
+        return True
+    output_handler.log("Файл temp_price.xls отсутствует, выполняется скачивание")
+    return download_xls_file(session, headers, output_handler, cancel_flag)
+
 def parse_cartridges_and_parts(session, headers, output_handler, cancel_flag):
     """Парсинг данных о актуальных картриджах и запчастях из PRINTERS_compatibility_actual.json"""
     if not os.path.exists(compatibility_actual_output_file):
@@ -364,6 +401,14 @@ def parse_cartridges_and_parts(session, headers, output_handler, cancel_flag):
 
     output_handler.log(f"Найдено {len(all_ids)} уникальных ID для парсинга")
 
+    # Проверяем и скачиваем temp_price.xls, если он отсутствует
+    if not ensure_xls_file(session, headers, output_handler, cancel_flag):
+        output_handler.log("Не удалось скачать temp_price.xls, данные 'in_transit' не будут загружены")
+        in_transit_data = {}
+    else:
+        # Загружаем данные о товарах в пути
+        in_transit_data = load_in_transit_data(output_handler)
+
     # Словарь для хранения данных
     parsed_data = {}
     total = len(all_ids)
@@ -391,6 +436,22 @@ def parse_cartridges_and_parts(session, headers, output_handler, cancel_flag):
             availability_element = soup.select_one('span.product-count')
             availability = int(availability_element.text.strip()) if availability_element and availability_element.text.strip().isdigit() else 0
 
+            # Извлечение данных о товарах в пути
+            in_transit = in_transit_data.get(product_id, 0)
+
+            # Извлечение цен
+            price_element = soup.select_one('div.product-price-container span[data-bind*="getBrowsingPrice"]')
+            retail_price = 0.0
+            wholesale_price = 0.0
+            if price_element:
+                data_bind = price_element.get('data-bind', '')
+                match = re.search(r'getBrowsingPrice\((\d+\.\d+), (\d+\.?\d*)\)', data_bind)
+                if match:
+                    retail_price = float(match.group(1))
+                    wholesale_price = float(match.group(2))
+                else:
+                    output_handler.log(f"Не удалось извлечь цены для ID {product_id}: {data_bind}")
+
             # Извлечение характеристик
             characteristics = {}
             characteristics_table = soup.select_one('div.product-properties-container table.price-list')
@@ -413,6 +474,9 @@ def parse_cartridges_and_parts(session, headers, output_handler, cancel_flag):
             parsed_data[product_id] = {
                 "name": product_name,
                 "availability": availability,
+                "in_transit": in_transit,
+                "wholesale_price": wholesale_price,
+                "retail_price": retail_price,
                 "characteristics": characteristics,
                 "description": description
             }
@@ -464,6 +528,14 @@ def parse_all_cartridges_and_parts(session, headers, output_handler, cancel_flag
 
     output_handler.log(f"Найдено {len(all_ids)} уникальных ID для парсинга")
 
+    # Проверяем и скачиваем temp_price.xls, если он отсутствует
+    if not ensure_xls_file(session, headers, output_handler, cancel_flag):
+        output_handler.log("Не удалось скачать temp_price.xls, данные 'in_transit' не будут загружены")
+        in_transit_data = {}
+    else:
+        # Загружаем данные о товарах в пути
+        in_transit_data = load_in_transit_data(output_handler)
+
     # Словарь для хранения данных
     parsed_data = {}
     total = len(all_ids)
@@ -491,6 +563,22 @@ def parse_all_cartridges_and_parts(session, headers, output_handler, cancel_flag
             availability_element = soup.select_one('span.product-count')
             availability = int(availability_element.text.strip()) if availability_element and availability_element.text.strip().isdigit() else 0
 
+            # Извлечение данных о товарах в пути
+            in_transit = in_transit_data.get(product_id, 0)
+
+            # Извлечение цен
+            price_element = soup.select_one('div.product-price-container span[data-bind*="getBrowsingPrice"]')
+            retail_price = 0.0
+            wholesale_price = 0.0
+            if price_element:
+                data_bind = price_element.get('data-bind', '')
+                match = re.search(r'getBrowsingPrice\((\d+\.\d+), (\d+\.?\d*)\)', data_bind)
+                if match:
+                    retail_price = float(match.group(1))
+                    wholesale_price = float(match.group(2))
+                else:
+                    output_handler.log(f"Не удалось извлечь цены для ID {product_id}: {data_bind}")
+
             # Извлечение характеристик
             characteristics = {}
             characteristics_table = soup.select_one('div.product-properties-container table.price-list')
@@ -513,6 +601,9 @@ def parse_all_cartridges_and_parts(session, headers, output_handler, cancel_flag
             parsed_data[product_id] = {
                 "name": product_name,
                 "availability": availability,
+                "in_transit": in_transit,
+                "wholesale_price": wholesale_price,
+                "retail_price": retail_price,
                 "characteristics": characteristics,
                 "description": description
             }
@@ -554,6 +645,14 @@ def parse_comcenter_products(session, headers, output_handler, cancel_flag):
 
     output_handler.log(f"Найдено {len(product_ids)} уникальных ID для парсинга")
 
+    # Проверяем и скачиваем temp_price.xls, если он отсутствует
+    if not ensure_xls_file(session, headers, output_handler, cancel_flag):
+        output_handler.log("Не удалось скачать temp_price.xls, данные 'in_transit' не будут загружены")
+        in_transit_data = {}
+    else:
+        # Загружаем данные о товарах в пути
+        in_transit_data = load_in_transit_data(output_handler)
+
     # Словарь для хранения данных
     parsed_data = {}
     total = len(product_ids)
@@ -581,6 +680,22 @@ def parse_comcenter_products(session, headers, output_handler, cancel_flag):
             availability_element = soup.select_one('span.product-count')
             availability = int(availability_element.text.strip()) if availability_element and availability_element.text.strip().isdigit() else 0
 
+            # Извлечение данных о товарах в пути
+            in_transit = in_transit_data.get(product_id, 0)
+
+            # Извлечение цен
+            price_element = soup.select_one('div.product-price-container span[data-bind*="getBrowsingPrice"]')
+            retail_price = 0.0
+            wholesale_price = 0.0
+            if price_element:
+                data_bind = price_element.get('data-bind', '')
+                match = re.search(r'getBrowsingPrice\((\d+\.\d+), (\d+\.?\d*)\)', data_bind)
+                if match:
+                    retail_price = float(match.group(1))
+                    wholesale_price = float(match.group(2))
+                else:
+                    output_handler.log(f"Не удалось извлечь цены для ID {product_id}: {data_bind}")
+
             # Извлечение характеристик
             characteristics = {}
             characteristics_table = soup.select_one('div.product-properties-container table.price-list')
@@ -603,6 +718,9 @@ def parse_comcenter_products(session, headers, output_handler, cancel_flag):
             parsed_data[product_id] = {
                 "name": product_name,
                 "availability": availability,
+                "in_transit": in_transit,
+                "wholesale_price": wholesale_price,
+                "retail_price": retail_price,
                 "characteristics": characteristics,
                 "description": description
             }
