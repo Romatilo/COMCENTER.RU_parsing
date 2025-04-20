@@ -78,19 +78,16 @@ class ComcenterGUI:
         # Кнопки для действий с подсказками
         self.action_buttons = []
         self.buttons = [
-            ("ID лазерных принтеров", self.run_action_1, "Сохраняет ID всех лазерных принтеров"),
-            ("ID товаров из прайс-листа", self.run_action_2, "Сохраняет ID всех актуальных товаров из xls-прайс-листа"),
-            ("Совместимость ВСЕХ", self.run_action_3, "Парсит совместимость всех картриджей и запчастей для принтеров"),
-            ("Совместимость АКТУАЛЬНЫХ", self.run_action_4, "Парсит совместимость актуальных картриджей и запчастей для принтеров"),
-            ("АКТУАЛЬНЫЕ Картриджи и запчасти", self.run_action_5, "Парсит данные АКТУАЛЬНЫХ картриджей и запчастей"),
-            ("ВСЕ картриджи и запчасти", self.run_action_6, "Парсит данные ВСЕХ картриджей и запчастей"),
-            ("ВСЕ АКТУАЛЬНЫЕ товары", self.run_action_7, "Парсит данные ВСЕХ АКТУАЛЬНЫХ товаров Comcenter"),
+            ("ПАРСИНГ СОВМЕСТИМОСТИ", self.run_action_3_4, "Парсит совместимость всех картриджей и запчастей, затем фильтрует по наличию"),
+            ("ПАРСИНГ КАРТРИДЖЕЙ И ЗАПЧАСТЕЙ В НАЛИЧИИ", self.run_action_5, "Парсит данные актуальных картриджей и запчастей"),
+            ("ПОЛНЫЙ ПАРСИНГ КАРТРИДЖЕЙ И ЗАПЧАСТЕЙ", self.run_action_6, "Парсит данные всех картриджей и запчастей"),
+            ("ПАРСИНГ ПРАЙСА ТОВАРОВ", self.run_action_7, "Парсит данные всех актуальных товаров Comcenter"),
             ("Выход", self.exit, "")
         ]
 
         # Добавляем кнопки в интерфейс
         for text, command, tooltip in self.buttons:
-            btn = tk.Button(self.button_frame, text=text, command=command, width=40)
+            btn = tk.Button(self.button_frame, text=text, command=command, width=50)  # Увеличена ширина кнопок
             btn.pack(pady=5)
             if tooltip:
                 Tooltip(btn, tooltip)
@@ -98,16 +95,18 @@ class ComcenterGUI:
                 self.action_buttons.append(btn)
 
         # Кнопка "Отмена"
-        self.cancel_button = tk.Button(self.button_frame, text="Отмена", command=self.cancel, width=40, state=tk.DISABLED)
+        self.cancel_button = tk.Button(self.button_frame, text="Отмена", command=self.cancel, width=50, state=tk.DISABLED)
         self.cancel_button.pack(pady=5)
         Tooltip(self.cancel_button, "Прерывает выполнение текущей операции")
 
         # Флаг отмены
         self.cancel_flag = None
 
-        # Инициализация сессии
+        # Инициализация сессии и запуск начальных действий
         self.session_info = None
         self.setup_session()
+        if self.session_info:
+            self.run_initial_actions()
 
     def setup_session(self):
         """Инициализация сессии"""
@@ -126,7 +125,7 @@ class ComcenterGUI:
         """Сброс прогресс-бара"""
         self.progress_bar['value'] = 0
 
-    def run_in_thread(self, action, choice):
+    def run_in_thread(self, action):
         """Запуск действия в отдельном потоке"""
         self.cancel_flag = CancelFlag()
         self.enable_buttons(False)
@@ -148,33 +147,44 @@ class ComcenterGUI:
             self.cancel_flag.cancel()
             self.output_handler.log("Запрос на отмену операции отправлен...")
 
-    def run_action_1(self):
-        """Действие 1: Получение базы данных лазерных принтеров"""
+    def run_initial_actions(self):
+        """Автоматический запуск действий 1 и 2 при старте"""
         if not self.session_info:
             self.output_handler.log("Сессия не инициализирована. Пожалуйста, перезапустите приложение.")
             return
         session, headers = self.session_info
-        self.run_in_thread(lambda: get_laser_printers_database(session, headers, self.output_handler, self.cancel_flag), "1")
+        self.output_handler.log("Загрузка...")
+        self.run_in_thread(lambda: self.initial_actions_wrapper(session, headers))
 
-    def run_action_2(self):
-        """Действие 2: Получение базы данных из XLS"""
+    def initial_actions_wrapper(self, session, headers):
+        """Обертка для последовательного выполнения действий 1 и 2"""
+        try:
+            get_laser_printers_database(session, headers, self.output_handler, CancelFlag())
+            if self.cancel_flag and self.cancel_flag.is_cancelled():
+                self.output_handler.log("Операция отменена")
+                return
+            process_xls_database(session, headers, self.output_handler, CancelFlag())
+        except Exception as e:
+            self.output_handler.log(f"Ошибка при выполнении начальных действий: {e}")
+
+    def run_action_3_4(self):
+        """Действие 3 и 4: Парсинг совместимости и фильтрация по наличию"""
         if not self.session_info:
             self.output_handler.log("Сессия не инициализирована. Пожалуйста, перезапустите приложение.")
             return
         session, headers = self.session_info
-        self.run_in_thread(lambda: process_xls_database(session, headers, self.output_handler, self.cancel_flag), "2")
+        self.run_in_thread(lambda: self.action_3_4_wrapper(session, headers))
 
-    def run_action_3(self):
-        """Действие 3: Парсинг совместимости принтеров"""
-        if not self.session_info:
-            self.output_handler.log("Сессия не инициализирована. Пожалуйста, перезапустите приложение.")
-            return
-        session, headers = self.session_info
-        self.run_in_thread(lambda: parse_printer_compatibility(session, headers, self.output_handler, self.cancel_flag), "3")
-
-    def run_action_4(self):
-        """Действие 4: Фильтрация совместимости"""
-        self.run_in_thread(lambda: filter_compatibility_by_stock(self.output_handler, self.cancel_flag), "4")
+    def action_3_4_wrapper(self, session, headers):
+        """Обертка для последовательного выполнения действий 3 и 4"""
+        try:
+            parse_printer_compatibility(session, headers, self.output_handler, CancelFlag())
+            if self.cancel_flag and self.cancel_flag.is_cancelled():
+                self.output_handler.log("Операция отменена")
+                return
+            filter_compatibility_by_stock(self.output_handler, CancelFlag())
+        except Exception as e:
+            self.output_handler.log(f"Ошибка при парсинге совместимости: {e}")
 
     def run_action_5(self):
         """Действие 5: Парсинг актуальных картриджей и запчастей"""
@@ -182,7 +192,7 @@ class ComcenterGUI:
             self.output_handler.log("Сессия не инициализирована. Пожалуйста, перезапустите приложение.")
             return
         session, headers = self.session_info
-        self.run_in_thread(lambda: parse_cartridges_and_parts(session, headers, self.output_handler, self.cancel_flag), "5")
+        self.run_in_thread(lambda: parse_cartridges_and_parts(session, headers, self.output_handler, self.cancel_flag))
 
     def run_action_6(self):
         """Действие 6: Парсинг всех картриджей и запчастей"""
@@ -190,7 +200,7 @@ class ComcenterGUI:
             self.output_handler.log("Сессия не инициализирована. Пожалуйста, перезапустите приложение.")
             return
         session, headers = self.session_info
-        self.run_in_thread(lambda: parse_all_cartridges_and_parts(session, headers, self.output_handler, self.cancel_flag), "6")
+        self.run_in_thread(lambda: parse_all_cartridges_and_parts(session, headers, self.output_handler, self.cancel_flag))
 
     def run_action_7(self):
         """Действие 7: Парсинг актуальных товаров Comcenter"""
@@ -198,7 +208,7 @@ class ComcenterGUI:
             self.output_handler.log("Сессия не инициализирована. Пожалуйста, перезапустите приложение.")
             return
         session, headers = self.session_info
-        self.run_in_thread(lambda: parse_comcenter_products(session, headers, self.output_handler, self.cancel_flag), "7")
+        self.run_in_thread(lambda: parse_comcenter_products(session, headers, self.output_handler, self.cancel_flag))
 
     def exit(self):
         """Выход из приложения"""
