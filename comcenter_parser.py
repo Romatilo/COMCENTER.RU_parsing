@@ -1,5 +1,4 @@
 from dotenv import load_dotenv
-import urllib3
 import requests
 import pandas as pd
 import json
@@ -18,21 +17,12 @@ output_dir = "COMCENTER.ru_database"
 log_file = "comcenter_parser.log"
 xls_url = "https://comcenter.ru/Content/PriceList/price.xls"
 xls_output_file = os.path.join(output_dir, "DATABASE_recent.json")
-xls_output_file_csv = os.path.join(output_dir, "DATABASE_recent.csv")
 printers_output_file = os.path.join(output_dir, "Laser_Printers.json")
-printers_output_file_csv = os.path.join(output_dir, "Laser_Printers.csv")
 compatibility_output_file = os.path.join(output_dir, "PRINTERS_compatibility.json")
-compatibility_output_file_csv = os.path.join(output_dir, "PRINTERS_compatibility.csv")
 compatibility_actual_output_file = os.path.join(output_dir, "PRINTERS_compatibility_actual.json")
-compatibility_actual_output_file_csv = os.path.join(output_dir, "PRINTERS_compatibility_actual.csv")
 cartridges_parts_output_file = os.path.join(output_dir, "DATABASE_cartridges&Parts.json")
-cartridges_parts_output_file_csv = os.path.join(output_dir, "DATABASE_cartridges&Parts.csv")
 all_cartridges_parts_output_file = os.path.join(output_dir, "DATABASE_all_cartridges&Parts.json")
-all_cartridges_parts_output_file_csv = os.path.join(output_dir, "DATABASE_all_cartridges&Parts.csv")
 comcenter_products_output_file = os.path.join(output_dir, "DATABASE_comcenter_products.json")
-comcenter_products_output_file_csv = os.path.join(output_dir, "DATABASE_comcenter_products.csv")
-printers_data_output_file = os.path.join(output_dir, "Printers.json")
-printers_data_output_file_csv = os.path.join(output_dir, "Printers.csv")
 
 class ConsoleOutputHandler:
     """Обработчик вывода для консоли с записью в файл"""
@@ -140,11 +130,7 @@ def get_laser_printers_database(session, headers, output_handler, cancel_flag):
         with open(printers_output_file, 'w', encoding='utf-8') as f:
             json.dump(product_ids, f, ensure_ascii=False, indent=4)
         
-        # Save to CSV
-        df = pd.DataFrame(product_ids, columns=['product_id'])
-        df.to_csv(printers_output_file_csv, index=False, encoding='utf-8')
-        
-        output_handler.log(f"Найдено {len(product_ids)} товаров. ID сохранены в '{printers_output_file}' и '{printers_output_file_csv}'.")
+        output_handler.log(f"Найдено {len(product_ids)} товаров. ID сохранены в '{printers_output_file}'.")
         return product_ids
     except requests.exceptions.RequestException as e:
         output_handler.log(f"Ошибка при загрузке страницы: {e}")
@@ -182,7 +168,21 @@ def process_xls_file(output_handler, cancel_flag):
         output_handler.log(f"Ошибка при обработке xls файла: {e}")
         return None
 
-def save_to_json_and_csv(data, json_filename, csv_filename, output_handler):
+def save_to_json(data, json_filename, output_handler):
+    """Сохранение данных в JSON"""
+    try:
+        os.makedirs(output_dir, exist_ok=True)
+        
+        # Save to JSON
+        json_filepath = os.path.join(output_dir, json_filename)
+        with open(json_filepath, 'w', encoding='utf-8') as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+        
+        output_handler.log(f"Данные сохранены в {json_filepath}")
+    except Exception as e:
+        output_handler.log(f"Ошибка при сохранении данных: {e}")
+
+def save_to_json_and_csv(data, json_filename, output_handler):
     """Сохранение данных в JSON и CSV"""
     try:
         os.makedirs(output_dir, exist_ok=True)
@@ -193,7 +193,7 @@ def save_to_json_and_csv(data, json_filename, csv_filename, output_handler):
             json.dump(data, f, ensure_ascii=False, indent=2)
         
         # Save to CSV
-        csv_filepath = os.path.join(output_dir, csv_filename)
+        csv_filepath = os.path.join(output_dir, json_filename.replace('.json', '.csv'))
         if isinstance(data, list):
             df = pd.DataFrame(data, columns=['product_id'])
         elif isinstance(data, dict):
@@ -234,10 +234,11 @@ def save_to_json_and_csv(data, json_filename, csv_filename, output_handler):
 
 def process_xls_database(session, headers, output_handler, cancel_flag):
     """Получение базы данных из xls-файла"""
+    output_handler.log("Получение базы данных из xls-файла...")
     if download_xls_file(session, headers, output_handler, cancel_flag):
         numbers = process_xls_file(output_handler, cancel_flag)
         if numbers:
-            save_to_json_and_csv(numbers, "DATABASE_recent.json", "DATABASE_recent.csv", output_handler)
+            save_to_json(numbers, "DATABASE_recent.json", output_handler)
             try:
                 os.remove("temp_price.xls")
             except:
@@ -343,46 +344,9 @@ def parse_printer_compatibility(session, headers, output_handler, cancel_flag):
             continue
 
     if compatibility_data:
-        save_to_json_and_csv(compatibility_data, "PRINTERS_compatibility.json", "PRINTERS_compatibility.csv", output_handler)
+        save_to_json_and_csv(compatibility_data, "PRINTERS_compatibility.json", output_handler)
     else:
         output_handler.log("Не удалось собрать данные о совместимости")
-
-def create_printers_table(session, headers, output_handler, cancel_flag):
-    """Создание таблиц Printers.json и Printers.csv с данными о принтерах"""
-    output_handler.log("Создание таблиц Printers.json и Printers.csv...")
-    
-    # Сначала получаем IDs принтеров
-    printer_ids = get_laser_printers_database(session, headers, output_handler, cancel_flag)
-    if not printer_ids:
-        output_handler.log("Не удалось получить данные о принтерах")
-        return
-
-    # Затем обновляем данные с информацией о совместимости, бренде и модели
-    parse_printer_compatibility(session, headers, output_handler, cancel_flag)
-    
-    # Загружаем данные совместимости
-    try:
-        with open(compatibility_output_file, 'r', encoding='utf-8') as f:
-            printer_data = json.load(f)
-    except Exception as e:
-        output_handler.log(f"Ошибка при чтении файла {compatibility_output_file}: {e}")
-        return
-
-    # Формируем данные для Printers.json и Printers.csv
-    formatted_data = []
-    for printer_id, data in printer_data.items():
-        formatted_data.append({
-            "product_id": printer_id,
-            "brand": data.get("brand", "Не указано"),
-            "model_name": data.get("model_name", "Не указано"),
-            "cartridges": data.get("cartridges", []),
-            "parts": data.get("parts", [])
-        })
-
-    if formatted_data:
-        save_to_json_and_csv(formatted_data, "Printers.json", "Printers.csv", output_handler)
-    else:
-        output_handler.log("Не удалось собрать данные для Printers")
 
 def filter_compatibility_by_stock(output_handler, cancel_flag):
     """Фильтрация совместимости по товарам в наличии"""
@@ -435,7 +399,7 @@ def filter_compatibility_by_stock(output_handler, cancel_flag):
             output_handler.log(f"Принтер {printer_id}: удален, так как нет товаров в наличии")
 
     if filtered_data:
-        save_to_json_and_csv(filtered_data, "PRINTERS_compatibility_actual.json", "PRINTERS_compatibility_actual.csv", output_handler)
+        save_to_json_and_csv(filtered_data, "PRINTERS_compatibility_actual.json", output_handler)
     else:
         output_handler.log("Нет данных для сохранения после фильтрации")
 
@@ -582,7 +546,7 @@ def parse_cartridges_and_parts(session, headers, output_handler, cancel_flag):
             continue
 
     if parsed_data:
-        save_to_json_and_csv(parsed_data, "DATABASE_cartridges&Parts.json", "DATABASE_cartridges&Parts.csv", output_handler)
+        save_to_json_and_csv(parsed_data, "DATABASE_cartridges&Parts.json", output_handler)
     else:
         output_handler.log("Не удалось собрать данные")
 
@@ -694,7 +658,7 @@ def parse_all_cartridges_and_parts(session, headers, output_handler, cancel_flag
             continue
 
     if parsed_data:
-        save_to_json_and_csv(parsed_data, "DATABASE_all_cartridges&Parts.json", "DATABASE_all_cartridges&Parts.csv", output_handler)
+        save_to_json_and_csv(parsed_data, "DATABASE_all_cartridges&Parts.json", output_handler)
     else:
         output_handler.log("Не удалось собрать данные")
 
@@ -797,78 +761,78 @@ def parse_comcenter_products(session, headers, output_handler, cancel_flag):
             continue
 
     if parsed_data:
-        save_to_json_and_csv(parsed_data, "DATABASE_comcenter_products.json", "DATABASE_comcenter_products.csv", output_handler)
+        save_to_json_and_csv(parsed_data, "DATABASE_comcenter_products.json", output_handler)
     else:
         output_handler.log("Не удалось собрать данные")
 
-def run_action(choice, output_handler, cancel_flag):
+def run_action(choice, session, headers, output_handler, cancel_flag):
     """Запуск выбранного действия"""
-    session_info = setup_session(output_handler)
-    if not session_info:
-        output_handler.log("Не удалось авторизоваться. Программа завершена.")
-        return
-
-    session, headers = session_info
-
     if choice == "1":
         output_handler.log("Получение базы данных лазерных принтеров...")
         get_laser_printers_database(session, headers, output_handler, cancel_flag)
     
     elif choice == "2":
-        output_handler.log("Получение базы данных из xls-файла...")
-        process_xls_database(session, headers, output_handler, cancel_flag)
-    
-    elif choice == "3":
-        output_handler.log("Парсинг совместимости для всех принтеров...")
+        output_handler.log("Парсинг совместимости принтера...")
         parse_printer_compatibility(session, headers, output_handler, cancel_flag)
     
-    elif choice == "4":
-        output_handler.log("Фильтрация совместимости по товарам в наличии...")
-        filter_compatibility_by_stock(output_handler, cancel_flag)
-    
-    elif choice == "5":
-        output_handler.log("Парсинг актуальных картриджей и запчастей...")
-        parse_cartridges_and_parts(session, headers, output_handler, cancel_flag)
-    
-    elif choice == "6":
+    elif choice == "3":
         output_handler.log("Парсинг ВСЕХ картриджей и запчастей...")
         parse_all_cartridges_and_parts(session, headers, output_handler, cancel_flag)
     
-    elif choice == "7":
+    elif choice == "4":
         output_handler.log("Парсинг актуальных товаров Comcenter...")
         parse_comcenter_products(session, headers, output_handler, cancel_flag)
     
-    elif choice == "8":
-        output_handler.log("Создание таблиц Printers.json и Printers.csv...")
-        create_printers_table(session, headers, output_handler, cancel_flag)
+    elif choice == "5":
+        print("\nПодменю:")
+        print("1. Совместимость только по товарам в наличии")
+        print("2. Парсинг актуальных картриджей и запчастей")
+        print("0. Вернуться в главное меню")
+        sub_choice = input("Выберите действие (0-2): ")
+        
+        if sub_choice == "1":
+            output_handler.log("Фильтрация совместимости по товарам в наличии...")
+            filter_compatibility_by_stock(output_handler, cancel_flag)
+        elif sub_choice == "2":
+            output_handler.log("Парсинг актуальных картриджей и запчастей...")
+            parse_cartridges_and_parts(session, headers, output_handler, cancel_flag)
+        elif sub_choice == "0":
+            output_handler.log("Возврат в главное меню")
+        else:
+            output_handler.log("Неверный выбор в подменю. Пожалуйста, выберите 0, 1 или 2")
     
     else:
-        output_handler.log("Неверный выбор. Пожалуйста, выберите 0, 1, 2, 3, 4, 5, 6, 7 или 8")
+        output_handler.log("Неверный выбор. Пожалуйста, выберите 0, 1, 2, 3, 4 или 5")
 
 def console_main():
     """Консольный интерфейс программы"""
     output_handler = ConsoleOutputHandler()
+    cancel_flag = CancelFlag()
+    
+    # Автоматическое выполнение загрузки и обработки XLS при запуске
+    session_info = setup_session(output_handler)
+    if not session_info:
+        output_handler.log("Не удалось авторизоваться. Программа завершена.")
+        return
+    
+    session, headers = session_info
+    process_xls_database(session, headers, output_handler, cancel_flag)
     
     while True:
         print("\nМеню:")
         print("1. Получить базу данных лазерных принтеров")
-        print("2. Получить базу данных из xls-файла")
-        print("3. Парсинг совместимости принтера")
-        print("4. Совместимость только по товарам в наличии")
-        print("5. Парсинг актуальных картриджей и запчастей")
-        print("6. Парсинг ВСЕХ картриджей и запчастей")
-        print("7. Парсинг актуальных товаров Comcenter")
-        print("8. Создать таблицы Printers.json и Printers.csv")
+        print("2. Парсинг совместимости принтера")
+        print("3. Парсинг ВСЕХ картриджей и запчастей")
+        print("4. Парсинг актуальных товаров COMCENTER")
+        print("5. Еще...")
         print("0. Выход")
         
-        choice = input("Выберите действие (0-8): ")
-        
+        choice = input("Выберите действие (0-5): ")
         if choice == "0":
             output_handler.log("Программа завершена")
             break
         
-        cancel_flag = CancelFlag()
-        run_action(choice, output_handler, cancel_flag)
+        run_action(choice, session, headers, output_handler, cancel_flag)
 
 if __name__ == "__main__":
     console_main()
