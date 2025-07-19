@@ -11,19 +11,28 @@ from tqdm import tqdm
 import datetime
 
 # Путь к файлу сертификата
-cert_path = "C:/!Work/COMCENTER/fullchain.pem"
+cert_path = "D:/!tilo/COMCENTER/fullchain.pem"
 
 # Путь для сохранения данных
 output_dir = "COMCENTER.ru_database"
 log_file = "comcenter_parser.log"
 xls_url = "https://comcenter.ru/Content/PriceList/price.xls"
 xls_output_file = os.path.join(output_dir, "DATABASE_recent.json")
+xls_output_file_csv = os.path.join(output_dir, "DATABASE_recent.csv")
 printers_output_file = os.path.join(output_dir, "Laser_Printers.json")
+printers_output_file_csv = os.path.join(output_dir, "Laser_Printers.csv")
 compatibility_output_file = os.path.join(output_dir, "PRINTERS_compatibility.json")
+compatibility_output_file_csv = os.path.join(output_dir, "PRINTERS_compatibility.csv")
 compatibility_actual_output_file = os.path.join(output_dir, "PRINTERS_compatibility_actual.json")
+compatibility_actual_output_file_csv = os.path.join(output_dir, "PRINTERS_compatibility_actual.csv")
 cartridges_parts_output_file = os.path.join(output_dir, "DATABASE_cartridges&Parts.json")
+cartridges_parts_output_file_csv = os.path.join(output_dir, "DATABASE_cartridges&Parts.csv")
 all_cartridges_parts_output_file = os.path.join(output_dir, "DATABASE_all_cartridges&Parts.json")
+all_cartridges_parts_output_file_csv = os.path.join(output_dir, "DATABASE_all_cartridges&Parts.csv")
 comcenter_products_output_file = os.path.join(output_dir, "DATABASE_comcenter_products.json")
+comcenter_products_output_file_csv = os.path.join(output_dir, "DATABASE_comcenter_products.csv")
+printers_data_output_file = os.path.join(output_dir, "Printers.json")
+printers_data_output_file_csv = os.path.join(output_dir, "Printers.csv")
 
 class ConsoleOutputHandler:
     """Обработчик вывода для консоли с записью в файл"""
@@ -109,7 +118,7 @@ def get_laser_printers_database(session, headers, output_handler, cancel_flag):
     url = 'https://comcenter.ru/Store/Browse/400000006580/printery-lazernye-i-mfu'
 
     try:
-        response = session.get(url, headers=headers, timeout=10, verify=cert_path)
+        response = session.get(url, headers=headers, timeout=10, verify=True)
         response.raise_for_status()
         soup = BeautifulSoup(response.text, 'html.parser')
 
@@ -126,11 +135,20 @@ def get_laser_printers_database(session, headers, output_handler, cancel_flag):
 
         product_ids = list(set(product_ids))
         os.makedirs(output_dir, exist_ok=True)
+        
+        # Save to JSON
         with open(printers_output_file, 'w', encoding='utf-8') as f:
             json.dump(product_ids, f, ensure_ascii=False, indent=4)
-        output_handler.log(f"Найдено {len(product_ids)} товаров. ID сохранены в '{printers_output_file}'.")
+        
+        # Save to CSV
+        df = pd.DataFrame(product_ids, columns=['product_id'])
+        df.to_csv(printers_output_file_csv, index=False, encoding='utf-8')
+        
+        output_handler.log(f"Найдено {len(product_ids)} товаров. ID сохранены в '{printers_output_file}' и '{printers_output_file_csv}'.")
+        return product_ids
     except requests.exceptions.RequestException as e:
         output_handler.log(f"Ошибка при загрузке страницы: {e}")
+        return []
 
 def download_xls_file(session, headers, output_handler, cancel_flag):
     """Скачивание xls-файла с использованием сессии"""
@@ -164,30 +182,68 @@ def process_xls_file(output_handler, cancel_flag):
         output_handler.log(f"Ошибка при обработке xls файла: {e}")
         return None
 
-def save_to_json(data, filename, output_handler):
-    """Сохранение данных в JSON"""
+def save_to_json_and_csv(data, json_filename, csv_filename, output_handler):
+    """Сохранение данных в JSON и CSV"""
     try:
         os.makedirs(output_dir, exist_ok=True)
-        filepath = os.path.join(output_dir, filename)
-        with open(filepath, 'w', encoding='utf-8') as f:
+        
+        # Save to JSON
+        json_filepath = os.path.join(output_dir, json_filename)
+        with open(json_filepath, 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
-        output_handler.log(f"Данные сохранены в {filepath}")
+        
+        # Save to CSV
+        csv_filepath = os.path.join(output_dir, csv_filename)
+        if isinstance(data, list):
+            df = pd.DataFrame(data, columns=['product_id'])
+        elif isinstance(data, dict):
+            # Handle nested dictionaries for compatibility and product data
+            if all(isinstance(v, dict) for v in data.values()):
+                rows = []
+                for key, value in data.items():
+                    row = {'printer_id': key}
+                    if 'name' in value:
+                        row['name'] = value['name']
+                    if 'brand' in value:
+                        row['brand'] = value['brand']
+                    if 'model_name' in value:
+                        row['model_name'] = value['model_name']
+                    row['cartridges'] = ','.join(value.get('cartridges', []))
+                    row['parts'] = ','.join(value.get('parts', []))
+                    if 'availability' in value:
+                        row['availability'] = value['availability']
+                        row['in_transit'] = value['in_transit']
+                        row['wholesale_price'] = value['wholesale_price']
+                        row['retail_price'] = value['retail_price']
+                        row['description'] = value['description']
+                        for char_key, char_value in value.get('characteristics', {}).items():
+                            row[f'char_{char_key}'] = char_value
+                    rows.append(row)
+                df = pd.DataFrame(rows)
+            else:
+                df = pd.DataFrame.from_dict(data, orient='index')
+                df.index.name = 'id'
+        else:
+            raise ValueError("Unsupported data type for CSV conversion")
+        
+        df.to_csv(csv_filepath, index=(df.index.name is not None), encoding='utf-8')
+        
+        output_handler.log(f"Данные сохранены в {json_filepath} и {csv_filepath}")
     except Exception as e:
-        output_handler.log(f"Ошибка при сохранении JSON: {e}")
+        output_handler.log(f"Ошибка при сохранении данных: {e}")
 
 def process_xls_database(session, headers, output_handler, cancel_flag):
     """Получение базы данных из xls-файла"""
     if download_xls_file(session, headers, output_handler, cancel_flag):
         numbers = process_xls_file(output_handler, cancel_flag)
         if numbers:
-            save_to_json(numbers, "DATABASE_recent.json", output_handler)
+            save_to_json_and_csv(numbers, "DATABASE_recent.json", "DATABASE_recent.csv", output_handler)
             try:
                 os.remove("temp_price.xls")
             except:
                 pass
 
 def parse_printer_compatibility(session, headers, output_handler, cancel_flag):
-    """Парсинг совместимости для всех принтеров из Laser_Printers.json"""
     if not os.path.exists(printers_output_file):
         output_handler.log(f"Файл {printers_output_file} не найден")
         return
@@ -197,10 +253,6 @@ def parse_printer_compatibility(session, headers, output_handler, cancel_flag):
             printer_ids = json.load(f)
     except Exception as e:
         output_handler.log(f"Ошибка при чтении файла {printers_output_file}: {e}")
-        return
-
-    if not printer_ids:
-        output_handler.log("Список ID принтеров пуст")
         return
 
     compatibility_data = {}
@@ -221,10 +273,29 @@ def parse_printer_compatibility(session, headers, output_handler, cancel_flag):
             response.raise_for_status()
             soup = BeautifulSoup(response.text, 'html.parser')
 
-            grid_sections = soup.select('div.grid.space-top')
+            # Извлечение наименования принтера
+            printer_name_tag = soup.select_one('h1[data-bind*="spellCheckedHtml"]')
+            printer_name = printer_name_tag.text.strip() if printer_name_tag else "Не указано"
+
+            # Извлечение бренда и модели из таблицы характеристик
+            brand = "Не указано"
+            model_name = "Не указано"
+            characteristics_table = soup.select_one('div.product-properties-container table.price-list')
+            if characteristics_table:
+                for row in characteristics_table.select('tr'):
+                    cells = row.select('td')
+                    if len(cells) == 2:
+                        key = cells[0].text.strip()
+                        value = cells[1].text.strip()
+                        if key == "Бренд":
+                            brand = value
+                        if key == "Название модели":
+                            model_name = value
+
+            # Извлечение картриджей и запчастей
             cartridge_ids = []
             part_ids = []
-
+            grid_sections = soup.select('div.grid.space-top')
             found_cartridges = False
             found_parts = False
 
@@ -232,7 +303,6 @@ def parse_printer_compatibility(session, headers, output_handler, cancel_flag):
                 header = grid.select_one('div.grid-header h2.title')
                 if not header:
                     continue
-
                 section_title = header.text.strip()
 
                 if section_title == "Картриджи":
@@ -259,23 +329,60 @@ def parse_printer_compatibility(session, headers, output_handler, cancel_flag):
             part_ids = list(set(part_ids))
 
             compatibility_data[printer_id] = {
+                "name": printer_name,
+                "brand": brand,
+                "model_name": model_name,
                 "cartridges": cartridge_ids,
                 "parts": part_ids
             }
 
-            output_handler.log(f"Принтер {printer_id}: найдено картриджей: {len(cartridge_ids)}, запчастей: {len(part_ids)}")
+            output_handler.log(f"Принтер {printer_id} ({printer_name}): бренд: {brand}, модель: {model_name}, найдено картриджей: {len(cartridge_ids)}, запчастей: {len(part_ids)}")
 
         except requests.exceptions.RequestException as e:
             output_handler.log(f"Ошибка при загрузке страницы для принтера {printer_id}: {e}")
             continue
 
     if compatibility_data:
-        os.makedirs(output_dir, exist_ok=True)
-        with open(compatibility_output_file, 'w', encoding='utf-8') as f:
-            json.dump(compatibility_data, f, ensure_ascii=False, indent=4)
-        output_handler.log(f"Совместимость для {len(compatibility_data)} принтеров сохранена в '{compatibility_output_file}'.")
+        save_to_json_and_csv(compatibility_data, "PRINTERS_compatibility.json", "PRINTERS_compatibility.csv", output_handler)
     else:
         output_handler.log("Не удалось собрать данные о совместимости")
+
+def create_printers_table(session, headers, output_handler, cancel_flag):
+    """Создание таблиц Printers.json и Printers.csv с данными о принтерах"""
+    output_handler.log("Создание таблиц Printers.json и Printers.csv...")
+    
+    # Сначала получаем IDs принтеров
+    printer_ids = get_laser_printers_database(session, headers, output_handler, cancel_flag)
+    if not printer_ids:
+        output_handler.log("Не удалось получить данные о принтерах")
+        return
+
+    # Затем обновляем данные с информацией о совместимости, бренде и модели
+    parse_printer_compatibility(session, headers, output_handler, cancel_flag)
+    
+    # Загружаем данные совместимости
+    try:
+        with open(compatibility_output_file, 'r', encoding='utf-8') as f:
+            printer_data = json.load(f)
+    except Exception as e:
+        output_handler.log(f"Ошибка при чтении файла {compatibility_output_file}: {e}")
+        return
+
+    # Формируем данные для Printers.json и Printers.csv
+    formatted_data = []
+    for printer_id, data in printer_data.items():
+        formatted_data.append({
+            "product_id": printer_id,
+            "brand": data.get("brand", "Не указано"),
+            "model_name": data.get("model_name", "Не указано"),
+            "cartridges": data.get("cartridges", []),
+            "parts": data.get("parts", [])
+        })
+
+    if formatted_data:
+        save_to_json_and_csv(formatted_data, "Printers.json", "Printers.csv", output_handler)
+    else:
+        output_handler.log("Не удалось собрать данные для Printers")
 
 def filter_compatibility_by_stock(output_handler, cancel_flag):
     """Фильтрация совместимости по товарам в наличии"""
@@ -328,10 +435,7 @@ def filter_compatibility_by_stock(output_handler, cancel_flag):
             output_handler.log(f"Принтер {printer_id}: удален, так как нет товаров в наличии")
 
     if filtered_data:
-        os.makedirs(output_dir, exist_ok=True)
-        with open(compatibility_actual_output_file, 'w', encoding='utf-8') as f:
-            json.dump(filtered_data, f, ensure_ascii=False, indent=4)
-        output_handler.log(f"Отфильтрованные данные для {len(filtered_data)} принтеров сохранены в '{compatibility_actual_output_file}'.")
+        save_to_json_and_csv(filtered_data, "PRINTERS_compatibility_actual.json", "PRINTERS_compatibility_actual.csv", output_handler)
     else:
         output_handler.log("Нет данных для сохранения после фильтрации")
 
@@ -346,13 +450,11 @@ def load_in_transit_data(output_handler):
         xls = pd.ExcelFile("temp_price.xls")
         for sheet_name in xls.sheet_names:
             df = pd.read_excel(xls, sheet_name=sheet_name, dtype=str)
-            # Проверяем наличие колонок 3 ("Код") и 6 ("В пути")
             if len(df.columns) >= 6:
                 for _, row in df.iterrows():
-                    product_id = row.iloc[2]  # Колонка 3 (индекс 2)
-                    in_transit = row.iloc[5]  # Колонка 6 (индекс 5)
+                    product_id = row.iloc[2]
+                    in_transit = row.iloc[5]
                     if isinstance(product_id, str) and re.match(r'^\d{12}$', product_id):
-                        # Проверяем, является ли in_transit числом
                         try:
                             in_transit_value = int(float(in_transit)) if pd.notna(in_transit) else 0
                         except (ValueError, TypeError):
@@ -389,7 +491,6 @@ def parse_cartridges_and_parts(session, headers, output_handler, cancel_flag):
         output_handler.log("Данные о совместимости пусты")
         return
 
-    # Собираем все уникальные ID картриджей и запчастей
     all_ids = set()
     for printer_id, data in compatibility_data.items():
         all_ids.update(data.get("cartridges", []))
@@ -401,15 +502,12 @@ def parse_cartridges_and_parts(session, headers, output_handler, cancel_flag):
 
     output_handler.log(f"Найдено {len(all_ids)} уникальных ID для парсинга")
 
-    # Проверяем и скачиваем temp_price.xls, если он отсутствует
     if not ensure_xls_file(session, headers, output_handler, cancel_flag):
         output_handler.log("Не удалось скачать temp_price.xls, данные 'in_transit' не будут загружены")
         in_transit_data = {}
     else:
-        # Загружаем данные о товарах в пути
         in_transit_data = load_in_transit_data(output_handler)
 
-    # Словарь для хранения данных
     parsed_data = {}
     total = len(all_ids)
     current = 0
@@ -428,18 +526,14 @@ def parse_cartridges_and_parts(session, headers, output_handler, cancel_flag):
             response.raise_for_status()
             soup = BeautifulSoup(response.text, 'html.parser')
 
-            # Извлечение наименования товара
             name_element = soup.select_one('div.grid-body.text-left.space-top-tiny h1')
             product_name = name_element.text.strip() if name_element else ""
 
-            # Извлечение наличия
             availability_element = soup.select_one('span.product-count')
             availability = int(availability_element.text.strip()) if availability_element and availability_element.text.strip().isdigit() else 0
 
-            # Извлечение данных о товарах в пути
             in_transit = in_transit_data.get(product_id, 0)
 
-            # Извлечение цен
             price_element = soup.select_one('div.product-price-container span[data-bind*="getBrowsingPrice"]')
             retail_price = 0.0
             wholesale_price = 0.0
@@ -452,7 +546,6 @@ def parse_cartridges_and_parts(session, headers, output_handler, cancel_flag):
                 else:
                     output_handler.log(f"Не удалось извлечь цены для ID {product_id}: {data_bind}")
 
-            # Извлечение характеристик
             characteristics = {}
             characteristics_table = soup.select_one('div.product-properties-container table.price-list')
             if characteristics_table:
@@ -463,14 +556,12 @@ def parse_cartridges_and_parts(session, headers, output_handler, cancel_flag):
                         value = cells[1].text.strip()
                         characteristics[key] = value
 
-            # Извлечение описания товара
             description_section = soup.select_one('div.grid.space-top div.grid-body.text-left.space-top-tiny')
             description = ""
             if description_section:
                 description = ' '.join(description_section.get_text(strip=True).split())
                 description = re.sub(r'\s+', ' ', description).strip()
 
-            # Формирование данных для текущего ID
             parsed_data[product_id] = {
                 "name": product_name,
                 "availability": availability,
@@ -490,12 +581,8 @@ def parse_cartridges_and_parts(session, headers, output_handler, cancel_flag):
             output_handler.log(f"Ошибка при парсинге данных для ID {product_id}: {e}")
             continue
 
-    # Сохранение данных в JSON
     if parsed_data:
-        os.makedirs(output_dir, exist_ok=True)
-        with open(cartridges_parts_output_file, 'w', encoding='utf-8') as f:
-            json.dump(parsed_data, f, ensure_ascii=False, indent=4)
-        output_handler.log(f"Данные для {len(parsed_data)} элементов сохранены в '{cartridges_parts_output_file}'.")
+        save_to_json_and_csv(parsed_data, "DATABASE_cartridges&Parts.json", "DATABASE_cartridges&Parts.csv", output_handler)
     else:
         output_handler.log("Не удалось собрать данные")
 
@@ -516,7 +603,6 @@ def parse_all_cartridges_and_parts(session, headers, output_handler, cancel_flag
         output_handler.log("Данные о совместимости пусты")
         return
 
-    # Собираем все уникальные ID картриджей и запчастей
     all_ids = set()
     for printer_id, data in compatibility_data.items():
         all_ids.update(data.get("cartridges", []))
@@ -528,15 +614,12 @@ def parse_all_cartridges_and_parts(session, headers, output_handler, cancel_flag
 
     output_handler.log(f"Найдено {len(all_ids)} уникальных ID для парсинга")
 
-    # Проверяем и скачиваем temp_price.xls, если он отсутствует
     if not ensure_xls_file(session, headers, output_handler, cancel_flag):
         output_handler.log("Не удалось скачать temp_price.xls, данные 'in_transit' не будут загружены")
         in_transit_data = {}
     else:
-        # Загружаем данные о товарах в пути
         in_transit_data = load_in_transit_data(output_handler)
 
-    # Словарь для хранения данных
     parsed_data = {}
     total = len(all_ids)
     current = 0
@@ -555,18 +638,14 @@ def parse_all_cartridges_and_parts(session, headers, output_handler, cancel_flag
             response.raise_for_status()
             soup = BeautifulSoup(response.text, 'html.parser')
 
-            # Извлечение наименования товара
             name_element = soup.select_one('div.grid-body.text-left.space-top-tiny h1')
             product_name = name_element.text.strip() if name_element else ""
 
-            # Извлечение наличия
             availability_element = soup.select_one('span.product-count')
             availability = int(availability_element.text.strip()) if availability_element and availability_element.text.strip().isdigit() else 0
 
-            # Извлечение данных о товарах в пути
             in_transit = in_transit_data.get(product_id, 0)
 
-            # Извлечение цен
             price_element = soup.select_one('div.product-price-container span[data-bind*="getBrowsingPrice"]')
             retail_price = 0.0
             wholesale_price = 0.0
@@ -579,7 +658,6 @@ def parse_all_cartridges_and_parts(session, headers, output_handler, cancel_flag
                 else:
                     output_handler.log(f"Не удалось извлечь цены для ID {product_id}: {data_bind}")
 
-            # Извлечение характеристик
             characteristics = {}
             characteristics_table = soup.select_one('div.product-properties-container table.price-list')
             if characteristics_table:
@@ -590,14 +668,12 @@ def parse_all_cartridges_and_parts(session, headers, output_handler, cancel_flag
                         value = cells[1].text.strip()
                         characteristics[key] = value
 
-            # Извлечение описания товара
             description_section = soup.select_one('div.grid.space-top div.grid-body.text-left.space-top-tiny')
             description = ""
             if description_section:
                 description = ' '.join(description_section.get_text(strip=True).split())
                 description = re.sub(r'\s+', ' ', description).strip()
 
-            # Формирование данных для текущего ID
             parsed_data[product_id] = {
                 "name": product_name,
                 "availability": availability,
@@ -617,12 +693,8 @@ def parse_all_cartridges_and_parts(session, headers, output_handler, cancel_flag
             output_handler.log(f"Ошибка при парсинге данных для ID {product_id}: {e}")
             continue
 
-    # Сохранение данных в JSON
     if parsed_data:
-        os.makedirs(output_dir, exist_ok=True)
-        with open(all_cartridges_parts_output_file, 'w', encoding='utf-8') as f:
-            json.dump(parsed_data, f, ensure_ascii=False, indent=4)
-        output_handler.log(f"Данные для {len(parsed_data)} элементов сохранены в '{all_cartridges_parts_output_file}'.")
+        save_to_json_and_csv(parsed_data, "DATABASE_all_cartridges&Parts.json", "DATABASE_all_cartridges&Parts.csv", output_handler)
     else:
         output_handler.log("Не удалось собрать данные")
 
@@ -645,15 +717,12 @@ def parse_comcenter_products(session, headers, output_handler, cancel_flag):
 
     output_handler.log(f"Найдено {len(product_ids)} уникальных ID для парсинга")
 
-    # Проверяем и скачиваем temp_price.xls, если он отсутствует
     if not ensure_xls_file(session, headers, output_handler, cancel_flag):
         output_handler.log("Не удалось скачать temp_price.xls, данные 'in_transit' не будут загружены")
         in_transit_data = {}
     else:
-        # Загружаем данные о товарах в пути
         in_transit_data = load_in_transit_data(output_handler)
 
-    # Словарь для хранения данных
     parsed_data = {}
     total = len(product_ids)
     current = 0
@@ -672,18 +741,14 @@ def parse_comcenter_products(session, headers, output_handler, cancel_flag):
             response.raise_for_status()
             soup = BeautifulSoup(response.text, 'html.parser')
 
-            # Извлечение наименования товара
             name_element = soup.select_one('div.grid-body.text-left.space-top-tiny h1')
             product_name = name_element.text.strip() if name_element else ""
 
-            # Извлечение наличия
             availability_element = soup.select_one('span.product-count')
             availability = int(availability_element.text.strip()) if availability_element and availability_element.text.strip().isdigit() else 0
 
-            # Извлечение данных о товарах в пути
             in_transit = in_transit_data.get(product_id, 0)
 
-            # Извлечение цен
             price_element = soup.select_one('div.product-price-container span[data-bind*="getBrowsingPrice"]')
             retail_price = 0.0
             wholesale_price = 0.0
@@ -696,7 +761,6 @@ def parse_comcenter_products(session, headers, output_handler, cancel_flag):
                 else:
                     output_handler.log(f"Не удалось извлечь цены для ID {product_id}: {data_bind}")
 
-            # Извлечение характеристик
             characteristics = {}
             characteristics_table = soup.select_one('div.product-properties-container table.price-list')
             if characteristics_table:
@@ -707,14 +771,12 @@ def parse_comcenter_products(session, headers, output_handler, cancel_flag):
                         value = cells[1].text.strip()
                         characteristics[key] = value
 
-            # Извлечение описания товара
             description_section = soup.select_one('div.grid.space-top div.grid-body.text-left.space-top-tiny')
             description = ""
             if description_section:
                 description = ' '.join(description_section.get_text(strip=True).split())
                 description = re.sub(r'\s+', ' ', description).strip()
 
-            # Формирование данных для текущего ID
             parsed_data[product_id] = {
                 "name": product_name,
                 "availability": availability,
@@ -734,12 +796,8 @@ def parse_comcenter_products(session, headers, output_handler, cancel_flag):
             output_handler.log(f"Ошибка при парсинге данных для ID {product_id}: {e}")
             continue
 
-    # Сохранение данных в JSON
     if parsed_data:
-        os.makedirs(output_dir, exist_ok=True)
-        with open(comcenter_products_output_file, 'w', encoding='utf-8') as f:
-            json.dump(parsed_data, f, ensure_ascii=False, indent=4)
-        output_handler.log(f"Данные для {len(parsed_data)} элементов сохранены в '{comcenter_products_output_file}'.")
+        save_to_json_and_csv(parsed_data, "DATABASE_comcenter_products.json", "DATABASE_comcenter_products.csv", output_handler)
     else:
         output_handler.log("Не удалось собрать данные")
 
@@ -780,8 +838,12 @@ def run_action(choice, output_handler, cancel_flag):
         output_handler.log("Парсинг актуальных товаров Comcenter...")
         parse_comcenter_products(session, headers, output_handler, cancel_flag)
     
+    elif choice == "8":
+        output_handler.log("Создание таблиц Printers.json и Printers.csv...")
+        create_printers_table(session, headers, output_handler, cancel_flag)
+    
     else:
-        output_handler.log("Неверный выбор. Пожалуйста, выберите 0, 1, 2, 3, 4, 5, 6 или 7")
+        output_handler.log("Неверный выбор. Пожалуйста, выберите 0, 1, 2, 3, 4, 5, 6, 7 или 8")
 
 def console_main():
     """Консольный интерфейс программы"""
@@ -796,9 +858,10 @@ def console_main():
         print("5. Парсинг актуальных картриджей и запчастей")
         print("6. Парсинг ВСЕХ картриджей и запчастей")
         print("7. Парсинг актуальных товаров Comcenter")
+        print("8. Создать таблицы Printers.json и Printers.csv")
         print("0. Выход")
         
-        choice = input("Выберите действие (0-7): ")
+        choice = input("Выберите действие (0-8): ")
         
         if choice == "0":
             output_handler.log("Программа завершена")
