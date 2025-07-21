@@ -19,10 +19,12 @@ xls_url = "https://comcenter.ru/Content/PriceList/price.xls"
 xls_output_file = os.path.join(output_dir, "DATABASE_recent.json")
 printers_output_file = os.path.join(output_dir, "Laser_Printers.json")
 compatibility_output_file = os.path.join(output_dir, "PRINTERS_compatibility.json")
+compatibility_output_file_csv = os.path.join(output_dir, "PRINTERS_compatibility.csv")
 compatibility_actual_output_file = os.path.join(output_dir, "PRINTERS_compatibility_actual.json")
 cartridges_parts_output_file = os.path.join(output_dir, "DATABASE_cartridges&Parts.json")
 all_cartridges_parts_output_file = os.path.join(output_dir, "DATABASE_all_cartridges&Parts.json")
 comcenter_products_output_file = os.path.join(output_dir, "DATABASE_comcenter_products.json")
+comcenter_products_output_file_csv = os.path.join(output_dir, "DATABASE_comcenter_products.csv")
 
 class ConsoleOutputHandler:
     """Обработчик вывода для консоли с записью в файл"""
@@ -194,41 +196,36 @@ def save_to_json_and_csv(data, json_filename, output_handler):
         
         # Save to CSV
         csv_filepath = os.path.join(output_dir, json_filename.replace('.json', '.csv'))
-        if isinstance(data, list):
-            df = pd.DataFrame(data, columns=['product_id'])
-        elif isinstance(data, dict):
-            # Handle nested dictionaries for compatibility and product data
-            if all(isinstance(v, dict) for v in data.values()):
-                rows = []
-                for key, value in data.items():
-                    row = {'printer_id': key}
-                    if 'name' in value:
-                        row['name'] = value['name']
-                    if 'brand' in value:
-                        row['brand'] = value['brand']
-                    if 'model_name' in value:
-                        row['model_name'] = value['model_name']
-                    row['cartridges'] = ','.join(value.get('cartridges', []))
-                    row['parts'] = ','.join(value.get('parts', []))
-                    if 'availability' in value:
-                        row['availability'] = value['availability']
-                        row['in_transit'] = value['in_transit']
-                        row['wholesale_price'] = value['wholesale_price']
-                        row['retail_price'] = value['retail_price']
-                        row['description'] = value['description']
-                        for char_key, char_value in value.get('characteristics', {}).items():
-                            row[f'char_{char_key}'] = char_value
-                    rows.append(row)
-                df = pd.DataFrame(rows)
-            else:
-                df = pd.DataFrame.from_dict(data, orient='index')
-                df.index.name = 'id'
-        else:
-            raise ValueError("Unsupported data type for CSV conversion")
+        if json_filename == "PRINTERS_compatibility.json":
+            rows = []
+            for printer_id, value in data.items():
+                row = {
+                    'printer_id': printer_id,
+                    'printer_name': value.get('printer_name', ''),
+                    'cartridges': json.dumps(value.get('cartridges', []), ensure_ascii=False),
+                    'parts': json.dumps(value.get('parts', []), ensure_ascii=False)
+                }
+                rows.append(row)
+            df = pd.DataFrame(rows)
+            df.to_csv(csv_filepath, index=False, encoding='utf-8')
+        elif json_filename == "DATABASE_comcenter_products.json":
+            rows = []
+            for product_id, value in data.items():
+                row = {
+                    'product_id': product_id,
+                    'name': value.get('name', ''),
+                    'availability': value.get('availability', 0),
+                    'in_transit': value.get('in_transit', 0),
+                    'wholesale_price': value.get('wholesale_price', 0.0),
+                    'retail_price': value.get('retail_price', 0.0),
+                    'characteristics': json.dumps(value.get('characteristics', {}), ensure_ascii=False),
+                    'description': value.get('description', '')
+                }
+                rows.append(row)
+            df = pd.DataFrame(rows)
+            df.to_csv(csv_filepath, index=False, encoding='utf-8')
         
-        df.to_csv(csv_filepath, index=(df.index.name is not None), encoding='utf-8')
-        
-        output_handler.log(f"Данные сохранены в {json_filepath} и {csv_filepath}")
+        output_handler.log(f"Данные сохранены в {json_filepath}" + (f" и {csv_filepath}" if json_filename in ["PRINTERS_compatibility.json", "DATABASE_comcenter_products.json"] else ""))
     except Exception as e:
         output_handler.log(f"Ошибка при сохранении данных: {e}")
 
@@ -275,23 +272,11 @@ def parse_printer_compatibility(session, headers, output_handler, cancel_flag):
             soup = BeautifulSoup(response.text, 'html.parser')
 
             # Извлечение наименования принтера
-            printer_name_tag = soup.select_one('h1[data-bind*="spellCheckedHtml"]')
-            printer_name = printer_name_tag.text.strip() if printer_name_tag else "Не указано"
-
-            # Извлечение бренда и модели из таблицы характеристик
-            brand = "Не указано"
-            model_name = "Не указано"
-            characteristics_table = soup.select_one('div.product-properties-container table.price-list')
-            if characteristics_table:
-                for row in characteristics_table.select('tr'):
-                    cells = row.select('td')
-                    if len(cells) == 2:
-                        key = cells[0].text.strip()
-                        value = cells[1].text.strip()
-                        if key == "Бренд":
-                            brand = value
-                        if key == "Название модели":
-                            model_name = value
+            title = soup.find('div', class_='grid-body text-left space-top-tiny').find('h1').text.strip()
+            pattern = r'(A4|A3|SRA3|A3\+|1195x320)\s+([^\,]+)'
+            match = re.search(pattern, title)
+            if match:
+                printer_name = match.group(2)
 
             # Извлечение картриджей и запчастей
             cartridge_ids = []
@@ -330,14 +315,12 @@ def parse_printer_compatibility(session, headers, output_handler, cancel_flag):
             part_ids = list(set(part_ids))
 
             compatibility_data[printer_id] = {
-                "name": printer_name,
-                "brand": brand,
-                "model_name": model_name,
+                "printer_name": printer_name,
                 "cartridges": cartridge_ids,
                 "parts": part_ids
             }
 
-            output_handler.log(f"Принтер {printer_id} ({printer_name}): бренд: {brand}, модель: {model_name}, найдено картриджей: {len(cartridge_ids)}, запчастей: {len(part_ids)}")
+            output_handler.log(f"Принтер {printer_id} ({printer_name}): найдено картриджей: {len(cartridge_ids)}, запчастей: {len(part_ids)}")
 
         except requests.exceptions.RequestException as e:
             output_handler.log(f"Ошибка при загрузке страницы для принтера {printer_id}: {e}")
@@ -399,7 +382,7 @@ def filter_compatibility_by_stock(output_handler, cancel_flag):
             output_handler.log(f"Принтер {printer_id}: удален, так как нет товаров в наличии")
 
     if filtered_data:
-        save_to_json_and_csv(filtered_data, "PRINTERS_compatibility_actual.json", output_handler)
+        save_to_json(filtered_data, "PRINTERS_compatibility_actual.json", output_handler)
     else:
         output_handler.log("Нет данных для сохранения после фильтрации")
 
@@ -546,7 +529,7 @@ def parse_cartridges_and_parts(session, headers, output_handler, cancel_flag):
             continue
 
     if parsed_data:
-        save_to_json_and_csv(parsed_data, "DATABASE_cartridges&Parts.json", output_handler)
+        save_to_json(parsed_data, "DATABASE_cartridges&Parts.json", output_handler)
     else:
         output_handler.log("Не удалось собрать данные")
 
@@ -658,7 +641,7 @@ def parse_all_cartridges_and_parts(session, headers, output_handler, cancel_flag
             continue
 
     if parsed_data:
-        save_to_json_and_csv(parsed_data, "DATABASE_all_cartridges&Parts.json", output_handler)
+        save_to_json(parsed_data, "DATABASE_all_cartridges&Parts.json", output_handler)
     else:
         output_handler.log("Не удалось собрать данные")
 
@@ -826,8 +809,8 @@ def console_main():
         print("4. Парсинг актуальных товаров COMCENTER")
         print("5. Еще...")
         print("0. Выход")
-        
         choice = input("Выберите действие (0-5): ")
+        
         if choice == "0":
             output_handler.log("Программа завершена")
             break
