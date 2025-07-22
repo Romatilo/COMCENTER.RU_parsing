@@ -606,15 +606,23 @@ def parse_all_cartridges_and_parts(session, headers, output_handler, cancel_flag
                     output_handler.log(f"Не удалось извлечь цены для ID {product_id}: {data_bind}")
 
             characteristics = {}
-            characteristics_table = soup.select_one('div.product-properties-container table.price-list')
-            if characteristics_table:
-                for row in characteristics_table.select('tr'):
-                    cells = row.select('td')
-                    if len(cells) == 2:
-                        key = cells[0].text.strip()
-                        value = cells[1].text.strip()
-                        characteristics[key] = value
-
+            # Поиск заголовка "Характеристики товара"
+            header = soup.find('h2', string='Характеристики товара')
+            if header:
+                # Находим следующую таблицу после заголовка
+                table = header.find_next('table')
+                if table:
+                    for row in table.find_all('tr'):
+                        cells = row.find_all('td')
+                        if len(cells) >= 2:
+                            key = cells[0].text.strip()
+                            value = cells[1].text.strip()
+                            characteristics[key] = value
+                else:
+                    output_handler.log(f"Таблица 'Характеристики товара' не найдена для ID {product_id}")
+            else:
+                output_handler.log(f"Заголовок 'Характеристики товара' не найден для ID {product_id}")
+                
             description_section = soup.select_one('div.grid.space-top div.grid-body.text-left.space-top-tiny')
             description = ""
             if description_section:
@@ -709,14 +717,22 @@ def parse_comcenter_products(session, headers, output_handler, cancel_flag):
                     output_handler.log(f"Не удалось извлечь цены для ID {product_id}: {data_bind}")
 
             characteristics = {}
-            characteristics_table = soup.select_one('div.product-properties-container table.price-list')
-            if characteristics_table:
-                for row in characteristics_table.select('tr'):
-                    cells = row.select('td')
-                    if len(cells) == 2:
-                        key = cells[0].text.strip()
-                        value = cells[1].text.strip()
-                        characteristics[key] = value
+            # Поиск заголовка "Характеристики товара"
+            header = soup.find('h2', string='Характеристики товара')
+            if header:
+                # Находим следующую таблицу после заголовка
+                table = header.find_next('table')
+                if table:
+                    for row in table.find_all('tr'):
+                        cells = row.find_all('td')
+                        if len(cells) >= 2:
+                            key = cells[0].text.strip()
+                            value = cells[1].text.strip()
+                            characteristics[key] = value
+                else:
+                    output_handler.log(f"Таблица 'Характеристики товара' не найдена для ID {product_id}")
+            else:
+                output_handler.log(f"Заголовок 'Характеристики товара' не найден для ID {product_id}")
 
             description_section = soup.select_one('div.grid.space-top div.grid-body.text-left.space-top-tiny')
             description = ""
