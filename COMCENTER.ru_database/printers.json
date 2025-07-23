@@ -1,0 +1,6202 @@
+[
+  {
+    "printer_id": "400000026262",
+    "printer_name": "Kyocera Ecosys M3040dn"
+  },
+  {
+    "printer_id": "400000027216",
+    "printer_name": "Canon PC 880"
+  },
+  {
+    "printer_id": "400000028953",
+    "printer_name": "Brother HL-1210"
+  },
+  {
+    "printer_id": "400000031314",
+    "printer_name": "Panasonic KX MB1507"
+  },
+  {
+    "printer_id": "400000029772",
+    "printer_name": "Brother MFC-L2740DWR"
+  },
+  {
+    "printer_id": "400000026668",
+    "printer_name": "Xerox Phaser 3121"
+  },
+  {
+    "printer_id": "400000027267",
+    "printer_name": "Brother HL-2142R"
+  },
+  {
+    "printer_id": "400000028094",
+    "printer_name": "Brother MFC-7420R"
+  },
+  {
+    "printer_id": "400000026170",
+    "printer_name": "Kyocera Mita FS-1800"
+  },
+  {
+    "printer_id": "400000029540",
+    "printer_name": "Kyocera FS-C2526"
+  },
+  {
+    "printer_id": "400000032367",
+    "printer_name": "Konica Minolta AccurioPrint 2100"
+  },
+  {
+    "printer_id": "400000028955",
+    "printer_name": "Brother DCP-1510"
+  },
+  {
+    "printer_id": "400000027246",
+    "printer_name": "Kyocera FS-C5350DN"
+  },
+  {
+    "printer_id": "400000028884",
+    "printer_name": "Canon i-SENSYS LBP251dw"
+  },
+  {
+    "printer_id": "400000024404",
+    "printer_name": "Kyocera Ecosys P4040dn"
+  },
+  {
+    "printer_id": "400000028802",
+    "printer_name": "Canon i-SENSYS MF217w"
+  },
+  {
+    "printer_id": "400000028867",
+    "printer_name": "Samsung ML-2163"
+  },
+  {
+    "printer_id": "400000026907",
+    "printer_name": "Samsung SCX-5737"
+  },
+  {
+    "printer_id": "400000027934",
+    "printer_name": "HP Color LaserJet CP1215"
+  },
+  {
+    "printer_id": "400000032360",
+    "printer_name": "Xerox PrimeLink C9070"
+  },
+  {
+    "printer_id": "400000033662",
+    "printer_name": "Xerox Versalink С7030"
+  },
+  {
+    "printer_id": "400000033131",
+    "printer_name": "Xerox WorkCentre 7970i"
+  },
+  {
+    "printer_id": "400000033529",
+    "printer_name": "Konica Minolta bizhub C551i"
+  },
+  {
+    "printer_id": "400000028805",
+    "printer_name": "Canon i-SENSYS MF232w"
+  },
+  {
+    "printer_id": "400000030120",
+    "printer_name": "Brother HL-5370DW"
+  },
+  {
+    "printer_id": "400000028995",
+    "printer_name": "Canon PC 795"
+  },
+  {
+    "printer_id": "400000028931",
+    "printer_name": "Brother MFC-9750"
+  },
+  {
+    "printer_id": "400000030988",
+    "printer_name": "Ricoh FT3613"
+  },
+  {
+    "printer_id": "400000031077",
+    "printer_name": "Konica Minolta bizhub C650"
+  },
+  {
+    "printer_id": "400000033433",
+    "printer_name": "Konica Minolta bizhub 362"
+  },
+  {
+    "printer_id": "400000032424",
+    "printer_name": "Xerox D136"
+  },
+  {
+    "printer_id": "400000028864",
+    "printer_name": "Xerox WorkCentre 3210N"
+  },
+  {
+    "printer_id": "400000033434",
+    "printer_name": "Konica Minolta bizhub 4752"
+  },
+  {
+    "printer_id": "400000026794",
+    "printer_name": "Samsung SCX-6320F"
+  },
+  {
+    "printer_id": "400000029777",
+    "printer_name": "Kyocera FS-C5150DN"
+  },
+  {
+    "printer_id": "400000033489",
+    "printer_name": "Konica Minolta bizhub 4402P"
+  },
+  {
+    "printer_id": "400000033808",
+    "printer_name": "Xerox AltaLink C8130"
+  },
+  {
+    "printer_id": "400000027268",
+    "printer_name": "Brother HL-2150NR"
+  },
+  {
+    "printer_id": "400000028645",
+    "printer_name": "HP Color LaserJet Enterprise CM4540 MFP"
+  },
+  {
+    "printer_id": "400000028669",
+    "printer_name": "HP Color LaserJet 3000"
+  },
+  {
+    "printer_id": "400000026480",
+    "printer_name": "Canon MF4140"
+  },
+  {
+    "printer_id": "400000030720",
+    "printer_name": "Konica Minolta bizhub C754"
+  },
+  {
+    "printer_id": "400000030997",
+    "printer_name": "Xerox Сolour J75 Press"
+  },
+  {
+    "printer_id": "400000026735",
+    "printer_name": "Samsung ML-1630"
+  },
+  {
+    "printer_id": "400000028849",
+    "printer_name": "Lexmark X215 MFP"
+  },
+  {
+    "printer_id": "400000028821",
+    "printer_name": "HP LaserJet Pro MFP M130fw"
+  },
+  {
+    "printer_id": "400000033499",
+    "printer_name": "Konica Minolta bizhub 130f"
+  },
+  {
+    "printer_id": "400000029737",
+    "printer_name": "Samsung SL-M3375FD"
+  },
+  {
+    "printer_id": "400000029478",
+    "printer_name": "Xerox WorkCentre 5022"
+  },
+  {
+    "printer_id": "400000028885",
+    "printer_name": "Canon i-SENSYS LBP252dw"
+  },
+  {
+    "printer_id": "400000029516",
+    "printer_name": "Kyocera FS-C8600dn"
+  },
+  {
+    "printer_id": "400000026896",
+    "printer_name": "Samsung SCX-5835FN"
+  },
+  {
+    "printer_id": "400000026557",
+    "printer_name": "HP LaserJet P3005"
+  },
+  {
+    "printer_id": "400000032657",
+    "printer_name": "Konica Minolta bizhub C550"
+  },
+  {
+    "printer_id": "400000026904",
+    "printer_name": "Samsung ML-3710"
+  },
+  {
+    "printer_id": "400000033527",
+    "printer_name": "Konica Minolta bizhub C4051i"
+  },
+  {
+    "printer_id": "400000033263",
+    "printer_name": "Canon imageRUNNER ADVANCE C7055"
+  },
+  {
+    "printer_id": "400000026946",
+    "printer_name": "Xerox Phaser 3600"
+  },
+  {
+    "printer_id": "400000028964",
+    "printer_name": "Brother MFC-1813"
+  },
+  {
+    "printer_id": "400000026377",
+    "printer_name": "Kyocera TASKalfa 520i"
+  },
+  {
+    "printer_id": "400000029802",
+    "printer_name": "Samsung SL-C410W"
+  },
+  {
+    "printer_id": "400000027903",
+    "printer_name": "Canon i-SENSYS MF8080Cw"
+  },
+  {
+    "printer_id": "400000028175",
+    "printer_name": "Canon I-SENSYS LBP215x"
+  },
+  {
+    "printer_id": "400000033531",
+    "printer_name": "Konica Minolta bizhub C751i"
+  },
+  {
+    "printer_id": "400000028463",
+    "printer_name": "Canon Fax-L390"
+  },
+  {
+    "printer_id": "400000028763",
+    "printer_name": "HP LaserJet Enterprise 500 Color M551xh"
+  },
+  {
+    "printer_id": "400000028888",
+    "printer_name": "HP LaserJet Pro M1130 MFP"
+  },
+  {
+    "printer_id": "400000026538",
+    "printer_name": "Canon i-SENSYS LBP3310"
+  },
+  {
+    "printer_id": "400000026423",
+    "printer_name": "HP LaserJet Enterprise M632h"
+  },
+  {
+    "printer_id": "400000032413",
+    "printer_name": "Xerox WorkCentre WC7765"
+  },
+  {
+    "printer_id": "400000032468",
+    "printer_name": "Canon ImagePress C750"
+  },
+  {
+    "printer_id": "400000026329",
+    "printer_name": "Kyocera KM-1635"
+  },
+  {
+    "printer_id": "400000033749",
+    "printer_name": "Pantum P3302DN"
+  },
+  {
+    "printer_id": "400000026551",
+    "printer_name": "Canon i-SENSYS LBP6650dn"
+  },
+  {
+    "printer_id": "400000032667",
+    "printer_name": "Konica Minolta Bizhub C3300i"
+  },
+  {
+    "printer_id": "400000028800",
+    "printer_name": "Canon i-SENSYS MF212w"
+  },
+  {
+    "printer_id": "400000028024",
+    "printer_name": "Xerox Phaser 6010"
+  },
+  {
+    "printer_id": "400000033811",
+    "printer_name": "Xerox AltaLink C8155"
+  },
+  {
+    "printer_id": "400000026877",
+    "printer_name": "Samsung SCX-4728FD"
+  },
+  {
+    "printer_id": "400000030977",
+    "printer_name": "Pantum M6600"
+  },
+  {
+    "printer_id": "400000015102",
+    "printer_name": "Canon I-SENSYS LBP6310DN"
+  },
+  {
+    "printer_id": "400000033485",
+    "printer_name": "Konica Minolta Bizhub 4051i"
+  },
+  {
+    "printer_id": "400000032423",
+    "printer_name": "Konica Minolta Bizhub PRESS C1070P"
+  },
+  {
+    "printer_id": "400000026834",
+    "printer_name": "Samsung ML-1910"
+  },
+  {
+    "printer_id": "400000031009",
+    "printer_name": "Konica Minolta bizhub 654"
+  },
+  {
+    "printer_id": "400000033502",
+    "printer_name": "Konica Minolta AccurioPrint 950i"
+  },
+  {
+    "printer_id": "400000032361",
+    "printer_name": "Xerox Color C60"
+  },
+  {
+    "printer_id": "400000033301",
+    "printer_name": "Xerox DocuPrint 1100"
+  },
+  {
+    "printer_id": "400000029002",
+    "printer_name": "Canon PC 981"
+  },
+  {
+    "printer_id": "400000029488",
+    "printer_name": "Konica Minolta bizhub C554"
+  },
+  {
+    "printer_id": "400000033479",
+    "printer_name": "Konica Minolta bizhub 4000i"
+  },
+  {
+    "printer_id": "400000026583",
+    "printer_name": "HP  LaserJet 9040dn"
+  },
+  {
+    "printer_id": "400000031017",
+    "printer_name": "Konica Minolta bizhub C554e"
+  },
+  {
+    "printer_id": "400000029767",
+    "printer_name": "Brother HL-L2340DWR"
+  },
+  {
+    "printer_id": "400000033447",
+    "printer_name": "Konica Minolta bizhub 601"
+  },
+  {
+    "printer_id": "400000026774",
+    "printer_name": "Xerox WorkCentre 3119"
+  },
+  {
+    "printer_id": "400000026395",
+    "printer_name": "HP LaserJet Enterprise M607dn"
+  },
+  {
+    "printer_id": "400000033813",
+    "printer_name": "Canon VarioPrint VP120"
+  },
+  {
+    "printer_id": "400000026953",
+    "printer_name": "Samsung ML-2168W"
+  },
+  {
+    "printer_id": "400000028978",
+    "printer_name": "Canon FC 220"
+  },
+  {
+    "printer_id": "400000029500",
+    "printer_name": "Canon iR 1020"
+  },
+  {
+    "printer_id": "400000026286",
+    "printer_name": "Kyocera Ecosys M3860idn"
+  },
+  {
+    "printer_id": "400000027181",
+    "printer_name": "Oki MC352dn"
+  },
+  {
+    "printer_id": "400000026468",
+    "printer_name": "HP LaserJet 3020"
+  },
+  {
+    "printer_id": "400000033669",
+    "printer_name": "Konica Minolta Bizhub C266"
+  },
+  {
+    "printer_id": "400000026226",
+    "printer_name": "Kyocera Ecosys M2530DN"
+  },
+  {
+    "printer_id": "400000028733",
+    "printer_name": "Canon i-SENSYS MF8540Cdn"
+  },
+  {
+    "printer_id": "400000033517",
+    "printer_name": "Konica Minolta bizhub C250P"
+  },
+  {
+    "printer_id": "400000026271",
+    "printer_name": "Kyocera M3540IDN"
+  },
+  {
+    "printer_id": "400000028712",
+    "printer_name": "Canon i-SENSYS MF8450"
+  },
+  {
+    "printer_id": "400000033525",
+    "printer_name": "Konica Minolta bizhub 190f"
+  },
+  {
+    "printer_id": "400000028069",
+    "printer_name": "Brother FAX-2920R"
+  },
+  {
+    "printer_id": "400000027266",
+    "printer_name": "Brother HL-2140R"
+  },
+  {
+    "printer_id": "400000028766",
+    "printer_name": "HP LaserJet Pro 500 Color MFP M570dn"
+  },
+  {
+    "printer_id": "400000027096",
+    "printer_name": "Canon i-SENSYS MF4750"
+  },
+  {
+    "printer_id": "400000028787",
+    "printer_name": "HP LaserJet Pro MFP M225dn"
+  },
+  {
+    "printer_id": "400000026471",
+    "printer_name": "HP LaserJet 3052"
+  },
+  {
+    "printer_id": "400000026229",
+    "printer_name": "Kyocera Ecosys M2035DN"
+  },
+  {
+    "printer_id": "400000033661",
+    "printer_name": "Xerox Versalink С7025"
+  },
+  {
+    "printer_id": "400000028896",
+    "printer_name": "Brother HL-1030"
+  },
+  {
+    "printer_id": "400000027122",
+    "printer_name": "Canon i-SENSYS MF6180dw"
+  },
+  {
+    "printer_id": "400000026382",
+    "printer_name": "Kyocera KM-3530"
+  },
+  {
+    "printer_id": "400000026863",
+    "printer_name": "Xerox Phaser 3160"
+  },
+  {
+    "printer_id": "400000026375",
+    "printer_name": "Kyocera TASKalfa 3511i"
+  },
+  {
+    "printer_id": "400000028912",
+    "printer_name": "Brother IntelliFax 4750"
+  },
+  {
+    "printer_id": "400000029006",
+    "printer_name": "HP Color LaserJet 2500"
+  },
+  {
+    "printer_id": "400000026345",
+    "printer_name": "Kyocera FS-6025MFP"
+  },
+  {
+    "printer_id": "400000028743",
+    "printer_name": "Canon i-SENSYS MF8280Cw"
+  },
+  {
+    "printer_id": "400000026898",
+    "printer_name": "Samsung SCX-5330N"
+  },
+  {
+    "printer_id": "400000029805",
+    "printer_name": "Samsung CLP-320"
+  },
+  {
+    "printer_id": "400000030158",
+    "printer_name": "HP LaserJet Pro M404dn"
+  },
+  {
+    "printer_id": "400000033655",
+    "printer_name": "Xerox Versalink B7035"
+  },
+  {
+    "printer_id": "400000033765",
+    "printer_name": "Ricoh Pro C7200X"
+  },
+  {
+    "printer_id": "400000033538",
+    "printer_name": "Konica Minolta C35"
+  },
+  {
+    "printer_id": "400000031016",
+    "printer_name": "Konica Minolta bizhub 808"
+  },
+  {
+    "printer_id": "400000029528",
+    "printer_name": "Xerox Phaser 7800"
+  },
+  {
+    "printer_id": "400000028982",
+    "printer_name": "Canon FC 336"
+  },
+  {
+    "printer_id": "400000029790",
+    "printer_name": "Kyocera KM-C2520"
+  },
+  {
+    "printer_id": "400000026957",
+    "printer_name": "Samsung ML-3712ND"
+  },
+  {
+    "printer_id": "400000028375",
+    "printer_name": "Canon i-SENSYS FAX-L160"
+  },
+  {
+    "printer_id": "400000028848",
+    "printer_name": "Samsung SF-560R"
+  },
+  {
+    "printer_id": "400000033526",
+    "printer_name": "Konica Minolta bizhub 240f"
+  },
+  {
+    "printer_id": "400000032634",
+    "printer_name": "Konica Minolta Bizhub 650i"
+  },
+  {
+    "printer_id": "400000033414",
+    "printer_name": "Konica Minolta bizhub 7718"
+  },
+  {
+    "printer_id": "400000033476",
+    "printer_name": "Konica Minolta bizhub 185"
+  },
+  {
+    "printer_id": "400000031007",
+    "printer_name": "Konica Minolta bizhub 558"
+  },
+  {
+    "printer_id": "400000028870",
+    "printer_name": "Samsung Xpress SL-M2021"
+  },
+  {
+    "printer_id": "400000026984",
+    "printer_name": "HP LaserJet 1000W"
+  },
+  {
+    "printer_id": "400000026220",
+    "printer_name": "Kyocera Ecosys FS-1060DN"
+  },
+  {
+    "printer_id": "400000033445",
+    "printer_name": "Konica Minolta bizhub 600"
+  },
+  {
+    "printer_id": "400000033450",
+    "printer_name": "Konica Minolta MagiColor 1690MF"
+  },
+  {
+    "printer_id": "400000028862",
+    "printer_name": "Samsung SCX-4610"
+  },
+  {
+    "printer_id": "400000033203",
+    "printer_name": "Konica Minolta bizhub C3120i"
+  },
+  {
+    "printer_id": "400000027686",
+    "printer_name": "Konica Minolta bizhub C353"
+  },
+  {
+    "printer_id": "400000033518",
+    "printer_name": "Konica Minolta  Develop ineo+ 754"
+  },
+  {
+    "printer_id": "400000026706",
+    "printer_name": "Samsung ML-1010"
+  },
+  {
+    "printer_id": "400000032430",
+    "printer_name": "Konica Minolta bizhub C287i"
+  },
+  {
+    "printer_id": "400000026402",
+    "printer_name": "HP LaserJet 3380mfp"
+  },
+  {
+    "printer_id": "400000026964",
+    "printer_name": "Xerox WorkCentre 390"
+  },
+  {
+    "printer_id": "400000026227",
+    "printer_name": "Kyocera Ecosys FS-1035MFP"
+  },
+  {
+    "printer_id": "400000026932",
+    "printer_name": "Samsung ProXpress SL-M3320"
+  },
+  {
+    "printer_id": "400000033406",
+    "printer_name": "Konica Minolta bizhub 161f"
+  },
+  {
+    "printer_id": "400000026416",
+    "printer_name": "Canon Fax-L380"
+  },
+  {
+    "printer_id": "400000033819",
+    "printer_name": "Konica Minolta bizhub PRO 8050"
+  },
+  {
+    "printer_id": "400000026915",
+    "printer_name": "Samsung ML-3561ND"
+  },
+  {
+    "printer_id": "400000033392",
+    "printer_name": "Konica Minolta 7030"
+  },
+  {
+    "printer_id": "400000032416",
+    "printer_name": "Konica Minolta Bizhub PRO 1200"
+  },
+  {
+    "printer_id": "400000026161",
+    "printer_name": "Kyocera KM-1500"
+  },
+  {
+    "printer_id": "400000026862",
+    "printer_name": "Xerox Phaser 3155"
+  },
+  {
+    "printer_id": "400000026719",
+    "printer_name": "Samsung SCX-4321"
+  },
+  {
+    "printer_id": "400000028460",
+    "printer_name": "Canon Fax-L300"
+  },
+  {
+    "printer_id": "400000026872",
+    "printer_name": "Xerox WorkCentre 3220N"
+  },
+  {
+    "printer_id": "400000033486",
+    "printer_name": "Konica Minolta Bizhub 4052"
+  },
+  {
+    "printer_id": "400000026365",
+    "printer_name": "Kyocera TASKAlfa 300i"
+  },
+  {
+    "printer_id": "400000026231",
+    "printer_name": "Kyocera P2235DN"
+  },
+  {
+    "printer_id": "400000032464",
+    "printer_name": "Canon ImagePress C600i"
+  },
+  {
+    "printer_id": "400000026795",
+    "printer_name": "Samsung SCX-6122FN"
+  },
+  {
+    "printer_id": "400000027215",
+    "printer_name": "Canon PC 860"
+  },
+  {
+    "printer_id": "400000026949",
+    "printer_name": "Xerox WC 4150"
+  },
+  {
+    "printer_id": "400000033268",
+    "printer_name": "Canon imageRUNNER ADVANCE C7260i"
+  },
+  {
+    "printer_id": "400000027801",
+    "printer_name": "Canon i-SENSYS MF8330Cdn"
+  },
+  {
+    "printer_id": "400000030989",
+    "printer_name": "Ricoh FT3813"
+  },
+  {
+    "printer_id": "400000028546",
+    "printer_name": "Canon i-SENSYS MF4330d"
+  },
+  {
+    "printer_id": "400000030979",
+    "printer_name": "Konica Minolta AccurioPress C6085"
+  },
+  {
+    "printer_id": "400000026337",
+    "printer_name": "Kyocera TASKAlfa 1801"
+  },
+  {
+    "printer_id": "400000028944",
+    "printer_name": "Brother DCP-7055"
+  },
+  {
+    "printer_id": "400000033330",
+    "printer_name": "Konica Minolta Bizhub 227"
+  },
+  {
+    "printer_id": "400000033540",
+    "printer_name": "Konica Minolta bizhub C252P"
+  },
+  {
+    "printer_id": "400000027245",
+    "printer_name": "Kyocera FS-C5300DN"
+  },
+  {
+    "printer_id": "400000032451",
+    "printer_name": "Konica Minolta Bizhub Pro C6500"
+  },
+  {
+    "printer_id": "400000028954",
+    "printer_name": "Brother HL-1212"
+  },
+  {
+    "printer_id": "400000026512",
+    "printer_name": "HP LaserJet 5100"
+  },
+  {
+    "printer_id": "400000033277",
+    "printer_name": "Canon imageRUNNER ADVANCE C7570i"
+  },
+  {
+    "printer_id": "400000032396",
+    "printer_name": "Konica Minolta bizhub PRESS C1060"
+  },
+  {
+    "printer_id": "400000032386",
+    "printer_name": "Konica Minolta Bizhub C308"
+  },
+  {
+    "printer_id": "400000027123",
+    "printer_name": "HP LaserJet Pro M104"
+  },
+  {
+    "printer_id": "400000026681",
+    "printer_name": "Samsung ML-2510"
+  },
+  {
+    "printer_id": "400000029729",
+    "printer_name": "Samsung SL-M3325ND"
+  },
+  {
+    "printer_id": "400000026942",
+    "printer_name": "Xerox WC 4250S"
+  },
+  {
+    "printer_id": "400000027874",
+    "printer_name": "HP LaserJet Pro 100 Color M175nw"
+  },
+  {
+    "printer_id": "400000027272",
+    "printer_name": "Brother DCP-7032R"
+  },
+  {
+    "printer_id": "400000032365",
+    "printer_name": "Konica Minolta bizhub C658"
+  },
+  {
+    "printer_id": "400000027307",
+    "printer_name": "HP LaserJet Pro MFP M428dw"
+  },
+  {
+    "printer_id": "400000033441",
+    "printer_name": "Konica Minolta bizhub 550i"
+  },
+  {
+    "printer_id": "400000013451",
+    "printer_name": "Kyocera FS-2100DN"
+  },
+  {
+    "printer_id": "400000026961",
+    "printer_name": "Xerox DocuPrint P8ex"
+  },
+  {
+    "printer_id": "400000033789",
+    "printer_name": "Ricoh Pro C5300S"
+  },
+  {
+    "printer_id": "400000033756",
+    "printer_name": "Pantum M7200FDN"
+  },
+  {
+    "printer_id": "400000026902",
+    "printer_name": "Xerox Phaser 3635MFP/S"
+  },
+  {
+    "printer_id": "400000026201",
+    "printer_name": "Kyocera FS-1128MFP"
+  },
+  {
+    "printer_id": "400000027762",
+    "printer_name": "Canon LBP5100"
+  },
+  {
+    "printer_id": "400000028924",
+    "printer_name": "Brother MFC-9600"
+  },
+  {
+    "printer_id": "400000028966",
+    "printer_name": "Brother MFC-1818"
+  },
+  {
+    "printer_id": "400000026448",
+    "printer_name": "HP LaserJet Pro M15a"
+  },
+  {
+    "printer_id": "400000033652",
+    "printer_name": "Xerox Phaser 5550DN"
+  },
+  {
+    "printer_id": "400000033435",
+    "printer_name": "Konica Minolta bizhub 500"
+  },
+  {
+    "printer_id": "400000033460",
+    "printer_name": "Konica Minolta bizhub 226"
+  },
+  {
+    "printer_id": "400000028828",
+    "printer_name": "HP LaserJet Pro M132fn"
+  },
+  {
+    "printer_id": "400000028777",
+    "printer_name": "HP Color LaserJet CM2320fxi"
+  },
+  {
+    "printer_id": "400000027804",
+    "printer_name": "HP Color LaserJet CP2025"
+  },
+  {
+    "printer_id": "400000026453",
+    "printer_name": "HP LaserJet Pro MFP M29w"
+  },
+  {
+    "printer_id": "400000029000",
+    "printer_name": "Canon PC 950"
+  },
+  {
+    "printer_id": "400000026500",
+    "printer_name": "Canon i-SENSYS MF4270"
+  },
+  {
+    "printer_id": "400000033659",
+    "printer_name": "Xerox Versalink С7000"
+  },
+  {
+    "printer_id": "400000029722",
+    "printer_name": "Samsung SL-M2675FN"
+  },
+  {
+    "printer_id": "400000032636",
+    "printer_name": "Xerox WorkCentre 7525"
+  },
+  {
+    "printer_id": "400000026905",
+    "printer_name": "Samsung SCX-4833"
+  },
+  {
+    "printer_id": "400000033536",
+    "printer_name": "Konica Bizhub C35P"
+  },
+  {
+    "printer_id": "400000027208",
+    "printer_name": "Canon FC 200"
+  },
+  {
+    "printer_id": "400000026203",
+    "printer_name": "Kyocera FS-1300D"
+  },
+  {
+    "printer_id": "400000028104",
+    "printer_name": "Brother DCP-7025R"
+  },
+  {
+    "printer_id": "400000026374",
+    "printer_name": "Kyocera TASKalfa 3510i"
+  },
+  {
+    "printer_id": "400000032378",
+    "printer_name": "Konica Minolta Bizhub C224"
+  },
+  {
+    "printer_id": "400000029506",
+    "printer_name": "Samsung ProXpress SL-M3870FD"
+  },
+  {
+    "printer_id": "400000032431",
+    "printer_name": "Konica Minolta Bizhub Press C8000"
+  },
+  {
+    "printer_id": "400000028827",
+    "printer_name": "HP LaserJet Pro M104w"
+  },
+  {
+    "printer_id": "400000029726",
+    "printer_name": "Samsung SL-M2875FD"
+  },
+  {
+    "printer_id": "400000031019",
+    "printer_name": "Konica Minolta bizhub C659"
+  },
+  {
+    "printer_id": "400000026921",
+    "printer_name": "Xerox Phaser 3330"
+  },
+  {
+    "printer_id": "400000033397",
+    "printer_name": "Konica Minolta Bizhub 361i"
+  },
+  {
+    "printer_id": "400000026603",
+    "printer_name": "HP LaserJet Pro P1102w"
+  },
+  {
+    "printer_id": "400000026255",
+    "printer_name": "Kyocera FS-3540MFP"
+  },
+  {
+    "printer_id": "400000028950",
+    "printer_name": "Brother HL-1111"
+  },
+  {
+    "printer_id": "400000026420",
+    "printer_name": "Canon LaserBase MF5630"
+  },
+  {
+    "printer_id": "400000026936",
+    "printer_name": "Samsung ProXpress SL-M4070FR"
+  },
+  {
+    "printer_id": "400000026750",
+    "printer_name": "Samsung ML-1667"
+  },
+  {
+    "printer_id": "400000033519",
+    "printer_name": "Konica Minolta Bizhub C3851"
+  },
+  {
+    "printer_id": "400000033426",
+    "printer_name": "Konica Minolta bizhub 7621"
+  },
+  {
+    "printer_id": "400000027273",
+    "printer_name": "Brother DCP-7040"
+  },
+  {
+    "printer_id": "400000026744",
+    "printer_name": "Samsung ML-1641"
+  },
+  {
+    "printer_id": "400000031030",
+    "printer_name": "Konica Minolta AccurioPress C2060"
+  },
+  {
+    "printer_id": "400000026399",
+    "printer_name": "HP LaserJet 3300"
+  },
+  {
+    "printer_id": "400000032385",
+    "printer_name": "Konica Minolta Bizhub 458"
+  },
+  {
+    "printer_id": "400000029007",
+    "printer_name": "HP Color LaserJet 2550"
+  },
+  {
+    "printer_id": "400000030102",
+    "printer_name": "Ricoh SP4510DN"
+  },
+  {
+    "printer_id": "400000028833",
+    "printer_name": "HP LaserJet Pro M203dn"
+  },
+  {
+    "printer_id": "400000026153",
+    "printer_name": "Kyocera Mita FS-1000"
+  },
+  {
+    "printer_id": "400000026549",
+    "printer_name": "HP LaserJet P2055"
+  },
+  {
+    "printer_id": "400000026732",
+    "printer_name": "Xerox Phaser 3125"
+  },
+  {
+    "printer_id": "400000026422",
+    "printer_name": "HP LaserJet Enterprise M631dn"
+  },
+  {
+    "printer_id": "400000032357",
+    "printer_name": "Konica Minolta Bizhub PRESS C71cf"
+  },
+  {
+    "printer_id": "400000026363",
+    "printer_name": "Kyocera KM-3060"
+  },
+  {
+    "printer_id": "400000026210",
+    "printer_name": "Kyocera FS-1320D"
+  },
+  {
+    "printer_id": "400000026233",
+    "printer_name": "Kyocera Ecosys M2635DN"
+  },
+  {
+    "printer_id": "400000028794",
+    "printer_name": "HP LaserJet Pro M201n"
+  },
+  {
+    "printer_id": "400000033492",
+    "printer_name": "Konica Minolta bizhub 4702P"
+  },
+  {
+    "printer_id": "400000033202",
+    "printer_name": "Konica Minolta bizhub C3100i"
+  },
+  {
+    "printer_id": "400000033515",
+    "printer_name": "HP LaserJet 137a"
+  },
+  {
+    "printer_id": "400000029054",
+    "printer_name": "Canon iR C3200"
+  },
+  {
+    "printer_id": "400000032639",
+    "printer_name": "Xerox WorkCentre 7545"
+  },
+  {
+    "printer_id": "400000026747",
+    "printer_name": "Samsung ML-2241"
+  },
+  {
+    "printer_id": "400000026600",
+    "printer_name": "HP LaserJet M1522nf MFP"
+  },
+  {
+    "printer_id": "400000026867",
+    "printer_name": "Samsung SCX-4824FN"
+  },
+  {
+    "printer_id": "400000026555",
+    "printer_name": "Canon i-SENSYS MF5980dn"
+  },
+  {
+    "printer_id": "400000026674",
+    "printer_name": "Samsung SCX-4216f"
+  },
+  {
+    "printer_id": "400000028031",
+    "printer_name": "Samsung CLX-2160"
+  },
+  {
+    "printer_id": "400000033453",
+    "printer_name": "Konica Minolta MagiColor 1680MF"
+  },
+  {
+    "printer_id": "400000026914",
+    "printer_name": "Samsung ML-3560N"
+  },
+  {
+    "printer_id": "400000029746",
+    "printer_name": "Xerox Phaser 3250D"
+  },
+  {
+    "printer_id": "400000028824",
+    "printer_name": "HP LaserJet Pro M203dw"
+  },
+  {
+    "printer_id": "400000026383",
+    "printer_name": "Kyocera KM-4030"
+  },
+  {
+    "printer_id": "400000033386",
+    "printer_name": "Konica Minolta 7220"
+  },
+  {
+    "printer_id": "400000028032",
+    "printer_name": "Samsung CLP-300"
+  },
+  {
+    "printer_id": "400000026586",
+    "printer_name": "HP LaserJet M9050 mfp"
+  },
+  {
+    "printer_id": "400000028769",
+    "printer_name": "HP Color LaserJet Enterprise CM4540f MFP"
+  },
+  {
+    "printer_id": "400000026267",
+    "printer_name": "Kyocera FS-4300dn"
+  },
+  {
+    "printer_id": "400000026530",
+    "printer_name": "HP LaserJet 3390"
+  },
+  {
+    "printer_id": "400000030119",
+    "printer_name": "Brother HL-5350DN"
+  },
+  {
+    "printer_id": "400000033454",
+    "printer_name": "Konica Minolta MagiColor 1600W"
+  },
+  {
+    "printer_id": "400000028850",
+    "printer_name": "Samsung ML-1650"
+  },
+  {
+    "printer_id": "400000032640",
+    "printer_name": "Xerox WorkCentre 7556"
+  },
+  {
+    "printer_id": "400000027247",
+    "printer_name": "Kyocera ECOSYS P6030c"
+  },
+  {
+    "printer_id": "400000026392",
+    "printer_name": "Canon LBP800"
+  },
+  {
+    "printer_id": "400000032669",
+    "printer_name": "Konica Minolta Bizhub C3350i"
+  },
+  {
+    "printer_id": "400000033482",
+    "printer_name": "Konica Minolta Bizhub 4020"
+  },
+  {
+    "printer_id": "400000026252",
+    "printer_name": "Kyocera FS-3040MFP"
+  },
+  {
+    "printer_id": "400000032680",
+    "printer_name": "Xerox DocuCentre SC2020"
+  },
+  {
+    "printer_id": "400000033390",
+    "printer_name": "Konica Minolta 7022"
+  },
+  {
+    "printer_id": "400000028727",
+    "printer_name": "Canon i-SENSYS MF8340Cdn"
+  },
+  {
+    "printer_id": "400000026256",
+    "printer_name": "Kyocera FS-3640MFP"
+  },
+  {
+    "printer_id": "400000032393",
+    "printer_name": "Konica Minolta AccurioPress C2070P"
+  },
+  {
+    "printer_id": "400000026230",
+    "printer_name": "Kyocera Ecosys M2535DN"
+  },
+  {
+    "printer_id": "400000026403",
+    "printer_name": "Canon LBP1210"
+  },
+  {
+    "printer_id": "400000026950",
+    "printer_name": "Samsung SCX-6545N"
+  },
+  {
+    "printer_id": "400000026720",
+    "printer_name": "Samsung SCX-4521"
+  },
+  {
+    "printer_id": "400000028829",
+    "printer_name": "HP LaserJet Pro M132fw"
+  },
+  {
+    "printer_id": "400000026478",
+    "printer_name": "Canon i-SENSYS MF4018"
+  },
+  {
+    "printer_id": "400000028921",
+    "printer_name": "Brother MFC-8700"
+  },
+  {
+    "printer_id": "400000026241",
+    "printer_name": "Kyocera FS-2000D"
+  },
+  {
+    "printer_id": "400000033284",
+    "printer_name": "Canon imageRUNNER ADVANCE DX C7770i"
+  },
+  {
+    "printer_id": "400000033481",
+    "printer_name": "Konica Minolta bizhub 4700P"
+  },
+  {
+    "printer_id": "400000027213",
+    "printer_name": "Canon PC 760"
+  },
+  {
+    "printer_id": "400000027239",
+    "printer_name": "Pantum M6550NW"
+  },
+  {
+    "printer_id": "400000033281",
+    "printer_name": "Canon imageRUNNER ADVANCE C9270 PRO"
+  },
+  {
+    "printer_id": "400000033436",
+    "printer_name": "Konica Minolta bizhub 420"
+  },
+  {
+    "printer_id": "400000033266",
+    "printer_name": "Canon imageRUNNER ADVANCE C7065i"
+  },
+  {
+    "printer_id": "400000029775",
+    "printer_name": "Kyocera FS-C5400DN"
+  },
+  {
+    "printer_id": "400000029721",
+    "printer_name": "Samsung SL-M2625"
+  },
+  {
+    "printer_id": "400000028992",
+    "printer_name": "HP Color LaserJet 4700dn"
+  },
+  {
+    "printer_id": "400000029804",
+    "printer_name": "Samsung SL-C460W"
+  },
+  {
+    "printer_id": "400000033458",
+    "printer_name": "Konica Minolta F+ imaging P40dn"
+  },
+  {
+    "printer_id": "400000026457",
+    "printer_name": "HP LaserJet 4000"
+  },
+  {
+    "printer_id": "400000028728",
+    "printer_name": "Canon i-SENSYS MF8580Cdw"
+  },
+  {
+    "printer_id": "400000028890",
+    "printer_name": "HP LaserJet Pro MFP M127fw"
+  },
+  {
+    "printer_id": "400000033282",
+    "printer_name": "Canon imageRUNNER ADVANCE C9280 PRO"
+  },
+  {
+    "printer_id": "400000032653",
+    "printer_name": "Konica Minolta Bizhub 4050i"
+  },
+  {
+    "printer_id": "400000026756",
+    "printer_name": "Samsung ML-1867"
+  },
+  {
+    "printer_id": "400000026657",
+    "printer_name": "Xerox Phaser 3210"
+  },
+  {
+    "printer_id": "400000030701",
+    "printer_name": "Konica Minolta Bizhub Press C7000"
+  },
+  {
+    "printer_id": "400000029739",
+    "printer_name": "Samsung SL-M3825ND"
+  },
+  {
+    "printer_id": "400000026285",
+    "printer_name": "Kyocera Ecosys P3260dn"
+  },
+  {
+    "printer_id": "400000028971",
+    "printer_name": "Canon FC 120"
+  },
+  {
+    "printer_id": "400000033276",
+    "printer_name": "Canon imageRUNNER ADVANCE C7580"
+  },
+  {
+    "printer_id": "400000033758",
+    "printer_name": "Pantum M7302FDW"
+  },
+  {
+    "printer_id": "400000026947",
+    "printer_name": "Samsung SCX-6345"
+  },
+  {
+    "printer_id": "400000028990",
+    "printer_name": "Canon PC 425"
+  },
+  {
+    "printer_id": "400000028468",
+    "printer_name": "Canon LBP465"
+  },
+  {
+    "printer_id": "400000029725",
+    "printer_name": "Samsung SL-M2835DW"
+  },
+  {
+    "printer_id": "400000033418",
+    "printer_name": "Konica Minolta bizhub 250"
+  },
+  {
+    "printer_id": "400000026659",
+    "printer_name": "Samsung ML-1510"
+  },
+  {
+    "printer_id": "400000028796",
+    "printer_name": "Canon i-SENSYS FAX-L150"
+  },
+  {
+    "printer_id": "400000033768",
+    "printer_name": "Ricoh Pro C7210X"
+  },
+  {
+    "printer_id": "400000033616",
+    "printer_name": "Pantum P3308DN"
+  },
+  {
+    "printer_id": "400000033205",
+    "printer_name": "Konica Minolta 7235"
+  },
+  {
+    "printer_id": "400000029797",
+    "printer_name": "Kyocera TASKalfa 2551ci"
+  },
+  {
+    "printer_id": "400000033533",
+    "printer_name": "Konica Minolta 7228"
+  },
+  {
+    "printer_id": "400000027058",
+    "printer_name": "HP LaserJet P1007"
+  },
+  {
+    "printer_id": "400000029552",
+    "printer_name": "Kyocera Ecosys P6021cdn"
+  },
+  {
+    "printer_id": "400000029055",
+    "printer_name": "Canon iR C4580"
+  },
+  {
+    "printer_id": "400000029752",
+    "printer_name": "Xerox WorkCentre 3220N"
+  },
+  {
+    "printer_id": "400000033821",
+    "printer_name": "Konica Minolta Bizhub PRO 920"
+  },
+  {
+    "printer_id": "400000028865",
+    "printer_name": "Samsung ML-2162"
+  },
+  {
+    "printer_id": "400000026454",
+    "printer_name": "HP LaserJet Pro M15w"
+  },
+  {
+    "printer_id": "400000033747",
+    "printer_name": "Pantum P3300DN"
+  },
+  {
+    "printer_id": "400000027263",
+    "printer_name": "Panasonic KX-MB2020"
+  },
+  {
+    "printer_id": "400000033446",
+    "printer_name": "Konica Minolta bizhub 750"
+  },
+  {
+    "printer_id": "400000026469",
+    "printer_name": "HP LaserJet 3030"
+  },
+  {
+    "printer_id": "400000028894",
+    "printer_name": "Canon i-SENSYS LBP6020B"
+  },
+  {
+    "printer_id": "400000026349",
+    "printer_name": "Kyocera FS-6530MFP"
+  },
+  {
+    "printer_id": "400000030991",
+    "printer_name": "Xerox D110"
+  },
+  {
+    "printer_id": "400000029794",
+    "printer_name": "Kyocera KM-C4035E"
+  },
+  {
+    "printer_id": "400000026542",
+    "printer_name": "HP LaserJet Enterprise flow MFP M830z"
+  },
+  {
+    "printer_id": "400000026604",
+    "printer_name": "HP LaserJet Pro M1132 MFP"
+  },
+  {
+    "printer_id": "400000026963",
+    "printer_name": "Xerox WorkCentre 385"
+  },
+  {
+    "printer_id": "400000026861",
+    "printer_name": "Xerox Phaser 3140"
+  },
+  {
+    "printer_id": "400000028765",
+    "printer_name": "HP LaserJet Enterprise 500 Color MFP M575dn"
+  },
+  {
+    "printer_id": "400000033556",
+    "printer_name": "Canon ImagePress C600"
+  },
+  {
+    "printer_id": "400000032662",
+    "printer_name": "Konica Minolta bizhub C353P"
+  },
+  {
+    "printer_id": "400000033449",
+    "printer_name": "Konica Minolta bizhub C3100P"
+  },
+  {
+    "printer_id": "400000027237",
+    "printer_name": "Pantum P2500W"
+  },
+  {
+    "printer_id": "400000029549",
+    "printer_name": "Xerox Phaser 7750"
+  },
+  {
+    "printer_id": "400000026214",
+    "printer_name": "Kyocera FS-1124MFP"
+  },
+  {
+    "printer_id": "400000026884",
+    "printer_name": "Ricoh SP 200N"
+  },
+  {
+    "printer_id": "400000026900",
+    "printer_name": "Xerox Phaser 3300MFP"
+  },
+  {
+    "printer_id": "400000026724",
+    "printer_name": "Xerox Phaser 3117"
+  },
+  {
+    "printer_id": "400000032368",
+    "printer_name": "Konica Minolta Bizhub Pro C6000L"
+  },
+  {
+    "printer_id": "400000029727",
+    "printer_name": "Samsung SL-M2875FW"
+  },
+  {
+    "printer_id": "400000026580",
+    "printer_name": "HP LaserJet P4014"
+  },
+  {
+    "printer_id": "400000033443",
+    "printer_name": "Konica Minolta bizhub C3851FS"
+  },
+  {
+    "printer_id": "400000026944",
+    "printer_name": "Samsung ML-4550"
+  },
+  {
+    "printer_id": "400000029742",
+    "printer_name": "Samsung SL-M4025ND"
+  },
+  {
+    "printer_id": "400000032404",
+    "printer_name": "Xerox Color C70"
+  },
+  {
+    "printer_id": "400000033615",
+    "printer_name": "Pantum P3308DW"
+  },
+  {
+    "printer_id": "400000032389",
+    "printer_name": "Konica Minolta Bizhub 368e"
+  },
+  {
+    "printer_id": "400000033764",
+    "printer_name": "Ricoh Pro C7200SX"
+  },
+  {
+    "printer_id": "400000026746",
+    "printer_name": "Samsung ML-2240"
+  },
+  {
+    "printer_id": "400000027280",
+    "printer_name": "Brother HL-2250DNR"
+  },
+  {
+    "printer_id": "400000027264",
+    "printer_name": "Panasonic KX-MB2030"
+  },
+  {
+    "printer_id": "400000029808",
+    "printer_name": "Samsung CLX-3185"
+  },
+  {
+    "printer_id": "400000029038",
+    "printer_name": "HP Color LaserJet Pro MFP M476dn"
+  },
+  {
+    "printer_id": "400000032461",
+    "printer_name": "Konica Minolta Bizhub PRO 1050"
+  },
+  {
+    "printer_id": "400000033668",
+    "printer_name": "Konica Minolta Bizhub C256"
+  },
+  {
+    "printer_id": "400000033763",
+    "printer_name": "Ricoh Pro C7200S"
+  },
+  {
+    "printer_id": "400000026801",
+    "printer_name": "Samsung ML-2160"
+  },
+  {
+    "printer_id": "400000026208",
+    "printer_name": "Kyocera Ecosys P2035d"
+  },
+  {
+    "printer_id": "400000027292",
+    "printer_name": "Brother DCP-7070DWR"
+  },
+  {
+    "printer_id": "400000026581",
+    "printer_name": "HP LaserJet P4015n"
+  },
+  {
+    "printer_id": "400000028466",
+    "printer_name": "Canon LBP3210"
+  },
+  {
+    "printer_id": "400000026806",
+    "printer_name": "Xerox WorkCentre 3025"
+  },
+  {
+    "printer_id": "400000032632",
+    "printer_name": "Konica Minolta Bizhub 450i"
+  },
+  {
+    "printer_id": "400000028946",
+    "printer_name": "Brother FAX-2940"
+  },
+  {
+    "printer_id": "400000033298",
+    "printer_name": "Xerox WorkCentre 4590"
+  },
+  {
+    "printer_id": "400000033687",
+    "printer_name": "Xerox WorkCentre 7825"
+  },
+  {
+    "printer_id": "400000026978",
+    "printer_name": "Xerox WorkCentre 5016"
+  },
+  {
+    "printer_id": "400000026479",
+    "printer_name": "Canon i-SENSYS MF4120"
+  },
+  {
+    "printer_id": "400000033520",
+    "printer_name": "Konica Minolta Bizhub C3351"
+  },
+  {
+    "printer_id": "400000033159",
+    "printer_name": "Xerox Versant 170i Press"
+  },
+  {
+    "printer_id": "400000028851",
+    "printer_name": "Samsung ML-3051N"
+  },
+  {
+    "printer_id": "400000030115",
+    "printer_name": "Brother HL-5270DN"
+  },
+  {
+    "printer_id": "400000033175",
+    "printer_name": "Xerox PrimeLink B9125"
+  },
+  {
+    "printer_id": "400000028927",
+    "printer_name": "Brother MFC-9660"
+  },
+  {
+    "printer_id": "400000031033",
+    "printer_name": "Konica Minolta bizhub 364e"
+  },
+  {
+    "printer_id": "400000033154",
+    "printer_name": "Xerox WorkCentre WC7675"
+  },
+  {
+    "printer_id": "400000033438",
+    "printer_name": "Konica Minolta bizhub 501"
+  },
+  {
+    "printer_id": "400000029538",
+    "printer_name": "Kyocera FS-C2026"
+  },
+  {
+    "printer_id": "400000028767",
+    "printer_name": "HP LaserJet Enterprise 500 Color MFP M575dw"
+  },
+  {
+    "printer_id": "400000033584",
+    "printer_name": "Konica Minolta PagePro 1350EN"
+  },
+  {
+    "printer_id": "400000026369",
+    "printer_name": "Kyocera KM-5050"
+  },
+  {
+    "printer_id": "400000033204",
+    "printer_name": "Konica Minolta AccurioPress C3070P"
+  },
+  {
+    "printer_id": "400000031070",
+    "printer_name": "Konica Minolta bizhub C552"
+  },
+  {
+    "printer_id": "400000033814",
+    "printer_name": "Canon VarioPrint VP115"
+  },
+  {
+    "printer_id": "400000026655",
+    "printer_name": "Samsung ML-1430"
+  },
+  {
+    "printer_id": "400000028682",
+    "printer_name": "HP Color LaserJet Pro MFP M177n"
+  },
+  {
+    "printer_id": "400000027198",
+    "printer_name": "Oki MC561dn"
+  },
+  {
+    "printer_id": "400000029515",
+    "printer_name": "Ricoh Aficio SP 150"
+  },
+  {
+    "printer_id": "400000032459",
+    "printer_name": "Konica Minolta AccurioPress 6136"
+  },
+  {
+    "printer_id": "400000028174",
+    "printer_name": "Canon i-SENSYS MF421dw"
+  },
+  {
+    "printer_id": "400000033495",
+    "printer_name": "Konica Minolta bizhub 225i"
+  },
+  {
+    "printer_id": "400000032642",
+    "printer_name": "Xerox WorkCentre 7845"
+  },
+  {
+    "printer_id": "400000026792",
+    "printer_name": "Samsung SCX-6220"
+  },
+  {
+    "printer_id": "400000029994",
+    "printer_name": "Xerox Phaser 3450D"
+  },
+  {
+    "printer_id": "400000033402",
+    "printer_name": "Konica Minolta AccurioPress 7136P"
+  },
+  {
+    "printer_id": "400000026200",
+    "printer_name": "Kyocera FS-920"
+  },
+  {
+    "printer_id": "400000032476",
+    "printer_name": "Canon ImagePress C8000VP"
+  },
+  {
+    "printer_id": "400000026473",
+    "printer_name": "HP LaserJet M1005 MFP"
+  },
+  {
+    "printer_id": "400000032420",
+    "printer_name": "Konica Minolta Bizhub Press 1250P"
+  },
+  {
+    "printer_id": "400000026243",
+    "printer_name": "Kyocera Ecosys M2735dn"
+  },
+  {
+    "printer_id": "400000029468",
+    "printer_name": "Samsung ML-1220"
+  },
+  {
+    "printer_id": "400000033125",
+    "printer_name": "Xerox WorkCentre 7425"
+  },
+  {
+    "printer_id": "400000026607",
+    "printer_name": "HP LaserJet Pro M1214nfh MFP"
+  },
+  {
+    "printer_id": "400000026721",
+    "printer_name": "Samsung SCX-4650N"
+  },
+  {
+    "printer_id": "400000029522",
+    "printer_name": "Kyocera FS-C5100"
+  },
+  {
+    "printer_id": "400000026986",
+    "printer_name": "HP LaserJet 1005W"
+  },
+  {
+    "printer_id": "400000027098",
+    "printer_name": "Canon i-SENSYS MF4780w"
+  },
+  {
+    "printer_id": "400000027105",
+    "printer_name": "Canon i-SENSYS MF4890dw"
+  },
+  {
+    "printer_id": "400000026334",
+    "printer_name": "Kyocera KM-2050"
+  },
+  {
+    "printer_id": "400000027871",
+    "printer_name": "Canon i-SENSYS LBP7018C"
+  },
+  {
+    "printer_id": "400000032672",
+    "printer_name": "Xerox AltaLink C8035"
+  },
+  {
+    "printer_id": "400000026361",
+    "printer_name": "Kyocera KM-2560"
+  },
+  {
+    "printer_id": "400000033258",
+    "printer_name": "Canon ImagePress Lite C265"
+  },
+  {
+    "printer_id": "400000029791",
+    "printer_name": "Kyocera KM-C2525E"
+  },
+  {
+    "printer_id": "400000029774",
+    "printer_name": "Kyocera Ecosys P7035CDN"
+  },
+  {
+    "printer_id": "400000028930",
+    "printer_name": "Brother MFC-9700"
+  },
+  {
+    "printer_id": "400000026567",
+    "printer_name": "HP LaserJet Pro M706"
+  },
+  {
+    "printer_id": "400000026541",
+    "printer_name": "HP LaserJet 2420"
+  },
+  {
+    "printer_id": "400000028779",
+    "printer_name": "HP Color LaserJet Enterprise CP4025n"
+  },
+  {
+    "printer_id": "400000030001",
+    "printer_name": "Samsung Xpress SL-C430"
+  },
+  {
+    "printer_id": "400000026417",
+    "printer_name": "Canon Fax-L400"
+  },
+  {
+    "printer_id": "400000026809",
+    "printer_name": "Samsung ML-2245"
+  },
+  {
+    "printer_id": "400000033427",
+    "printer_name": "Konica Minolta bizhub 7622"
+  },
+  {
+    "printer_id": "400000026239",
+    "printer_name": "Kyocera Ecosys M2640IDW"
+  },
+  {
+    "printer_id": "400000028945",
+    "printer_name": "Brother FAX-2845"
+  },
+  {
+    "printer_id": "400000033660",
+    "printer_name": "Xerox Versalink С7020"
+  },
+  {
+    "printer_id": "400000033437",
+    "printer_name": "Konica Minolta bizhub 5000i"
+  },
+  {
+    "printer_id": "400000032399",
+    "printer_name": "Xerox Versant 3100 Press"
+  },
+  {
+    "printer_id": "400000026342",
+    "printer_name": "Kyocera TASKAlfa 181"
+  },
+  {
+    "printer_id": "400000029462",
+    "printer_name": "Samsung SF-565P"
+  },
+  {
+    "printer_id": "400000028757",
+    "printer_name": "Canon i-SENSYS MF728Cdw"
+  },
+  {
+    "printer_id": "400000032403",
+    "printer_name": "Xerox Color 570"
+  },
+  {
+    "printer_id": "400000033404",
+    "printer_name": "Konica Minolta bizhub 161"
+  },
+  {
+    "printer_id": "400000033745",
+    "printer_name": "Pantum P3010DW"
+  },
+  {
+    "printer_id": "400000033173",
+    "printer_name": "Xerox PrimeLink B9100"
+  },
+  {
+    "printer_id": "400000026269",
+    "printer_name": "Kyocera Ecosys M3560idn"
+  },
+  {
+    "printer_id": "400000028892",
+    "printer_name": "HP LaserJet Pro MFP M225rdn"
+  },
+  {
+    "printer_id": "400000032412",
+    "printer_name": "Xerox WorkCentre WC7755"
+  },
+  {
+    "printer_id": "400000026599",
+    "printer_name": "HP LaserJet M1120n MFP"
+  },
+  {
+    "printer_id": "400000026553",
+    "printer_name": "Canon i-SENSYS MF5880dn"
+  },
+  {
+    "printer_id": "400000032682",
+    "printer_name": "Konica Minolta Bizhub C3350"
+  },
+  {
+    "printer_id": "400000031076",
+    "printer_name": "Konica Minolta bizhub C452"
+  },
+  {
+    "printer_id": "400000028658",
+    "printer_name": "HP LaserJet Enterprise 500 Color M551dn"
+  },
+  {
+    "printer_id": "400000030992",
+    "printer_name": "Xerox D125"
+  },
+  {
+    "printer_id": "400000026576",
+    "printer_name": "HP LaserJet 4350"
+  },
+  {
+    "printer_id": "400000026631",
+    "printer_name": "HP LaserJet Pro MFP M127fn"
+  },
+  {
+    "printer_id": "400000028171",
+    "printer_name": "Canon i-SENSYS MF429x"
+  },
+  {
+    "printer_id": "400000032408",
+    "printer_name": "Xerox DocuColor DC250"
+  },
+  {
+    "printer_id": "400000028544",
+    "printer_name": "Canon i-SENSYS MF419x"
+  },
+  {
+    "printer_id": "400000029786",
+    "printer_name": "Kyocera KM-C3225"
+  },
+  {
+    "printer_id": "400000026418",
+    "printer_name": "Canon LBP3200"
+  },
+  {
+    "printer_id": "400000026165",
+    "printer_name": "Kyocera Mita FS-1900"
+  },
+  {
+    "printer_id": "400000033280",
+    "printer_name": "Canon imageRUNNER ADVANCE C9075 PRO"
+  },
+  {
+    "printer_id": "400000033792",
+    "printer_name": "Ricoh Pro C9200"
+  },
+  {
+    "printer_id": "400000032414",
+    "printer_name": "Konica Minolta Bizhub PRO 951"
+  },
+  {
+    "printer_id": "400000033532",
+    "printer_name": "Konica Minolta 7222"
+  },
+  {
+    "printer_id": "400000026641",
+    "printer_name": "HP LaserJet Pro MFP M426fdn"
+  },
+  {
+    "printer_id": "400000026899",
+    "printer_name": "Samsung SCX-5530FN"
+  },
+  {
+    "printer_id": "400000028975",
+    "printer_name": "Canon FC 204"
+  },
+  {
+    "printer_id": "400000032397",
+    "printer_name": "Konica Minolta Bizhub PRESS C70hc"
+  },
+  {
+    "printer_id": "400000026975",
+    "printer_name": "Ricoh Aficio SP1000S"
+  },
+  {
+    "printer_id": "400000026974",
+    "printer_name": "Oki B2540 MFP"
+  },
+  {
+    "printer_id": "400000033420",
+    "printer_name": "Konica Minolta bizhub 4040"
+  },
+  {
+    "printer_id": "400000031045",
+    "printer_name": "Konica Minolta bizhub 423"
+  },
+  {
+    "printer_id": "400000026629",
+    "printer_name": "Canon i-SENSYS MF4580dn"
+  },
+  {
+    "printer_id": "400000026552",
+    "printer_name": "Canon i-SENSYS MF5840"
+  },
+  {
+    "printer_id": "400000029512",
+    "printer_name": "Pantum M5000"
+  },
+  {
+    "printer_id": "400000029724",
+    "printer_name": "Samsung SL-M2826ND"
+  },
+  {
+    "printer_id": "400000026477",
+    "printer_name": "Canon i-SENSYS MF4010"
+  },
+  {
+    "printer_id": "400000028918",
+    "printer_name": "Brother FAX-8360"
+  },
+  {
+    "printer_id": "400000028861",
+    "printer_name": "Samsung SCX-4605"
+  },
+  {
+    "printer_id": "400000032456",
+    "printer_name": "Konica Minolta Bizhub C650i"
+  },
+  {
+    "printer_id": "400000026645",
+    "printer_name": "Canon i-SENSYS LBP312x"
+  },
+  {
+    "printer_id": "400000026597",
+    "printer_name": "Canon i-SENSYS LBP-3100"
+  },
+  {
+    "printer_id": "400000028459",
+    "printer_name": "Canon Fax-L295"
+  },
+  {
+    "printer_id": "400000026189",
+    "printer_name": "Kyocera FS-9100DN"
+  },
+  {
+    "printer_id": "400000028803",
+    "printer_name": "Canon i-SENSYS MF226dn"
+  },
+  {
+    "printer_id": "400000033459",
+    "printer_name": "Konica Minolta bizhub C350"
+  },
+  {
+    "printer_id": "400000033516",
+    "printer_name": "Konica Minolta/Develop ineo+ 654e"
+  },
+  {
+    "printer_id": "400000029751",
+    "printer_name": "Xerox WorkCentre 3210N"
+  },
+  {
+    "printer_id": "400000033158",
+    "printer_name": "Xerox Versant 180i Press"
+  },
+  {
+    "printer_id": "400000027220",
+    "printer_name": "Xerox WorkCentre 5330"
+  },
+  {
+    "printer_id": "400000026341",
+    "printer_name": "Kyocera TASKAlfa 180"
+  },
+  {
+    "printer_id": "400000026398",
+    "printer_name": "HP LaserJet 1220"
+  },
+  {
+    "printer_id": "400000033273",
+    "printer_name": "Canon imageRUNNER ADVANCE C7565"
+  },
+  {
+    "printer_id": "400000026389",
+    "printer_name": "Kyocera KM-5035"
+  },
+  {
+    "printer_id": "400000031436",
+    "printer_name": "Konica Minolta AccurioPress C6100"
+  },
+  {
+    "printer_id": "400000033297",
+    "printer_name": "Xerox WorkCentre 4127"
+  },
+  {
+    "printer_id": "400000028957",
+    "printer_name": "Brother DCP-1512"
+  },
+  {
+    "printer_id": "400000033543",
+    "printer_name": "Konica Minolta bizhub 40p"
+  },
+  {
+    "printer_id": "400000026623",
+    "printer_name": "Canon i-SENSYS MF4410"
+  },
+  {
+    "printer_id": "400000026362",
+    "printer_name": "Kyocera KM-3040"
+  },
+  {
+    "printer_id": "400000033810",
+    "printer_name": "Xerox AltaLink C8145"
+  },
+  {
+    "printer_id": "400000030990",
+    "printer_name": "Xerox D95"
+  },
+  {
+    "printer_id": "400000026908",
+    "printer_name": "Xerox Phaser 3320"
+  },
+  {
+    "printer_id": "400000026640",
+    "printer_name": "HP LaserJet Pro M402dn"
+  },
+  {
+    "printer_id": "400000027293",
+    "printer_name": "Brother MFC-7360NR"
+  },
+  {
+    "printer_id": "400000033472",
+    "printer_name": "Konica Minolta Bizhub 36"
+  },
+  {
+    "printer_id": "400000026368",
+    "printer_name": "Kyocera KM-4050"
+  },
+  {
+    "printer_id": "400000027205",
+    "printer_name": "Canon FC 100"
+  },
+  {
+    "printer_id": "400000027765",
+    "printer_name": "HP Color LaserJet CM1015"
+  },
+  {
+    "printer_id": "400000031068",
+    "printer_name": "Konica Minolta bizhub 454e"
+  },
+  {
+    "printer_id": "400000033283",
+    "printer_name": "Canon imageRUNNER ADVANCE DX C7765i"
+  },
+  {
+    "printer_id": "400000028979",
+    "printer_name": "Canon FC 224"
+  },
+  {
+    "printer_id": "400000032674",
+    "printer_name": "Xerox AltaLink C8055"
+  },
+  {
+    "printer_id": "400000026870",
+    "printer_name": "Xerox Phaser 3250"
+  },
+  {
+    "printer_id": "400000026569",
+    "printer_name": "Canon i-SENSYS LBP6750dn"
+  },
+  {
+    "printer_id": "400000027927",
+    "printer_name": "HP Color LaserJet Pro CP1525nw"
+  },
+  {
+    "printer_id": "400000027106",
+    "printer_name": "Canon i-SENSYS LBP6670dn"
+  },
+  {
+    "printer_id": "400000033128",
+    "printer_name": "Xerox WorkCentre 7830i"
+  },
+  {
+    "printer_id": "400000026344",
+    "printer_name": "Kyocera TASKAlfa 221"
+  },
+  {
+    "printer_id": "400000030987",
+    "printer_name": "Ricoh FT4618"
+  },
+  {
+    "printer_id": "400000026464",
+    "printer_name": "HP LaserJet 1018"
+  },
+  {
+    "printer_id": "400000032655",
+    "printer_name": "Konica Minolta AccurioPress C14000"
+  },
+  {
+    "printer_id": "400000026506",
+    "printer_name": "Canon LaserBase MF6550"
+  },
+  {
+    "printer_id": "400000027059",
+    "printer_name": "HP LaserJet P1008"
+  },
+  {
+    "printer_id": "400000031012",
+    "printer_name": "Konica Minolta bizhub 754"
+  },
+  {
+    "printer_id": "400000026669",
+    "printer_name": "Xerox Phaser 3130"
+  },
+  {
+    "printer_id": "400000026722",
+    "printer_name": "Samsung SCX-4655FN"
+  },
+  {
+    "printer_id": "400000026574",
+    "printer_name": "HP LaserJet 4300"
+  },
+  {
+    "printer_id": "400000028993",
+    "printer_name": "Canon PC 710"
+  },
+  {
+    "printer_id": "400000029485",
+    "printer_name": "Konica Minolta bizhub C284"
+  },
+  {
+    "printer_id": "400000026335",
+    "printer_name": "Kyocera TASKAlfa 1800"
+  },
+  {
+    "printer_id": "400000028893",
+    "printer_name": "HP LaserJet Pro M201dw"
+  },
+  {
+    "printer_id": "400000030986",
+    "printer_name": "Ricoh FT4615"
+  },
+  {
+    "printer_id": "400000032373",
+    "printer_name": "Konica Minolta AccurioPress C2070"
+  },
+  {
+    "printer_id": "400000028820",
+    "printer_name": "HP LaserJet Ultra M106w"
+  },
+  {
+    "printer_id": "400000024042",
+    "printer_name": "Konica Minolta Bizhub C227"
+  },
+  {
+    "printer_id": "400000026596",
+    "printer_name": "Canon i-SENSYS LBP3010"
+  },
+  {
+    "printer_id": "400000026160",
+    "printer_name": "Kyocera Mita FS-1020D"
+  },
+  {
+    "printer_id": "400000033279",
+    "printer_name": "Canon imageRUNNER ADVANCE C9065 PRO"
+  },
+  {
+    "printer_id": "400000026340",
+    "printer_name": "Kyocera KM-2550"
+  },
+  {
+    "printer_id": "400000033391",
+    "printer_name": "Konica Minolta 7025"
+  },
+  {
+    "printer_id": "400000026419",
+    "printer_name": "Canon LaserBase MF3110"
+  },
+  {
+    "printer_id": "400000027177",
+    "printer_name": "Oki  C310dn"
+  },
+  {
+    "printer_id": "400000029005",
+    "printer_name": "HP Color LaserJet 1500"
+  },
+  {
+    "printer_id": "400000029473",
+    "printer_name": "Ricoh FAX 1140L"
+  },
+  {
+    "printer_id": "400000029543",
+    "printer_name": "Oki C810"
+  },
+  {
+    "printer_id": "400000029483",
+    "printer_name": "Konica Minolta bizhub C280"
+  },
+  {
+    "printer_id": "400000026805",
+    "printer_name": "Xerox Phaser 3020"
+  },
+  {
+    "printer_id": "400000026677",
+    "printer_name": "Samsung ML-1610"
+  },
+  {
+    "printer_id": "400000032410",
+    "printer_name": "Xerox DocuColor DC252"
+  },
+  {
+    "printer_id": "400000027914",
+    "printer_name": "HP LaserJet Pro CM1415fn"
+  },
+  {
+    "printer_id": "400000026804",
+    "printer_name": "Samsung SCX-3405"
+  },
+  {
+    "printer_id": "400000026955",
+    "printer_name": "Samsung ML-2167"
+  },
+  {
+    "printer_id": "400000026598",
+    "printer_name": "HP LaserJet P1505"
+  },
+  {
+    "printer_id": "400000033585",
+    "printer_name": "Konica Minolta PagePro 1350W"
+  },
+  {
+    "printer_id": "400000028830",
+    "printer_name": "HP LaserJet Pro M132nw"
+  },
+  {
+    "printer_id": "400000029476",
+    "printer_name": "Oki C9655"
+  },
+  {
+    "printer_id": "400000033400",
+    "printer_name": "Konica Minolta AccurioPress 7136"
+  },
+  {
+    "printer_id": "400000033523",
+    "printer_name": "Konica Minolta bizhub C361i"
+  },
+  {
+    "printer_id": "400000026396",
+    "printer_name": "HP LaserJet 1200"
+  },
+  {
+    "printer_id": "400000026601",
+    "printer_name": "Canon i-SENSYS LBP3250"
+  },
+  {
+    "printer_id": "400000033285",
+    "printer_name": "Canon imageRUNNER ADVANCE DX C7780i"
+  },
+  {
+    "printer_id": "400000031071",
+    "printer_name": "Konica Minolta bizhub C652"
+  },
+  {
+    "printer_id": "400000028724",
+    "printer_name": "Canon i-SENSYS LBP7660Cdn"
+  },
+  {
+    "printer_id": "400000029768",
+    "printer_name": "Brother HL-L2360DNR"
+  },
+  {
+    "printer_id": "400000028940",
+    "printer_name": "Brother DCP-1400\n"
+  },
+  {
+    "printer_id": "400000030985",
+    "printer_name": "Ricoh FT4018"
+  },
+  {
+    "printer_id": "400000028664",
+    "printer_name": "HP Color LaserJet 2700"
+  },
+  {
+    "printer_id": "400000032673",
+    "printer_name": "Xerox AltaLink C8045"
+  },
+  {
+    "printer_id": "400000033274",
+    "printer_name": "Canon imageRUNNER ADVANCE C7565i"
+  },
+  {
+    "printer_id": "400000026864",
+    "printer_name": "Samsung ML-2850D"
+  },
+  {
+    "printer_id": "400000026331",
+    "printer_name": "Kyocera KM-1650"
+  },
+  {
+    "printer_id": "400000026595",
+    "printer_name": "HP LaserJet P1006"
+  },
+  {
+    "printer_id": "400000033522",
+    "printer_name": "Konica Minolta bizhub C3301i"
+  },
+  {
+    "printer_id": "400000026865",
+    "printer_name": "Samsung ML-2851ND"
+  },
+  {
+    "printer_id": "400000026807",
+    "printer_name": "Samsung Xpress SL-M2020"
+  },
+  {
+    "printer_id": "400000032379",
+    "printer_name": "Konica Minolta Bizhub C284e"
+  },
+  {
+    "printer_id": "400000032465",
+    "printer_name": "Canon ImagePress C650"
+  },
+  {
+    "printer_id": "400000031042",
+    "printer_name": "Konica Minolta bizhub 223"
+  },
+  {
+    "printer_id": "400000033473",
+    "printer_name": "Konica Minolta Bizhub 42"
+  },
+  {
+    "printer_id": "400000029035",
+    "printer_name": "Canon iR C2620"
+  },
+  {
+    "printer_id": "400000027764",
+    "printer_name": "HP Color LaserJet CM1017"
+  },
+  {
+    "printer_id": "400000026467",
+    "printer_name": "HP LaserJet 3015"
+  },
+  {
+    "printer_id": "400000026911",
+    "printer_name": "Xerox WorkCentre 3315"
+  },
+  {
+    "printer_id": "400000033790",
+    "printer_name": "Ricoh Pro C5310S"
+  },
+  {
+    "printer_id": "400000033744",
+    "printer_name": "Pantum P3010D"
+  },
+  {
+    "printer_id": "400000026566",
+    "printer_name": "HP LaserJet Pro M701"
+  },
+  {
+    "printer_id": "400000026158",
+    "printer_name": "Kyocera FS-1018MFP"
+  },
+  {
+    "printer_id": "400000026152",
+    "printer_name": "Kyocera Mita FS-1000+"
+  },
+  {
+    "printer_id": "400000026749",
+    "printer_name": "Samsung ML-1665"
+  },
+  {
+    "printer_id": "400000026837",
+    "printer_name": "Samsung ML-2580"
+  },
+  {
+    "printer_id": "400000033408",
+    "printer_name": "Konica Minolta bizhub 163"
+  },
+  {
+    "printer_id": "400000026458",
+    "printer_name": "HP LaserJet 4100"
+  },
+  {
+    "printer_id": "400000031043",
+    "printer_name": "Konica Minolta bizhub 283"
+  },
+  {
+    "printer_id": "400000026338",
+    "printer_name": "Kyocera TASKAlfa 2200"
+  },
+  {
+    "printer_id": "400000028584",
+    "printer_name": "Canon i-SENSYS MF4370d"
+  },
+  {
+    "printer_id": "400000032388",
+    "printer_name": "Konica Minolta Bizhub 308e"
+  },
+  {
+    "printer_id": "400000028968",
+    "printer_name": "Brother DCP-7020"
+  },
+  {
+    "printer_id": "400000008196",
+    "printer_name": "Kyocera FS-3920DN"
+  },
+  {
+    "printer_id": "400000026556",
+    "printer_name": "HP LaserJet Pro 400 M401dn"
+  },
+  {
+    "printer_id": "400000033300",
+    "printer_name": "Xerox DocuPrint 900"
+  },
+  {
+    "printer_id": "400000026560",
+    "printer_name": "HP LaserJet M5025"
+  },
+  {
+    "printer_id": "400000027908",
+    "printer_name": "Canon i-SENSYS MF8040Cn"
+  },
+  {
+    "printer_id": "400000026238",
+    "printer_name": "Kyocera Ecosys M2540DN"
+  },
+  {
+    "printer_id": "400000026554",
+    "printer_name": "Canon i-SENSYS MF5940dn"
+  },
+  {
+    "printer_id": "400000026797",
+    "printer_name": "Xerox WorkCentre 4118X"
+  },
+  {
+    "printer_id": "400000032455",
+    "printer_name": "Konica Minolta Bizhub C250i"
+  },
+  {
+    "printer_id": "400000032380",
+    "printer_name": "Konica Minolta Bizhub C364e"
+  },
+  {
+    "printer_id": "400000032429",
+    "printer_name": "Konica Minolta Bizhub C257i"
+  },
+  {
+    "printer_id": "400000032472",
+    "printer_name": "Canon ImagePress C850"
+  },
+  {
+    "printer_id": "400000031005",
+    "printer_name": "Xerox WorkCentre 7346"
+  },
+  {
+    "printer_id": "400000026247",
+    "printer_name": "Kyocera FS-4000dn"
+  },
+  {
+    "printer_id": "400000033535",
+    "printer_name": "Konica Minolta MagiColor 4750DN"
+  },
+  {
+    "printer_id": "400000028977",
+    "printer_name": "Canon FC 208"
+  },
+  {
+    "printer_id": "400000027207",
+    "printer_name": "Canon FC 128"
+  },
+  {
+    "printer_id": "400000029755",
+    "printer_name": "Xerox WorkCentre 3225"
+  },
+  {
+    "printer_id": "400000029052",
+    "printer_name": "Canon i-SENSYS MF512x"
+  },
+  {
+    "printer_id": "400000032661",
+    "printer_name": "Konica Minolta Magicolor 8650DN"
+  },
+  {
+    "printer_id": "400000032659",
+    "printer_name": "Konica Minolta Bizhub 287"
+  },
+  {
+    "printer_id": "400000033491",
+    "printer_name": "Konica Minolta Bizhub 451i"
+  },
+  {
+    "printer_id": "400000028467",
+    "printer_name": "Canon LBP460"
+  },
+  {
+    "printer_id": "400000026391",
+    "printer_name": "HP LaserJet 3200mfp"
+  },
+  {
+    "printer_id": "400000029024",
+    "printer_name": "HP Color LaserJet 4730mfp"
+  },
+  {
+    "printer_id": "400000028797",
+    "printer_name": "Canon i-SENSYS FAX-L170"
+  },
+  {
+    "printer_id": "400000026424",
+    "printer_name": "Canon LaserBase MF5650"
+  },
+  {
+    "printer_id": "400000031000",
+    "printer_name": "Xerox WorkCentre 7235"
+  },
+  {
+    "printer_id": "400000028012",
+    "printer_name": "Xerox Phaser 6130"
+  },
+  {
+    "printer_id": "400000026671",
+    "printer_name": "Xerox WorkCentre PE114e"
+  },
+  {
+    "printer_id": "400000032400",
+    "printer_name": "Xerox Versant 4100 Press"
+  },
+  {
+    "printer_id": "400000026874",
+    "printer_name": "Samsung Xpress SL-M2880FW"
+  },
+  {
+    "printer_id": "400000033755",
+    "printer_name": "Pantum M7102DN"
+  },
+  {
+    "printer_id": "400000026731",
+    "printer_name": "Xerox Phaser 3124"
+  },
+  {
+    "printer_id": "400000028657",
+    "printer_name": "HP LaserJet Enterprise 500 M575f"
+  },
+  {
+    "printer_id": "400000033455",
+    "printer_name": "Konica Minolta Bizhub C20"
+  },
+  {
+    "printer_id": "400000028997",
+    "printer_name": "Canon PC 921"
+  },
+  {
+    "printer_id": "400000027761",
+    "printer_name": "HP color LaserJet CP3525dn"
+  },
+  {
+    "printer_id": "400000029487",
+    "printer_name": "Konica Minolta bizhub C454"
+  },
+  {
+    "printer_id": "400000029504",
+    "printer_name": "HP Color LaserJet 2820"
+  },
+  {
+    "printer_id": "400000026875",
+    "printer_name": "Samsung ML-2950"
+  },
+  {
+    "printer_id": "400000026565",
+    "printer_name": "HP LaserJet Pro M435nw"
+  },
+  {
+    "printer_id": "400000026835",
+    "printer_name": "Samsung ML-1915"
+  },
+  {
+    "printer_id": "400000033421",
+    "printer_name": "Konica Minolta bizhub 210"
+  },
+  {
+    "printer_id": "400000026270",
+    "printer_name": "Kyocera M3040IDN"
+  },
+  {
+    "printer_id": "400000028351",
+    "printer_name": "HP LaserJet 3100"
+  },
+  {
+    "printer_id": "400000026539",
+    "printer_name": "Canon i-SENSYS LBP3370"
+  },
+  {
+    "printer_id": "400000026584",
+    "printer_name": "HP LaserJet M9040mfp"
+  },
+  {
+    "printer_id": "400000028762",
+    "printer_name": "HP Laserjet Pro 400 Color MFP M475dw"
+  },
+  {
+    "printer_id": "400000029517",
+    "printer_name": "Kyocera FS-C8650dn"
+  },
+  {
+    "printer_id": "400000027763",
+    "printer_name": "Canon LBP5000"
+  },
+  {
+    "printer_id": "400000030983",
+    "printer_name": "Xerox Versant 180 Press"
+  },
+  {
+    "printer_id": "400000026966",
+    "printer_name": "Xerox Phaser 3040B"
+  },
+  {
+    "printer_id": "400000026622",
+    "printer_name": "HP LaserJet Pro P1606"
+  },
+  {
+    "printer_id": "400000026462",
+    "printer_name": "HP LaserJet 1012"
+  },
+  {
+    "printer_id": "400000033164",
+    "printer_name": "Xerox Color 800i Press"
+  },
+  {
+    "printer_id": "400000026673",
+    "printer_name": "Samsung SCX-4116"
+  },
+  {
+    "printer_id": "400000029548",
+    "printer_name": "Oki C830"
+  },
+  {
+    "printer_id": "400000028721",
+    "printer_name": "Canon i-SENSYS LBP5300"
+  },
+  {
+    "printer_id": "400000031013",
+    "printer_name": "Konica Minolta bizhub 754e"
+  },
+  {
+    "printer_id": "400000027802",
+    "printer_name": "Canon i-SENSYS LBP7200Cdn"
+  },
+  {
+    "printer_id": "400000029763",
+    "printer_name": "Brother DCP-L2520DWR"
+  },
+  {
+    "printer_id": "400000033206",
+    "printer_name": "Konica Minolta bizhub 4701i"
+  },
+  {
+    "printer_id": "400000030104",
+    "printer_name": "Ricoh SP6430DN"
+  },
+  {
+    "printer_id": "400000028998",
+    "printer_name": "Canon PC 940"
+  },
+  {
+    "printer_id": "400000033207",
+    "printer_name": "Konica Minolta/Develop Ineo + 5501"
+  },
+  {
+    "printer_id": "400000026934",
+    "printer_name": "Samsung ProXpress SL-M3820"
+  },
+  {
+    "printer_id": "400000030982",
+    "printer_name": "Xerox Versant 80 Press"
+  },
+  {
+    "printer_id": "400000028854",
+    "printer_name": "Xerox Phaser 3400"
+  },
+  {
+    "printer_id": "400000033474",
+    "printer_name": "Konica Minolta bizhub 3602P"
+  },
+  {
+    "printer_id": "400000028976",
+    "printer_name": "Canon FC 206"
+  },
+  {
+    "printer_id": "400000026155",
+    "printer_name": "Kyocera Mita FS-1050"
+  },
+  {
+    "printer_id": "400000026585",
+    "printer_name": "HP LaserJet 9050dn"
+  },
+  {
+    "printer_id": "400000026786",
+    "printer_name": "Samsung SCX-4720"
+  },
+  {
+    "printer_id": "400000033278",
+    "printer_name": "Canon imageRUNNER ADVANCE C7580i"
+  },
+  {
+    "printer_id": "400000027218",
+    "printer_name": "Xerox WorkCentre 5325"
+  },
+  {
+    "printer_id": "400000026390",
+    "printer_name": "HP LaserJet 1100"
+  },
+  {
+    "printer_id": "400000033211",
+    "printer_name": "Konica Minolta Bizhub Pro C6500P"
+  },
+  {
+    "printer_id": "400000028759",
+    "printer_name": "HP Color LaserJet CP2025n"
+  },
+  {
+    "printer_id": "400000026347",
+    "printer_name": "Kyocera FS-6030MFP"
+  },
+  {
+    "printer_id": "400000032671",
+    "printer_name": "Konica Minolta Bizhub C4050i"
+  },
+  {
+    "printer_id": "400000026938",
+    "printer_name": "Ricoh 212W"
+  },
+  {
+    "printer_id": "400000026624",
+    "printer_name": "Canon i-SENSYS MF4430"
+  },
+  {
+    "printer_id": "400000026381",
+    "printer_name": "Kyocera KM-3035"
+  },
+  {
+    "printer_id": "400000029771",
+    "printer_name": "Brother MFC-L2720DWR"
+  },
+  {
+    "printer_id": "400000026394",
+    "printer_name": "Canon LBP1120"
+  },
+  {
+    "printer_id": "400000026758",
+    "printer_name": "Samsung SCX-3200"
+  },
+  {
+    "printer_id": "400000028952",
+    "printer_name": "Brother HL-1118"
+  },
+  {
+    "printer_id": "400000028817",
+    "printer_name": "HP LaserJet Pro M102"
+  },
+  {
+    "printer_id": "400000032466",
+    "printer_name": "Canon ImagePress C700"
+  },
+  {
+    "printer_id": "400000029748",
+    "printer_name": "Xerox Phaser 3635MFP/X"
+  },
+  {
+    "printer_id": "400000033663",
+    "printer_name": "Xerox WorkCentre 7840"
+  },
+  {
+    "printer_id": "400000026533",
+    "printer_name": "Canon LBP3300"
+  },
+  {
+    "printer_id": "400000027290",
+    "printer_name": "Brother DCP-7060DR"
+  },
+  {
+    "printer_id": "400000027214",
+    "printer_name": "Canon PC 780"
+  },
+  {
+    "printer_id": "400000033295",
+    "printer_name": "Xerox WorkCentre 4110"
+  },
+  {
+    "printer_id": "400000026881",
+    "printer_name": "Xerox Phaser 3260"
+  },
+  {
+    "printer_id": "400000029759",
+    "printer_name": "Xerox WorkCentre 3345"
+  },
+  {
+    "printer_id": "400000028173",
+    "printer_name": "Canon i-SENSYS MF426dw"
+  },
+  {
+    "printer_id": "400000033257",
+    "printer_name": "Canon ImagePress Lite C170"
+  },
+  {
+    "printer_id": "400000026878",
+    "printer_name": "Samsung SCX-4729FW"
+  },
+  {
+    "printer_id": "400000027810",
+    "printer_name": "HP LaserJet Pro 300 Color MFP M375nw"
+  },
+  {
+    "printer_id": "400000029807",
+    "printer_name": "Samsung CLX-3180"
+  },
+  {
+    "printer_id": "400000026328",
+    "printer_name": "Kyocera KM-1620"
+  },
+  {
+    "printer_id": "400000026672",
+    "printer_name": "Samsung SCX-4016"
+  },
+  {
+    "printer_id": "400000026370",
+    "printer_name": "Kyocera TASKalfa 3010i"
+  },
+  {
+    "printer_id": "400000026415",
+    "printer_name": "Canon PC-d340"
+  },
+  {
+    "printer_id": "400000032665",
+    "printer_name": "Konica Minolta Bizhub 4700i"
+  },
+  {
+    "printer_id": "400000026588",
+    "printer_name": "HP LaserJet Enterprise M604dn"
+  },
+  {
+    "printer_id": "400000033487",
+    "printer_name": "Konica Minolta bizhub 301i"
+  },
+  {
+    "printer_id": "400000028723",
+    "printer_name": "Canon i-SENSYS LBP7210Cdn"
+  },
+  {
+    "printer_id": "400000033766",
+    "printer_name": "Ricoh Pro C7210S"
+  },
+  {
+    "printer_id": "400000033124",
+    "printer_name": "Xerox WorkCentre 7835"
+  },
+  {
+    "printer_id": "400000030619",
+    "printer_name": "Samsung CLP-315"
+  },
+  {
+    "printer_id": "400000033504",
+    "printer_name": "Konica Minolta Bizhub PRO 1050e"
+  },
+  {
+    "printer_id": "400000032364",
+    "printer_name": "Konica Minolta bizhub C458"
+  },
+  {
+    "printer_id": "400000029806",
+    "printer_name": "Samsung CLP-325"
+  },
+  {
+    "printer_id": "400000027261",
+    "printer_name": "Panasonic KX-MB2000"
+  },
+  {
+    "printer_id": "400000032474",
+    "printer_name": "Canon ImagePress C60"
+  },
+  {
+    "printer_id": "400000029762",
+    "printer_name": "Brother DCP-L2500DR"
+  },
+  {
+    "printer_id": "400000029541",
+    "printer_name": "Kyocera FS-C2626"
+  },
+  {
+    "printer_id": "400000032375",
+    "printer_name": "Konica Minolta AccurioPress C3080"
+  },
+  {
+    "printer_id": "400000028367",
+    "printer_name": "Canon i-SENSYS FAX-L120"
+  },
+  {
+    "printer_id": "400000028847",
+    "printer_name": "Samsung ML-1520"
+  },
+  {
+    "printer_id": "400000027687",
+    "printer_name": "Konica Minolta bizhub C253"
+  },
+  {
+    "printer_id": "400000028670",
+    "printer_name": "HP Color LaserJet 3800"
+  },
+  {
+    "printer_id": "400000026620",
+    "printer_name": "Canon i-SENSYS MF3010"
+  },
+  {
+    "printer_id": "400000027906",
+    "printer_name": "Canon i-SENSYS MF8050Cn"
+  },
+  {
+    "printer_id": "400000030108",
+    "printer_name": "Brother DCP-1602R"
+  },
+  {
+    "printer_id": "400000033475",
+    "printer_name": "Konica Minolta bizhub 165"
+  },
+  {
+    "printer_id": "400000033259",
+    "printer_name": "Canon ImagePress Lite C270"
+  },
+  {
+    "printer_id": "400000033767",
+    "printer_name": "Ricoh Pro C7210SX"
+  },
+  {
+    "printer_id": "400000026665",
+    "printer_name": "Xerox Phaser 3116"
+  },
+  {
+    "printer_id": "400000027285",
+    "printer_name": "Brother HL-2270DW"
+  },
+  {
+    "printer_id": "400000032638",
+    "printer_name": "Xerox WorkCentre 7535"
+  },
+  {
+    "printer_id": "400000032658",
+    "printer_name": "Konica Minolta MagiColor 4690MF"
+  },
+  {
+    "printer_id": "400000028370",
+    "printer_name": "Canon i-SENSYS FAX-L140"
+  },
+  {
+    "printer_id": "400000027243",
+    "printer_name": "Oki B2200"
+  },
+  {
+    "printer_id": "400000026202",
+    "printer_name": "Kyocera FS-1028MFP"
+  },
+  {
+    "printer_id": "400000026240",
+    "printer_name": "Kyocera Ecosys P2335dn"
+  },
+  {
+    "printer_id": "400000026680",
+    "printer_name": "Samsung ML-2015"
+  },
+  {
+    "printer_id": "400000026360",
+    "printer_name": "Kyocera KM-2540"
+  },
+  {
+    "printer_id": "400000030097",
+    "printer_name": "Ricoh SP3610"
+  },
+  {
+    "printer_id": "400000033484",
+    "printer_name": "Konica Minolta Bizhub 4050"
+  },
+  {
+    "printer_id": "400000026237",
+    "printer_name": "Kyocera Ecosys M2040DN"
+  },
+  {
+    "printer_id": "400000028744",
+    "printer_name": "Canon i-SENSYS MF8230cn"
+  },
+  {
+    "printer_id": "400000026780",
+    "printer_name": "Samsung ML-2251N"
+  },
+  {
+    "printer_id": "400000026615",
+    "printer_name": "Unknown"
+  },
+  {
+    "printer_id": "400000033167",
+    "printer_name": "Xerox Color 1000i Press"
+  },
+  {
+    "printer_id": "400000033754",
+    "printer_name": "Pantum M7100DW"
+  },
+  {
+    "printer_id": "400000026592",
+    "printer_name": "HP LaserJet Enterprise M603dn"
+  },
+  {
+    "printer_id": "400000026442",
+    "printer_name": "HP LaserJet Enterprise M806dn"
+  },
+  {
+    "printer_id": "400000026198",
+    "printer_name": "Kyocera FS-720"
+  },
+  {
+    "printer_id": "400000026528",
+    "printer_name": "HP LaserJet 1160"
+  },
+  {
+    "printer_id": "400000028644",
+    "printer_name": "Canon i-SENSYS MF628Cw"
+  },
+  {
+    "printer_id": "400000028510",
+    "printer_name": "Canon LaserBase MF3228"
+  },
+  {
+    "printer_id": "400000026447",
+    "printer_name": "HP LaserJet 1300"
+  },
+  {
+    "printer_id": "400000026282",
+    "printer_name": "Kyocera Ecosys M3645idn"
+  },
+  {
+    "printer_id": "400000033586",
+    "printer_name": "Konica Minolta PagePro 1480MF"
+  },
+  {
+    "printer_id": "400000032421",
+    "printer_name": "Konica Minolta Bizhub Press 2250P"
+  },
+  {
+    "printer_id": "400000032411",
+    "printer_name": "Xerox DocuColor DC260"
+  },
+  {
+    "printer_id": "400000026945",
+    "printer_name": "Samsung ML-4551N"
+  },
+  {
+    "printer_id": "400000028951",
+    "printer_name": "Brother HL-1112"
+  },
+  {
+    "printer_id": "400000027803",
+    "printer_name": "HP Color LaserJet CM2320nf"
+  },
+  {
+    "printer_id": "400000026976",
+    "printer_name": "Xerox Phaser 5500DN"
+  },
+  {
+    "printer_id": "400000033253",
+    "printer_name": "Canon ImagePress C265"
+  },
+  {
+    "printer_id": "400000032670",
+    "printer_name": "Konica Minolta Bizhub C4000i"
+  },
+  {
+    "printer_id": "400000027180",
+    "printer_name": "Oki C511dn"
+  },
+  {
+    "printer_id": "400000028509",
+    "printer_name": "Canon i-SENSYS MF3220"
+  },
+  {
+    "printer_id": "400000026903",
+    "printer_name": "Samsung ML-3310"
+  },
+  {
+    "printer_id": "400000033149",
+    "printer_name": "Konica Minolta/Develop ineo+ 754e"
+  },
+  {
+    "printer_id": "400000032419",
+    "printer_name": "Konica Minolta Bizhub Press 1250"
+  },
+  {
+    "printer_id": "400000029764",
+    "printer_name": "Brother DCP-L2540DNR"
+  },
+  {
+    "printer_id": "400000026718",
+    "printer_name": "Samsung ML-2571N"
+  },
+  {
+    "printer_id": "400000033750",
+    "printer_name": "Pantum P3302DW"
+  },
+  {
+    "printer_id": "400000028714",
+    "printer_name": "Canon i-SENSYS MF9130"
+  },
+  {
+    "printer_id": "400000033528",
+    "printer_name": "Konica Minolta bizhub C451i"
+  },
+  {
+    "printer_id": "400000026461",
+    "printer_name": "HP LaserJet 1010"
+  },
+  {
+    "printer_id": "400000026164",
+    "printer_name": "Kyocera Mita FS-1030D"
+  },
+  {
+    "printer_id": "400000033782",
+    "printer_name": "Ricoh Pro C5200S"
+  },
+  {
+    "printer_id": "400000033617",
+    "printer_name": "Pantum M7108DN"
+  },
+  {
+    "printer_id": "400000033416",
+    "printer_name": "Konica Minolta bizhub 20p"
+  },
+  {
+    "printer_id": "400000026594",
+    "printer_name": "HP LaseJet P1005"
+  },
+  {
+    "printer_id": "400000033752",
+    "printer_name": "Pantum M6700DW"
+  },
+  {
+    "printer_id": "400000027278",
+    "printer_name": "Brother HL-2132R"
+  },
+  {
+    "printer_id": "400000028920",
+    "printer_name": "Brother MFC-8350"
+  },
+  {
+    "printer_id": "400000026602",
+    "printer_name": "HP LaserJet Pro P1102"
+  },
+  {
+    "printer_id": "400000029740",
+    "printer_name": "Samsung SL-M3875FD"
+  },
+  {
+    "printer_id": "400000029539",
+    "printer_name": "Kyocera FS-C2126"
+  },
+  {
+    "printer_id": "400000026575",
+    "printer_name": "HP LaserJet 4250"
+  },
+  {
+    "printer_id": "400000029510",
+    "printer_name": "Pantum P1000"
+  },
+  {
+    "printer_id": "400000032646",
+    "printer_name": "Xerox WorkCentre WC27755"
+  },
+  {
+    "printer_id": "400000026367",
+    "printer_name": "Kyocera KM-3050"
+  },
+  {
+    "printer_id": "400000026888",
+    "printer_name": "Xerox WorkCentre 3550X"
+  },
+  {
+    "printer_id": "400000033762",
+    "printer_name": "Ricoh Pro C9210"
+  },
+  {
+    "printer_id": "400000032305",
+    "printer_name": "Xerox Versant 280 Press"
+  },
+  {
+    "printer_id": "400000028071",
+    "printer_name": "Brother MFC-7820NR"
+  },
+  {
+    "printer_id": "400000029062",
+    "printer_name": "HP HP LaserJet Pro 400 Color M451nw"
+  },
+  {
+    "printer_id": "400000033168",
+    "printer_name": "Xerox Versant 3100i Press"
+  },
+  {
+    "printer_id": "400000033214",
+    "printer_name": "Konica Minolta Bizhub Pro C6501P"
+  },
+  {
+    "printer_id": "400000026912",
+    "printer_name": "Xerox WorkCentre 3325"
+  },
+  {
+    "printer_id": "400000028999",
+    "printer_name": "Canon PC 941"
+  },
+  {
+    "printer_id": "400000026561",
+    "printer_name": "HP LaserJet M5035 mfp"
+  },
+  {
+    "printer_id": "400000033820",
+    "printer_name": "Konica Minolta bizhub PRO 8150"
+  },
+  {
+    "printer_id": "400000027277",
+    "printer_name": "Brother MFC-7840WR"
+  },
+  {
+    "printer_id": "400000028936",
+    "printer_name": "Brother MFC-9850"
+  },
+  {
+    "printer_id": "400000027913",
+    "printer_name": "Canon i-SENSYS LBP5050"
+  },
+  {
+    "printer_id": "400000026958",
+    "printer_name": "Samsung SCX-5639FW"
+  },
+  {
+    "printer_id": "400000028758",
+    "printer_name": "Canon i-SENSYS MF729Cx"
+  },
+  {
+    "printer_id": "400000029507",
+    "printer_name": "Samsung ProXpress SL-M4020ND"
+  },
+  {
+    "printer_id": "400000026886",
+    "printer_name": "Ricoh SP 201N"
+  },
+  {
+    "printer_id": "400000028943",
+    "printer_name": "Brother HL-1110"
+  },
+  {
+    "printer_id": "400000027760",
+    "printer_name": "HP color LaserJet CM3530 MFP"
+  },
+  {
+    "printer_id": "400000028832",
+    "printer_name": "HP LaserJet Ultra MFP M134fn"
+  },
+  {
+    "printer_id": "400000029810",
+    "printer_name": "Kyocera TASKalfa 552ci"
+  },
+  {
+    "printer_id": "400000028676",
+    "printer_name": "HP Color LaserJet 3600"
+  },
+  {
+    "printer_id": "400000028675",
+    "printer_name": "HP Color LaserJet CP3505n"
+  },
+  {
+    "printer_id": "400000026529",
+    "printer_name": "HP LaserJet 1320"
+  },
+  {
+    "printer_id": "400000026234",
+    "printer_name": "Kyocera Ecosys M2735DW"
+  },
+  {
+    "printer_id": "400000026940",
+    "printer_name": "Samsung ProXpress SL-M4080"
+  },
+  {
+    "printer_id": "400000026788",
+    "printer_name": "Xerox Phaser 3100"
+  },
+  {
+    "printer_id": "400000033588",
+    "printer_name": "Konica Minolta PagePro 4650EN"
+  },
+  {
+    "printer_id": "400000026446",
+    "printer_name": "HP LaserJet 1150"
+  },
+  {
+    "printer_id": "400000033208",
+    "printer_name": "Konica Minolta/Develop Develop Ineo + 6501"
+  },
+  {
+    "printer_id": "400000029785",
+    "printer_name": "Kyocera Ecosys P6026cdn"
+  },
+  {
+    "printer_id": "400000027253",
+    "printer_name": "Oki B432dn"
+  },
+  {
+    "printer_id": "400000026876",
+    "printer_name": "Samsung ML-2955"
+  },
+  {
+    "printer_id": "400000032467",
+    "printer_name": "Canon ImagePress C710"
+  },
+  {
+    "printer_id": "400000028462",
+    "printer_name": "Canon Fax-L360"
+  },
+  {
+    "printer_id": "400000030114",
+    "printer_name": "Brother HL-5250DN"
+  },
+  {
+    "printer_id": "400000028949",
+    "printer_name": "Brother HL-2230"
+  },
+  {
+    "printer_id": "400000026508",
+    "printer_name": "Canon LaserBase MF6560PL"
+  },
+  {
+    "printer_id": "400000028873",
+    "printer_name": "Samsung Xpress SL-M2071"
+  },
+  {
+    "printer_id": "400000026294",
+    "printer_name": "Kyocera FS-6950dn"
+  },
+  {
+    "printer_id": "400000033746",
+    "printer_name": "Pantum  P3020D"
+  },
+  {
+    "printer_id": "400000026452",
+    "printer_name": "HP LaserJet Pro MFP M29a"
+  },
+  {
+    "printer_id": "400000027793",
+    "printer_name": "Canon i-SENSYS LBP7680Cx"
+  },
+  {
+    "printer_id": "400000032422",
+    "printer_name": "Konica Minolta bizhub PRESS C1070"
+  },
+  {
+    "printer_id": "400000026568",
+    "printer_name": "HP LaserJet P3015"
+  },
+  {
+    "printer_id": "400000029741",
+    "printer_name": "Samsung SL-M3875FW"
+  },
+  {
+    "printer_id": "400000027294",
+    "printer_name": "Brother MFC-7860DW"
+  },
+  {
+    "printer_id": "400000032407",
+    "printer_name": "Xerox DocuColor DC240"
+  },
+  {
+    "printer_id": "400000033430",
+    "printer_name": "Konica Minolta bizhub 235"
+  },
+  {
+    "printer_id": "400000028749",
+    "printer_name": "Canon i-SENSYS LBP7750Cdn"
+  },
+  {
+    "printer_id": "400000033544",
+    "printer_name": "Konica Minoltabizhub C4001i"
+  },
+  {
+    "printer_id": "400000032475",
+    "printer_name": "Canon ImagePress C65"
+  },
+  {
+    "printer_id": "400000026404",
+    "printer_name": "Canon PC-d320"
+  },
+  {
+    "printer_id": "400000033618",
+    "printer_name": "Pantum M7108DW"
+  },
+  {
+    "printer_id": "400000026628",
+    "printer_name": "Canon i-SENSYS MF4570dn"
+  },
+  {
+    "printer_id": "400000026445",
+    "printer_name": "Canon LaserBase MF5770"
+  },
+  {
+    "printer_id": "400000028806",
+    "printer_name": "Canon i-SENSYS MF237w"
+  },
+  {
+    "printer_id": "400000026920",
+    "printer_name": "Xerox Phaser 3500"
+  },
+  {
+    "printer_id": "400000030107",
+    "printer_name": "Brother DCP-1623WR"
+  },
+  {
+    "printer_id": "400000028410",
+    "printer_name": "Canon Fax-L290"
+  },
+  {
+    "printer_id": "400000026736",
+    "printer_name": "Samsung SCX-4500"
+  },
+  {
+    "printer_id": "400000026893",
+    "printer_name": "Xerox Phaser 3435DN"
+  },
+  {
+    "printer_id": "400000032663",
+    "printer_name": "Konica Minolta Bizhub 360i"
+  },
+  {
+    "printer_id": "400000026761",
+    "printer_name": "Samsung SCX-4200"
+  },
+  {
+    "printer_id": "400000033498",
+    "printer_name": "Konica Minolta Bizhub 43"
+  },
+  {
+    "printer_id": "400000033252",
+    "printer_name": "Canon ImagePress C170"
+  },
+  {
+    "printer_id": "400000024285",
+    "printer_name": "Kyocera P3050DN"
+  },
+  {
+    "printer_id": "400000031069",
+    "printer_name": "Konica Minolta bizhub C287"
+  },
+  {
+    "printer_id": "400000033331",
+    "printer_name": "Konica Minolta AccurioPress 6272P"
+  },
+  {
+    "printer_id": "400000026534",
+    "printer_name": "Canon i-SENSYS LBP3360"
+  },
+  {
+    "printer_id": "400000032628",
+    "printer_name": "Konica Minolta Bizhub C226"
+  },
+  {
+    "printer_id": "400000024051",
+    "printer_name": "Kyocera P3055DN"
+  },
+  {
+    "printer_id": "400000032668",
+    "printer_name": "Konica Minolta Bizhub C3320i"
+  },
+  {
+    "printer_id": "400000032355",
+    "printer_name": "Konica Minolta AccurioPrint C3070L"
+  },
+  {
+    "printer_id": "400000028663",
+    "printer_name": "HP LaserJet Pro 200 Color MFP M276"
+  },
+  {
+    "printer_id": "400000026263",
+    "printer_name": "Kyocera Ecosys M3540dn"
+  },
+  {
+    "printer_id": "400000028461",
+    "printer_name": "Canon Fax-L350"
+  },
+  {
+    "printer_id": "400000033496",
+    "printer_name": "Konica Minolta bizhub 651i"
+  },
+  {
+    "printer_id": "400000026535",
+    "printer_name": "HP LaserJet P2014"
+  },
+  {
+    "printer_id": "400000026748",
+    "printer_name": "Samsung ML-1660"
+  },
+  {
+    "printer_id": "400000033757",
+    "printer_name": "Pantum M7200FDW"
+  },
+  {
+    "printer_id": "400000026757",
+    "printer_name": "Samsung ML-1865"
+  },
+  {
+    "printer_id": "400000027230",
+    "printer_name": "Pantum P2500"
+  },
+  {
+    "printer_id": "400000025770",
+    "printer_name": "Kyocera P3150DN"
+  },
+  {
+    "printer_id": "400000030112",
+    "printer_name": "Brother DCP-8065DN"
+  },
+  {
+    "printer_id": "400000031008",
+    "printer_name": "Konica Minolta Bizhub 368"
+  },
+  {
+    "printer_id": "400000028994",
+    "printer_name": "Canon PC 745"
+  },
+  {
+    "printer_id": "400000028967",
+    "printer_name": "Brother MFC-1912"
+  },
+  {
+    "printer_id": "400000028464",
+    "printer_name": "Canon imageRunner 1133"
+  },
+  {
+    "printer_id": "400000030999",
+    "printer_name": "Xerox WorkCentre 7228"
+  },
+  {
+    "printer_id": "400000029503",
+    "printer_name": "HP LaserJet 2100"
+  },
+  {
+    "printer_id": "400000033133",
+    "printer_name": "Xerox WorkCentre 7835i"
+  },
+  {
+    "printer_id": "400000033411",
+    "printer_name": "Konica Minolta bizhub 7616v"
+  },
+  {
+    "printer_id": "400000026339",
+    "printer_name": "Kyocera TASKAlfa 2201"
+  },
+  {
+    "printer_id": "400000033783",
+    "printer_name": "Ricoh Pro C5210S"
+  },
+  {
+    "printer_id": "400000027799",
+    "printer_name": "Canon i-SENSYS MF8350Cdn"
+  },
+  {
+    "printer_id": "400000033212",
+    "printer_name": "Konica Minolta Bizhub Pro C6501E"
+  },
+  {
+    "printer_id": "400000026194",
+    "printer_name": "Kyocera FS-9530"
+  },
+  {
+    "printer_id": "400000030681",
+    "printer_name": "Kyocera KM-2030"
+  },
+  {
+    "printer_id": "400000026205",
+    "printer_name": "Kyocera Mita FS-1110"
+  },
+  {
+    "printer_id": "400000026545",
+    "printer_name": "Canon i-SENSYS LBP351X"
+  },
+  {
+    "printer_id": "400000026802",
+    "printer_name": "Samsung ML-2165"
+  },
+  {
+    "printer_id": "400000032394",
+    "printer_name": "Konica Minolta AccurioPress C7100"
+  },
+  {
+    "printer_id": "400000028962",
+    "printer_name": "Brother MFC-1810"
+  },
+  {
+    "printer_id": "400000026460",
+    "printer_name": "Canon LBP1760"
+  },
+  {
+    "printer_id": "400000033431",
+    "printer_name": "Konica Minolta bizhub 222"
+  },
+  {
+    "printer_id": "400000028778",
+    "printer_name": "HP color LaserJet CM3530fs MFP"
+  },
+  {
+    "printer_id": "400000032381",
+    "printer_name": "Konica Minolta Bizhub C454e"
+  },
+  {
+    "printer_id": "400000028741",
+    "printer_name": "Canon i-SENSYS LBP7110Cw"
+  },
+  {
+    "printer_id": "400000032405",
+    "printer_name": "Xerox Digital Color Press DC700i"
+  },
+  {
+    "printer_id": "400000033389",
+    "printer_name": "Konica Minolta 7020"
+  },
+  {
+    "printer_id": "400000033442",
+    "printer_name": "Konica Minolta MagiColor 7450 II"
+  },
+  {
+    "printer_id": "400000032382",
+    "printer_name": "Konica Minolta AccurioPress C3080P"
+  },
+  {
+    "printer_id": "400000026972",
+    "printer_name": "Oki B2500 MFP"
+  },
+  {
+    "printer_id": "400000033248",
+    "printer_name": "Konica Minolta AccurioLabel 190"
+  },
+  {
+    "printer_id": "400000028941",
+    "printer_name": "Brother DCP-1200\n"
+  },
+  {
+    "printer_id": "400000028804",
+    "printer_name": "Canon i-SENSYS MF229dw"
+  },
+  {
+    "printer_id": "400000031006",
+    "printer_name": "Konica Minolta Bizhub 554e"
+  },
+  {
+    "printer_id": "400000028352",
+    "printer_name": "HP LaserJet 3150"
+  },
+  {
+    "printer_id": "400000028382",
+    "printer_name": "Canon Fax-L200"
+  },
+  {
+    "printer_id": "400000033490",
+    "printer_name": "Konica Minolta Bizhub 4422"
+  },
+  {
+    "printer_id": "400000026450",
+    "printer_name": "HP LaserJet Pro MFP M28a"
+  },
+  {
+    "printer_id": "400000033250",
+    "printer_name": "Konica Minolta AccurioPress C83hc"
+  },
+  {
+    "printer_id": "400000028837",
+    "printer_name": "HP LaserJet Pro MFP M227fdw"
+  },
+  {
+    "printer_id": "400000033176",
+    "printer_name": "Xerox PrimeLink B9136"
+  },
+  {
+    "printer_id": "400000030719",
+    "printer_name": "Konica Minolta bizhub C654"
+  },
+  {
+    "printer_id": "400000026589",
+    "printer_name": "HP LaserJet Enterprise M601dn"
+  },
+  {
+    "printer_id": "400000033132",
+    "printer_name": "Xerox WorkCentre 7845i"
+  },
+  {
+    "printer_id": "400000029484",
+    "printer_name": "Konica Minolta bizhub C360"
+  },
+  {
+    "printer_id": "400000032392",
+    "printer_name": "Konica Minolta Bizhub Press C7000P"
+  },
+  {
+    "printer_id": "400000033417",
+    "printer_name": "Konica Minolta bizhub 200"
+  },
+  {
+    "printer_id": "400000028364",
+    "printer_name": "Canon i-SENSYS FAX-L100"
+  },
+  {
+    "printer_id": "400000028959",
+    "printer_name": "Brother DCP-1610"
+  },
+  {
+    "printer_id": "400000027812",
+    "printer_name": "HP Color LaserJet Pro M476dw"
+  },
+  {
+    "printer_id": "400000033270",
+    "printer_name": "Canon imageRUNNER ADVANCE C7270i"
+  },
+  {
+    "printer_id": "400000029056",
+    "printer_name": "Canon iR C5180"
+  },
+  {
+    "printer_id": "400000026682",
+    "printer_name": "Samsung ML-2570"
+  },
+  {
+    "printer_id": "400000029720",
+    "printer_name": "Samsung SL-M2626D"
+  },
+  {
+    "printer_id": "400000026571",
+    "printer_name": "HP LaserJet Enterprise M725dn"
+  },
+  {
+    "printer_id": "400000032460",
+    "printer_name": "Konica Minolta Bizhub PRO 950"
+  },
+  {
+    "printer_id": "400000027240",
+    "printer_name": "Pantum M6607"
+  },
+  {
+    "printer_id": "400000026268",
+    "printer_name": "Kyocera Ecosys M3550idn"
+  },
+  {
+    "printer_id": "400000028875",
+    "printer_name": "Xerox WorkCentre 3025BI"
+  },
+  {
+    "printer_id": "400000026332",
+    "printer_name": "Kyocera KM-2020"
+  },
+  {
+    "printer_id": "400000032643",
+    "printer_name": "Xerox WorkCentre 7855"
+  },
+  {
+    "printer_id": "400000028799",
+    "printer_name": "Canon i-SENSYS MF211"
+  },
+  {
+    "printer_id": "400000033265",
+    "printer_name": "Canon imageRUNNER ADVANCE C7065"
+  },
+  {
+    "printer_id": "400000033537",
+    "printer_name": "Konica Minolta C25"
+  },
+  {
+    "printer_id": "400000028760",
+    "printer_name": "HP Laserjet Pro 400 Color M451dw"
+  },
+  {
+    "printer_id": "400000032402",
+    "printer_name": "Xerox Color 560"
+  },
+  {
+    "printer_id": "400000033448",
+    "printer_name": "Konica Minolta bizhub 751"
+  },
+  {
+    "printer_id": "400000026778",
+    "printer_name": "Samsung ML-2250"
+  },
+  {
+    "printer_id": "400000033748",
+    "printer_name": "Pantum P3300DW"
+  },
+  {
+    "printer_id": "400000031014",
+    "printer_name": "Konica Minolta bizhub 758"
+  },
+  {
+    "printer_id": "400000026510",
+    "printer_name": "Canon LaserBase MF6540PL"
+  },
+  {
+    "printer_id": "400000028025",
+    "printer_name": "Xerox Phaser 6000"
+  },
+  {
+    "printer_id": "400000033267",
+    "printer_name": "Canon imageRUNNER ADVANCE C7260"
+  },
+  {
+    "printer_id": "400000033670",
+    "printer_name": "Canon ImagePress C660"
+  },
+  {
+    "printer_id": "400000028866",
+    "printer_name": "Samsung ML-2164"
+  },
+  {
+    "printer_id": "400000030721",
+    "printer_name": "Konica Minolta bizhub C558"
+  },
+  {
+    "printer_id": "400000033409",
+    "printer_name": "Konica Minolta bizhub 163v"
+  },
+  {
+    "printer_id": "400000026605",
+    "printer_name": "HP LaserJet Pro M1210"
+  },
+  {
+    "printer_id": "400000033422",
+    "printer_name": "Konica Minolta bizhub 180"
+  },
+  {
+    "printer_id": "400000026275",
+    "printer_name": "Kyocera Ecosys P3055DN"
+  },
+  {
+    "printer_id": "400000026564",
+    "printer_name": "HP  LaserJet 5200"
+  },
+  {
+    "printer_id": "400000028809",
+    "printer_name": "Canon i-SENSYS MF244dw"
+  },
+  {
+    "printer_id": "400000026350",
+    "printer_name": "Kyocera TASKAlfa 255"
+  },
+  {
+    "printer_id": "400000029475",
+    "printer_name": "Oki C9650"
+  },
+  {
+    "printer_id": "400000026626",
+    "printer_name": "Canon i-SENSYS MF4450"
+  },
+  {
+    "printer_id": "400000029036",
+    "printer_name": "Canon iR C3220N"
+  },
+  {
+    "printer_id": "400000028725",
+    "printer_name": "Canon i-SENSYS MF8360Cdn"
+  },
+  {
+    "printer_id": "400000029788",
+    "printer_name": "Kyocera FS-C8100DN"
+  },
+  {
+    "printer_id": "400000028511",
+    "printer_name": "Canon LaserBase MF3240"
+  },
+  {
+    "printer_id": "400000033423",
+    "printer_name": "Konica Minolta bizhub 211"
+  },
+  {
+    "printer_id": "400000032654",
+    "printer_name": "Konica Minolta Bizhub Pro 958"
+  },
+  {
+    "printer_id": "400000026543",
+    "printer_name": "HP LaserJet 2430"
+  },
+  {
+    "printer_id": "400000026570",
+    "printer_name": "HP LaserJet Enterprise M712dn"
+  },
+  {
+    "printer_id": "400000016771",
+    "printer_name": "HP LaserJet Pro 400 MFP M425dw"
+  },
+  {
+    "printer_id": "400000028919",
+    "printer_name": "Brother FAX-8750"
+  },
+  {
+    "printer_id": "400000026933",
+    "printer_name": "Ricoh SP 202SN"
+  },
+  {
+    "printer_id": "400000032370",
+    "printer_name": "Konica Minolta Bizhub C300"
+  },
+  {
+    "printer_id": "400000026860",
+    "printer_name": "Samsung SCX-4623F"
+  },
+  {
+    "printer_id": "400000028716",
+    "printer_name": "Canon i-SENSYS MF9220Cdn"
+  },
+  {
+    "printer_id": "400000032664",
+    "printer_name": "Konica Minolta Bizhub 300i"
+  },
+  {
+    "printer_id": "400000026892",
+    "printer_name": "Samsung ML-3471"
+  },
+  {
+    "printer_id": "400000031004",
+    "printer_name": "Xerox WorkCentre 7345"
+  },
+  {
+    "printer_id": "400000026207",
+    "printer_name": "Kyocera Mita FS-1120D"
+  },
+  {
+    "printer_id": "400000029996",
+    "printer_name": "Xerox Phaser 3450B"
+  },
+  {
+    "printer_id": "400000033530",
+    "printer_name": "Konica Minolta bizhub C651i"
+  },
+  {
+    "printer_id": "400000032374",
+    "printer_name": "Konica Minolta AccurioPress C3070"
+  },
+  {
+    "printer_id": "400000026224",
+    "printer_name": "Kyocera Ecosys FS-1130MFP"
+  },
+  {
+    "printer_id": "400000028742",
+    "printer_name": "Canon i-SENSYS LBP7100"
+  },
+  {
+    "printer_id": "400000028898",
+    "printer_name": "Brother HL-1240"
+  },
+  {
+    "printer_id": "400000026154",
+    "printer_name": "Kyocera Mita FS-1010"
+  },
+  {
+    "printer_id": "400000027206",
+    "printer_name": "Canon FC 108"
+  },
+  {
+    "printer_id": "400000028889",
+    "printer_name": "HP LaserJet Pro MFP M125r"
+  },
+  {
+    "printer_id": "400000028880",
+    "printer_name": "Canon iR 1024iF"
+  },
+  {
+    "printer_id": "400000026379",
+    "printer_name": "Kyocera KM-2530"
+  },
+  {
+    "printer_id": "400000026197",
+    "printer_name": "Kyocera FS-1116MFP"
+  },
+  {
+    "printer_id": "400000026348",
+    "printer_name": "Kyocera FS-6525MFP"
+  },
+  {
+    "printer_id": "400000033812",
+    "printer_name": "Xerox AltaLink C8170"
+  },
+  {
+    "printer_id": "400000028843",
+    "printer_name": "HP LaserJet Ultra M105"
+  },
+  {
+    "printer_id": "400000032441",
+    "printer_name": "Konica Minolta Bizhub Pro C5500"
+  },
+  {
+    "printer_id": "400000032678",
+    "printer_name": "Canon VarioPrint VP110"
+  },
+  {
+    "printer_id": "400000032631",
+    "printer_name": "Konica Minolta AccurioPress 6136P"
+  },
+  {
+    "printer_id": "400000026558",
+    "printer_name": "HP LaserJet M3027"
+  },
+  {
+    "printer_id": "400000028348",
+    "printer_name": "HP LaserJet 5L"
+  },
+  {
+    "printer_id": "400000027811",
+    "printer_name": "HP Laserjet Pro 400 Color M451dn"
+  },
+  {
+    "printer_id": "400000031315",
+    "printer_name": "Panasonic KX MB1520"
+  },
+  {
+    "printer_id": "400000027279",
+    "printer_name": "Brother HL-2240R"
+  },
+  {
+    "printer_id": "400000033210",
+    "printer_name": "Konica Minolta Bizhub Pro C6500EP"
+  },
+  {
+    "printer_id": "400000028980",
+    "printer_name": "Canon FC 226"
+  },
+  {
+    "printer_id": "400000028642",
+    "printer_name": "Canon i-SENSYS MF6680dn"
+  },
+  {
+    "printer_id": "400000028899",
+    "printer_name": "Brother HL-1250"
+  },
+  {
+    "printer_id": "400000026277",
+    "printer_name": "Kyocera Ecosys P3155DN"
+  },
+  {
+    "printer_id": "400000026466",
+    "printer_name": "HP LaserJet 1022"
+  },
+  {
+    "printer_id": "400000027040",
+    "printer_name": "HP LaserJet 2300"
+  },
+  {
+    "printer_id": "400000026244",
+    "printer_name": "Kyocera Ecosys M2835dw"
+  },
+  {
+    "printer_id": "400000026939",
+    "printer_name": "Ricoh SP 210"
+  },
+  {
+    "printer_id": "400000027798",
+    "printer_name": "Canon i-SENSYS MF8380Cdw"
+  },
+  {
+    "printer_id": "400000033791",
+    "printer_name": "Ricoh Pro C9200"
+  },
+  {
+    "printer_id": "400000026656",
+    "printer_name": "Xerox Phaser 3110"
+  },
+  {
+    "printer_id": "400000026759",
+    "printer_name": "Samsung SCX-3205"
+  },
+  {
+    "printer_id": "400000032433",
+    "printer_name": "Konica Minolta Bizhub C300i"
+  },
+  {
+    "printer_id": "400000026883",
+    "printer_name": "Samsung ML-3050"
+  },
+  {
+    "printer_id": "400000029465",
+    "printer_name": "Dell 1815dn"
+  },
+  {
+    "printer_id": "400000026550",
+    "printer_name": "Canon i-SENSYS LBP6300dn"
+  },
+  {
+    "printer_id": "400000026762",
+    "printer_name": "Samsung SCX-4220"
+  },
+  {
+    "printer_id": "400000028810",
+    "printer_name": "Canon i-SENSYS MF247dw"
+  },
+  {
+    "printer_id": "400000032454",
+    "printer_name": "Konica Minolta Bizhub C450i"
+  },
+  {
+    "printer_id": "400000027291",
+    "printer_name": "Brother DCP-7065DN"
+  },
+  {
+    "printer_id": "400000032645",
+    "printer_name": "Xerox AltaLink C8030"
+  },
+  {
+    "printer_id": "400000033129",
+    "printer_name": "Xerox WorkCentre 7855i"
+  },
+  {
+    "printer_id": "400000028938",
+    "printer_name": "Brother MFC-9870"
+  },
+  {
+    "printer_id": "400000033751",
+    "printer_name": "Pantum M6700D"
+  },
+  {
+    "printer_id": "400000027217",
+    "printer_name": "Canon PC 890"
+  },
+  {
+    "printer_id": "400000033403",
+    "printer_name": "Konica Minolta bizhub 160"
+  },
+  {
+    "printer_id": "400000030998",
+    "printer_name": "Xerox Сolour C75 Press"
+  },
+  {
+    "printer_id": "400000026264",
+    "printer_name": "Kyocera FS-4100dn"
+  },
+  {
+    "printer_id": "400000026670",
+    "printer_name": "Samsung SCX-4100"
+  },
+  {
+    "printer_id": "400000026838",
+    "printer_name": "Samsung SCX-4600"
+  },
+  {
+    "printer_id": "400000033405",
+    "printer_name": "Konica Minolta bizhub 160f"
+  },
+  {
+    "printer_id": "400000027250",
+    "printer_name": "Oki MB472dnw"
+  },
+  {
+    "printer_id": "400000031011",
+    "printer_name": "Konica Minolta bizhub 658e"
+  },
+  {
+    "printer_id": "400000033514",
+    "printer_name": "HP LaserJet 107a"
+  },
+  {
+    "printer_id": "400000033425",
+    "printer_name": "Konica Minolta bizhub 220"
+  },
+  {
+    "printer_id": "400000026254",
+    "printer_name": "Kyocera FS-3140MFP+"
+  },
+  {
+    "printer_id": "400000026836",
+    "printer_name": "Samsung ML-2525"
+  },
+  {
+    "printer_id": "400000032354",
+    "printer_name": "Konica Minolta AccurioPrint C2060L"
+  },
+  {
+    "printer_id": "400000033155",
+    "printer_name": "Xerox WorkCentre WC7775"
+  },
+  {
+    "printer_id": "400000033209",
+    "printer_name": "Konica Minolta Bizhub Pro C6500E"
+  },
+  {
+    "printer_id": "400000027911",
+    "printer_name": "HP LaserJet Pro 200 color Printer M251nw"
+  },
+  {
+    "printer_id": "400000026661",
+    "printer_name": "Samsung ML-1740"
+  },
+  {
+    "printer_id": "400000028960",
+    "printer_name": "Brother DCP-1612"
+  },
+  {
+    "printer_id": "400000032359",
+    "printer_name": "Xerox PrimeLink C9065"
+  },
+  {
+    "printer_id": "400000033503",
+    "printer_name": "Konica Minolta MagiColor 1650EN"
+  },
+  {
+    "printer_id": "400000031001",
+    "printer_name": "Xerox WorkCentre 7245"
+  },
+  {
+    "printer_id": "400000026593",
+    "printer_name": "HP LaserJet Enterprise M4555"
+  },
+  {
+    "printer_id": "400000026225",
+    "printer_name": "Kyocera Ecosys M2030DN"
+  },
+  {
+    "printer_id": "400000028397",
+    "printer_name": "Canon Fax-L240"
+  },
+  {
+    "printer_id": "400000033393",
+    "printer_name": "Konica Minolta 7035"
+  },
+  {
+    "printer_id": "400000032383",
+    "printer_name": "Konica Minolta AccurioPress C7090"
+  },
+  {
+    "printer_id": "400000033256",
+    "printer_name": "Canon ImagePress Lite C165"
+  },
+  {
+    "printer_id": "400000028756",
+    "printer_name": "Canon i-SENSYS MF724Cdw"
+  },
+  {
+    "printer_id": "400000031003",
+    "printer_name": "Xerox WorkCentre 7335"
+  },
+  {
+    "printer_id": "400000033329",
+    "printer_name": "Konica Minolta bizhub C450P"
+  },
+  {
+    "printer_id": "400000027276",
+    "printer_name": "Brother MFC-7440NR"
+  },
+  {
+    "printer_id": "400000028904",
+    "printer_name": "Brother HL-1435"
+  },
+  {
+    "printer_id": "400000026666",
+    "printer_name": "Xerox Phaser 3115"
+  },
+  {
+    "printer_id": "400000026536",
+    "printer_name": "HP LaserJet P2015"
+  },
+  {
+    "printer_id": "400000032418",
+    "printer_name": "Konica Minolta Bizhub Press 1052"
+  },
+  {
+    "printer_id": "400000033452",
+    "printer_name": "Konica Minolta bizhub C352P"
+  },
+  {
+    "printer_id": "400000028801",
+    "printer_name": "Canon i-SENSYS MF216n"
+  },
+  {
+    "printer_id": "400000033587",
+    "printer_name": "Konica Minolta PagePro 1490MF"
+  },
+  {
+    "printer_id": "400000032406",
+    "printer_name": "Xerox Digital Color Press DC770"
+  },
+  {
+    "printer_id": "400000032442",
+    "printer_name": "Konica Minolta Bizhub Pro C5501"
+  },
+  {
+    "printer_id": "400000029027",
+    "printer_name": "HP Color LaserJet CP4005dn"
+  },
+  {
+    "printer_id": "400000026621",
+    "printer_name": "HP LaserJet Pro P1566"
+  },
+  {
+    "printer_id": "400000032675",
+    "printer_name": "Xerox AltaLink C8070"
+  },
+  {
+    "printer_id": "400000033656",
+    "printer_name": "Xerox Versalink B7130"
+  },
+  {
+    "printer_id": "400000026221",
+    "printer_name": "Kyocera Ecosys FS-1125MFP"
+  },
+  {
+    "printer_id": "400000027270",
+    "printer_name": "Brother HL-2170W"
+  },
+  {
+    "printer_id": "400000026796",
+    "printer_name": "Samsung SCX-6322DN"
+  },
+  {
+    "printer_id": "400000029481",
+    "printer_name": "Konica Minolta bizhub C224e"
+  },
+  {
+    "printer_id": "400000033480",
+    "printer_name": "Konica Minolta bizhub 4000P"
+  },
+  {
+    "printer_id": "400000028582",
+    "printer_name": "Canon i-SENSYS MF4350d"
+  },
+  {
+    "printer_id": "400000028948",
+    "printer_name": "Brother HL-2200"
+  },
+  {
+    "printer_id": "400000029795",
+    "printer_name": "Kyocera TASKalfa 2550ci"
+  },
+  {
+    "printer_id": "400000033296",
+    "printer_name": "Xerox WorkCentre 4112"
+  },
+  {
+    "printer_id": "400000033456",
+    "printer_name": "Konica Minolta Bizhub C251i"
+  },
+  {
+    "printer_id": "400000033413",
+    "printer_name": "Konica Minolta bizhub 184"
+  },
+  {
+    "printer_id": "400000032391",
+    "printer_name": "Konica Minolta Bizhub 558e"
+  },
+  {
+    "printer_id": "400000026667",
+    "printer_name": "Xerox Phaser 3120"
+  },
+  {
+    "printer_id": "400000028879",
+    "printer_name": "Canon iR 1022A"
+  },
+  {
+    "printer_id": "400000026218",
+    "printer_name": "Kyocera Ecosys FS-1020MFP"
+  },
+  {
+    "printer_id": "400000031010",
+    "printer_name": "Konica Minolta bizhub 654e"
+  },
+  {
+    "printer_id": "400000028249",
+    "printer_name": "Canon I-SENSYS LBP212dw"
+  },
+  {
+    "printer_id": "400000028906",
+    "printer_name": "Brother HL-1440"
+  },
+  {
+    "printer_id": "400000026887",
+    "printer_name": "Xerox Phaser 3428DN"
+  },
+  {
+    "printer_id": "400000029479",
+    "printer_name": "Xerox WorkCentre 5024"
+  },
+  {
+    "printer_id": "400000031075",
+    "printer_name": "Konica Minolta bizhub C451"
+  },
+  {
+    "printer_id": "400000028908",
+    "printer_name": "Brother HL-1470N"
+  },
+  {
+    "printer_id": "400000033275",
+    "printer_name": "Canon imageRUNNER ADVANCE C7570"
+  },
+  {
+    "printer_id": "400000029477",
+    "printer_name": "Oki C9800"
+  },
+  {
+    "printer_id": "400000030110",
+    "printer_name": "Brother HL-1223WR"
+  },
+  {
+    "printer_id": "400000026172",
+    "printer_name": "Kyocera Mita FS-3800"
+  },
+  {
+    "printer_id": "400000027271",
+    "printer_name": "Brother DCP-7030"
+  },
+  {
+    "printer_id": "400000026913",
+    "printer_name": "Samsung ML-3750ND"
+  },
+  {
+    "printer_id": "400000033471",
+    "printer_name": "Konica Minolta Bizhub 3320"
+  },
+  {
+    "printer_id": "400000029467",
+    "printer_name": "Samsung ML-1020"
+  },
+  {
+    "printer_id": "400000026388",
+    "printer_name": "Kyocera KM-4035"
+  },
+  {
+    "printer_id": "400000028023",
+    "printer_name": "Xerox WorkCentre 6015B"
+  },
+  {
+    "printer_id": "400000033415",
+    "printer_name": "Konica Minolta bizhub 20"
+  },
+  {
+    "printer_id": "400000026980",
+    "printer_name": "Xerox WorkCentre 5019"
+  },
+  {
+    "printer_id": "400000026546",
+    "printer_name": "Canon LBP3460"
+  },
+  {
+    "printer_id": "400000026504",
+    "printer_name": "Canon i-SENSYS LBP2900"
+  },
+  {
+    "printer_id": "400000032452",
+    "printer_name": "Konica Minolta Bizhub Pro C6501"
+  },
+  {
+    "printer_id": "400000026174",
+    "printer_name": "Kyocera Mita FS-3820"
+  },
+  {
+    "printer_id": "400000033148",
+    "printer_name": "Konica Minolta/Develop Ineo + 654"
+  },
+  {
+    "printer_id": "400000032376",
+    "printer_name": "Konica Minolta AccurioPress C4080"
+  },
+  {
+    "printer_id": "400000026954",
+    "printer_name": "Samsung SCX-3407"
+  },
+  {
+    "printer_id": "400000031002",
+    "printer_name": "Xerox WorkCentre 7328"
+  },
+  {
+    "printer_id": "400000033165",
+    "printer_name": "Xerox Color 1000 Press"
+  },
+  {
+    "printer_id": "400000027178",
+    "printer_name": "Oki C330dn"
+  },
+  {
+    "printer_id": "400000026869",
+    "printer_name": "Samsung SCX-4828FN"
+  },
+  {
+    "printer_id": "400000029032",
+    "printer_name": "HP Color LaserJet CM4730"
+  },
+  {
+    "printer_id": "400000026279",
+    "printer_name": "Kyocera Ecosys M3660idn"
+  },
+  {
+    "printer_id": "400000033264",
+    "printer_name": "Canon imageRUNNER ADVANCE C7055i"
+  },
+  {
+    "printer_id": "400000028135",
+    "printer_name": "Brother HL-2040R"
+  },
+  {
+    "printer_id": "400000026891",
+    "printer_name": "Samsung ML-3470D"
+  },
+  {
+    "printer_id": "400000033174",
+    "printer_name": "Xerox PrimeLink B9110"
+  },
+  {
+    "printer_id": "400000026781",
+    "printer_name": "Samsung ML-2252W"
+  },
+  {
+    "printer_id": "400000033163",
+    "printer_name": "Xerox Color 800 Press"
+  },
+  {
+    "printer_id": "400000033272",
+    "printer_name": "Canon imageRUNNER ADVANCE C7280i"
+  },
+  {
+    "printer_id": "400000026376",
+    "printer_name": "Kyocera TASKalfa 420i"
+  },
+  {
+    "printer_id": "400000033429",
+    "printer_name": "Konica Minolta bizhub 195"
+  },
+  {
+    "printer_id": "400000026193",
+    "printer_name": "Kyocera FS-9520"
+  },
+  {
+    "printer_id": "400000032372",
+    "printer_name": "Konica Minolta Bizhub C450"
+  },
+  {
+    "printer_id": "400000033439",
+    "printer_name": "Konica Minolta bizhub 5020i"
+  },
+  {
+    "printer_id": "400000032644",
+    "printer_name": "Xerox WorkCentre 7970"
+  },
+  {
+    "printer_id": "400000030616",
+    "printer_name": "Samsung CLP-310"
+  },
+  {
+    "printer_id": "400000028969",
+    "printer_name": "Brother FAX-2820"
+  },
+  {
+    "printer_id": "400000026679",
+    "printer_name": "Samsung ML-2010"
+  },
+  {
+    "printer_id": "400000031044",
+    "printer_name": "Konica Minolta bizhub 363"
+  },
+  {
+    "printer_id": "400000033153",
+    "printer_name": "Xerox WorkCentre WC7665"
+  },
+  {
+    "printer_id": "400000032366",
+    "printer_name": "Konica Minolta Bizhub PRO 1100"
+  },
+  {
+    "printer_id": "400000032630",
+    "printer_name": "Konica Minolta Bizhub C750i"
+  },
+  {
+    "printer_id": "400000026223",
+    "printer_name": "Kyocera Ecosys FS-1030MFP"
+  },
+  {
+    "printer_id": "400000026943",
+    "printer_name": "Samsung ML-4050N"
+  },
+  {
+    "printer_id": "400000028013",
+    "printer_name": "Xerox Phaser 6125N"
+  },
+  {
+    "printer_id": "400000026206",
+    "printer_name": "Kyocera Mita FS-1100"
+  },
+  {
+    "printer_id": "400000027201",
+    "printer_name": "Oki MC562dn"
+  },
+  {
+    "printer_id": "400000026678",
+    "printer_name": "Samsung ML-1615"
+  },
+  {
+    "printer_id": "400000028937",
+    "printer_name": "Brother MFC-9860"
+  },
+  {
+    "printer_id": "400000028408",
+    "printer_name": "Canon Fax-L260i"
+  },
+  {
+    "printer_id": "400000028900",
+    "printer_name": "Brother HL-1260"
+  },
+  {
+    "printer_id": "400000028798",
+    "printer_name": "Canon i-SENSYS FAX-L410"
+  },
+  {
+    "printer_id": "400000026526",
+    "printer_name": "Canon LBP2000"
+  },
+  {
+    "printer_id": "400000026463",
+    "printer_name": "HP LaserJet 1015"
+  },
+  {
+    "printer_id": "400000029508",
+    "printer_name": "Xerox Phaser 4510"
+  },
+  {
+    "printer_id": "400000030980",
+    "printer_name": "Ricoh Aficio SP100"
+  },
+  {
+    "printer_id": "400000027179",
+    "printer_name": "Oki C510dn"
+  },
+  {
+    "printer_id": "400000027244",
+    "printer_name": "Oki B2400"
+  },
+  {
+    "printer_id": "400000026965",
+    "printer_name": "Xerox Phaser 3010"
+  },
+  {
+    "printer_id": "400000033419",
+    "printer_name": "Konica Minolta bizhub 350"
+  },
+  {
+    "printer_id": "400000033440",
+    "printer_name": "Konica Minolta bizhub C252"
+  },
+  {
+    "printer_id": "400000028934",
+    "printer_name": "Brother MFC-9760"
+  },
+  {
+    "printer_id": "400000033761",
+    "printer_name": "Ricoh Pro C9200"
+  },
+  {
+    "printer_id": "400000027912",
+    "printer_name": "Canon i-SENSYS MF8030"
+  },
+  {
+    "printer_id": "400000026531",
+    "printer_name": "HP LaserJet 3392"
+  },
+  {
+    "printer_id": "400000033251",
+    "printer_name": "Canon ImagePress C165"
+  },
+  {
+    "printer_id": "400000026751",
+    "printer_name": "Samsung ML-1860"
+  },
+  {
+    "printer_id": "400000026449",
+    "printer_name": "HP LaserJet Pro M16a"
+  },
+  {
+    "printer_id": "400000028886",
+    "printer_name": "Canon i-SENSYS LBP253x"
+  },
+  {
+    "printer_id": "400000028808",
+    "printer_name": "Canon i-SENSYS LBP6230dw"
+  },
+  {
+    "printer_id": "400000029723",
+    "printer_name": "Samsung SL-M2825DW"
+  },
+  {
+    "printer_id": "400000028029",
+    "printer_name": "Xerox Color Phaser 6110"
+  },
+  {
+    "printer_id": "400000033469",
+    "printer_name": "Konica Minolta bizhub 3300p"
+  },
+  {
+    "printer_id": "400000028956",
+    "printer_name": "Brother DCP-1511"
+  },
+  {
+    "printer_id": "400000033407",
+    "printer_name": "Konica Minolta bizhub 162"
+  },
+  {
+    "printer_id": "400000010716",
+    "printer_name": "HP Laserjet 8100dn"
+  },
+  {
+    "printer_id": "400000033542",
+    "printer_name": "Konica Minolta F+ imaging P40adn"
+  },
+  {
+    "printer_id": "400000028795",
+    "printer_name": "Canon i-SENSYS LBP6020"
+  },
+  {
+    "printer_id": "400000033424",
+    "printer_name": "Konica Minolta bizhub 181"
+  },
+  {
+    "printer_id": "400000032666",
+    "printer_name": "Konica Minolta Bizhub 4750i"
+  },
+  {
+    "printer_id": "400000029766",
+    "printer_name": "Brother HL-L2300DR"
+  },
+  {
+    "printer_id": "400000029497",
+    "printer_name": "Pantum P2507"
+  },
+  {
+    "printer_id": "400000032384",
+    "printer_name": "Konica Minolta Bizhub 308"
+  },
+  {
+    "printer_id": "400000028133",
+    "printer_name": "Brother HL-2030R"
+  },
+  {
+    "printer_id": "400000030694",
+    "printer_name": "Konica Minolta Bizhub Press C6000"
+  },
+  {
+    "printer_id": "400000026582",
+    "printer_name": "HP LaserJet 9000"
+  },
+  {
+    "printer_id": "400000027223",
+    "printer_name": "Pantum P2207"
+  },
+  {
+    "printer_id": "400000033428",
+    "printer_name": "Konica Minolta bizhub 215"
+  },
+  {
+    "printer_id": "400000033497",
+    "printer_name": "Konica Minolta Bizhub 751i"
+  },
+  {
+    "printer_id": "400000028643",
+    "printer_name": "Canon i-SENSYS MF623Cn"
+  },
+  {
+    "printer_id": "400000029050",
+    "printer_name": "HP LaserJet Pro MFP M521dw"
+  },
+  {
+    "printer_id": "400000026212",
+    "printer_name": "Kyocera Ecosys P2135DN"
+  },
+  {
+    "printer_id": "400000029800",
+    "printer_name": "Kyocera TASKalfa 500ci"
+  },
+  {
+    "printer_id": "400000033127",
+    "printer_name": "Xerox WorkCentre 7435"
+  },
+  {
+    "printer_id": "400000027195",
+    "printer_name": "Oki MC362dn"
+  },
+  {
+    "printer_id": "400000028895",
+    "printer_name": "Canon i-SENSYS MF4780dn"
+  },
+  {
+    "printer_id": "400000033432",
+    "printer_name": "Konica Minolta bizhub 282"
+  },
+  {
+    "printer_id": "400000026653",
+    "printer_name": "Samsung ML-1210"
+  },
+  {
+    "printer_id": "400000033394",
+    "printer_name": "Konica Minolta 7130"
+  },
+  {
+    "printer_id": "400000028963",
+    "printer_name": "Brother MFC-1811"
+  },
+  {
+    "printer_id": "400000026245",
+    "printer_name": "Kyocera FS-3900dn"
+  },
+  {
+    "printer_id": "400000028868",
+    "printer_name": "Samsung ML-2166"
+  },
+  {
+    "printer_id": "400000027275",
+    "printer_name": "Brother MFC-7320R"
+  },
+  {
+    "printer_id": "400000007116",
+    "printer_name": "HP LaserJet P2035"
+  },
+  {
+    "printer_id": "400000026502",
+    "printer_name": "Canon i-SENSYS MF4660PL"
+  },
+  {
+    "printer_id": "400000026639",
+    "printer_name": "Canon i-SENSYS LBP151dw"
+  },
+  {
+    "printer_id": "400000028240",
+    "printer_name": "Canon I-SENSYS LBP214dw"
+  },
+  {
+    "printer_id": "400000026465",
+    "printer_name": "HP LaserJet 1020"
+  },
+  {
+    "printer_id": "400000027107",
+    "printer_name": "Canon i-SENSYS LBP6680x"
+  },
+  {
+    "printer_id": "400000026745",
+    "printer_name": "Samsung ML-1645"
+  },
+  {
+    "printer_id": "400000029042",
+    "printer_name": "HP LaserJet Enterprise 500 MFP M525dn"
+  },
+  {
+    "printer_id": "400000030996",
+    "printer_name": "Xerox Digital Color Press DC700"
+  },
+  {
+    "printer_id": "400000032469",
+    "printer_name": "Canon ImagePress C800"
+  },
+  {
+    "printer_id": "400000026236",
+    "printer_name": "Kyocera Ecosys P2040dw"
+  },
+  {
+    "printer_id": "400000026196",
+    "printer_name": "Kyocera FS-1016MFP"
+  },
+  {
+    "printer_id": "400000026922",
+    "printer_name": "Xerox WorkCentre 3335"
+  },
+  {
+    "printer_id": "400000028350",
+    "printer_name": "HP LaserJet 6L"
+  },
+  {
+    "printer_id": "400000028835",
+    "printer_name": "HP LaserJet Ultra M230sdn"
+  },
+  {
+    "printer_id": "400000031020",
+    "printer_name": "Konica Minolta bizhub C754e"
+  },
+  {
+    "printer_id": "400000029502",
+    "printer_name": "Canon iR 1210"
+  },
+  {
+    "printer_id": "400000027274",
+    "printer_name": "Brother DCP-7045NR"
+  },
+  {
+    "printer_id": "400000026474",
+    "printer_name": "HP LaserJet M1319f MFP"
+  },
+  {
+    "printer_id": "400000028033",
+    "printer_name": "Lexmark Optra E210"
+  },
+  {
+    "printer_id": "400000033468",
+    "printer_name": "Konica Minolta Bizhub 306"
+  },
+  {
+    "printer_id": "400000026511",
+    "printer_name": "HP LaserJet 5000"
+  },
+  {
+    "printer_id": "400000028516",
+    "printer_name": "Canon i-SENSYS MF418x"
+  },
+  {
+    "printer_id": "400000033817",
+    "printer_name": "Canon VarioPrint VP140"
+  },
+  {
+    "printer_id": "400000032677",
+    "printer_name": "Canon VarioPrint VP135"
+  },
+  {
+    "printer_id": "400000026175",
+    "printer_name": "Kyocera Mita FS-3830"
+  },
+  {
+    "printer_id": "400000028881",
+    "printer_name": "HP LaserJet P1505n"
+  },
+  {
+    "printer_id": "400000033470",
+    "printer_name": "Konica Minolta bizhub 3301p"
+  },
+  {
+    "printer_id": "400000028070",
+    "printer_name": "Brother FAX-2825R"
+  },
+  {
+    "printer_id": "400000026159",
+    "printer_name": "Kyocera FS-1118MFP"
+  },
+  {
+    "printer_id": "400000026393",
+    "printer_name": "Canon LBP810"
+  },
+  {
+    "printer_id": "400000033607",
+    "printer_name": "HP LaserJet 135a"
+  },
+  {
+    "printer_id": "400000032415",
+    "printer_name": "Konica Minolta Bizhub PRO 1051"
+  },
+  {
+    "printer_id": "400000027060",
+    "printer_name": "HP LaserJet Pro M1536"
+  },
+  {
+    "printer_id": "400000033451",
+    "printer_name": "Konica Minolta bizhub PRO C500"
+  },
+  {
+    "printer_id": "400000030984",
+    "printer_name": "Ricoh FT4015"
+  },
+  {
+    "printer_id": "400000027222",
+    "printer_name": "Pantum P2200"
+  },
+  {
+    "printer_id": "400000031067",
+    "printer_name": "Konica Minolta bizhub 652"
+  },
+  {
+    "printer_id": "400000028768",
+    "printer_name": "HP Color LaserJet Enterprise CM4540fksm MFP"
+  },
+  {
+    "printer_id": "400000026199",
+    "printer_name": "Kyocera FS-820"
+  },
+  {
+    "printer_id": "400000028729",
+    "printer_name": "Canon i-SENSYS MF8550Cdn"
+  },
+  {
+    "printer_id": "400000027100",
+    "printer_name": "Canon i-SENSYS MF4870dn"
+  },
+  {
+    "printer_id": "400000030113",
+    "printer_name": "Brother HL-5240"
+  },
+  {
+    "printer_id": "400000033395",
+    "printer_name": "Konica Minolta 7135"
+  },
+  {
+    "printer_id": "400000027933",
+    "printer_name": "HP Color LaserJet CP1515n"
+  },
+  {
+    "printer_id": "400000030118",
+    "printer_name": "Brother HL-5340DRT"
+  },
+  {
+    "printer_id": "400000028981",
+    "printer_name": "Canon FC 228"
+  },
+  {
+    "printer_id": "400000032369",
+    "printer_name": "Konica Minolta Bizhub C250"
+  },
+  {
+    "printer_id": "400000028926",
+    "printer_name": "Brother MFC-9650"
+  },
+  {
+    "printer_id": "400000026983",
+    "printer_name": "Xerox CopyCentre C118"
+  },
+  {
+    "printer_id": "400000026798",
+    "printer_name": "Xerox WorkCentre M20i"
+  },
+  {
+    "printer_id": "400000033166",
+    "printer_name": "Unknown"
+  },
+  {
+    "printer_id": "400000028947",
+    "printer_name": "Brother HL-2130"
+  },
+  {
+    "printer_id": "400000033387",
+    "printer_name": "Konica Minolta bizhub 20"
+  },
+  {
+    "printer_id": "400000031021",
+    "printer_name": "Konica Minolta bizhub C759"
+  },
+  {
+    "printer_id": "400000028935",
+    "printer_name": "Brother MFC-9800"
+  },
+  {
+    "printer_id": "400000028545",
+    "printer_name": "Canon i-SENSYS MF4320d"
+  },
+  {
+    "printer_id": "400000026215",
+    "printer_name": "Kyocera Mita FS-1040"
+  },
+  {
+    "printer_id": "400000029995",
+    "printer_name": "Xerox Phaser 3450DN"
+  },
+  {
+    "printer_id": "400000026507",
+    "printer_name": "Canon LaserBase MF6530"
+  },
+  {
+    "printer_id": "400000026444",
+    "printer_name": "Canon LaserBase MF5750"
+  },
+  {
+    "printer_id": "400000026643",
+    "printer_name": "HP LaserJet Enterprise M506dn"
+  },
+  {
+    "printer_id": "400000026537",
+    "printer_name": "HP LaserJet M2727nf MFP"
+  },
+  {
+    "printer_id": "400000028585",
+    "printer_name": "Canon i-SENSYS MF4380d"
+  },
+  {
+    "printer_id": "400000026171",
+    "printer_name": "Kyocera Mita FS-1800+"
+  },
+  {
+    "printer_id": "400000028826",
+    "printer_name": "HP LaserJet Pro M104a"
+  },
+  {
+    "printer_id": "400000033398",
+    "printer_name": "Konica Minolta Bizhub 361"
+  },
+  {
+    "printer_id": "400000026219",
+    "printer_name": "Kyocera Ecosys FS-1120MFP"
+  },
+  {
+    "printer_id": "400000026879",
+    "printer_name": "Xerox Phaser 3052"
+  },
+  {
+    "printer_id": "400000029799",
+    "printer_name": "Kyocera TASKalfa 400ci"
+  },
+  {
+    "printer_id": "400000026258",
+    "printer_name": "Kyocera FS-4020dn"
+  },
+  {
+    "printer_id": "400000033254",
+    "printer_name": "Canon ImagePress C270"
+  },
+  {
+    "printer_id": "400000026873",
+    "printer_name": "Samsung SL-M2620"
+  },
+  {
+    "printer_id": "400000026787",
+    "printer_name": "Xerox WorkCentre PE120i"
+  },
+  {
+    "printer_id": "400000026470",
+    "printer_name": "HP LaserJet 3050"
+  },
+  {
+    "printer_id": "400000029482",
+    "printer_name": "Konica Minolta bizhub C220"
+  },
+  {
+    "printer_id": "400000026827",
+    "printer_name": "Samsung SCX-4725FN"
+  },
+  {
+    "printer_id": "400000033388",
+    "printer_name": "Konica Minolta F+ imaging M60ade"
+  },
+  {
+    "printer_id": "400000032425",
+    "printer_name": "Konica Minolta AccurioPrint C4065P"
+  },
+  {
+    "printer_id": "400000026660",
+    "printer_name": "Samsung ML-1710"
+  },
+  {
+    "printer_id": "400000033299",
+    "printer_name": "Xerox WorkCentre 4595"
+  },
+  {
+    "printer_id": "400000033410",
+    "printer_name": "Konica Minolta bizhub 7616"
+  },
+  {
+    "printer_id": "400000032681",
+    "printer_name": "Konica Minolta Bizhub C3850"
+  },
+  {
+    "printer_id": "400000027768",
+    "printer_name": "HP Color LaserJet 1600"
+  },
+  {
+    "printer_id": "400000028720",
+    "printer_name": "Canon i-SENSYS MF9280Cdn"
+  },
+  {
+    "printer_id": "400000027241",
+    "printer_name": "Panasonic KX-MB1900"
+  },
+  {
+    "printer_id": "400000026906",
+    "printer_name": "Samsung SCX-5637"
+  },
+  {
+    "printer_id": "400000028939",
+    "printer_name": "Brother MFC-9880"
+  },
+  {
+    "printer_id": "400000033818",
+    "printer_name": "Canon ImagePress C700i"
+  },
+  {
+    "printer_id": "400000026213",
+    "printer_name": "Kyocera FS-1024MFP"
+  },
+  {
+    "printer_id": "400000026973",
+    "printer_name": "Oki B2520 MFP"
+  },
+  {
+    "printer_id": "400000032633",
+    "printer_name": "Konica Minolta Bizhub 551i"
+  },
+  {
+    "printer_id": "400000033399",
+    "printer_name": "Konica Minolta AccurioPress 7120"
+  },
+  {
+    "printer_id": "400000027265",
+    "printer_name": "Panasonic KX-MB2051"
+  },
+  {
+    "printer_id": "400000033505",
+    "printer_name": "Konica Minolta Bizhub PRO 1052"
+  },
+  {
+    "printer_id": "400000032660",
+    "printer_name": "Konica Minolta Bizhub 25e"
+  },
+  {
+    "printer_id": "400000026397",
+    "printer_name": "HP LaserJet Enterprise M608dn"
+  },
+  {
+    "printer_id": "400000028577",
+    "printer_name": "Canon i-SENSYS MF4340d"
+  },
+  {
+    "printer_id": "400000033815",
+    "printer_name": "Canon VarioPrint VP125"
+  },
+  {
+    "printer_id": "400000032637",
+    "printer_name": "Xerox WorkCentre 7530"
+  },
+  {
+    "printer_id": "400000026676",
+    "printer_name": "Xerox WorkCentre PE16e"
+  },
+  {
+    "printer_id": "400000028860",
+    "printer_name": "Samsung SF-650"
+  },
+  {
+    "printer_id": "400000026882",
+    "printer_name": "Xerox WorkCentre 3215I"
+  },
+  {
+    "printer_id": "400000028901",
+    "printer_name": "Brother HL-1270"
+  },
+  {
+    "printer_id": "400000027251",
+    "printer_name": "Oki MB492dn"
+  },
+  {
+    "printer_id": "400000026451",
+    "printer_name": "HP LaserJet Pro MFP M28w"
+  },
+  {
+    "printer_id": "400000033126",
+    "printer_name": "Xerox WorkCentre 7428"
+  },
+  {
+    "printer_id": "400000028909",
+    "printer_name": "Brother HL-P2500"
+  },
+  {
+    "printer_id": "400000026937",
+    "printer_name": "Samsung ProXpress SL-M4030"
+  },
+  {
+    "printer_id": "400000026982",
+    "printer_name": "Xerox WorkCentre M118"
+  },
+  {
+    "printer_id": "400000028891",
+    "printer_name": "HP LaserJet Pro MFP M225dw"
+  },
+  {
+    "printer_id": "400000029486",
+    "printer_name": "Konica Minolta bizhub C364"
+  },
+  {
+    "printer_id": "400000027252",
+    "printer_name": "Oki MB562dnw"
+  },
+  {
+    "printer_id": "400000026808",
+    "printer_name": "Samsung Xpress SL-M2070"
+  },
+  {
+    "printer_id": "400000026472",
+    "printer_name": "HP LaserJet 3055"
+  },
+  {
+    "printer_id": "400000030109",
+    "printer_name": "Brother HL-1202R"
+  },
+  {
+    "printer_id": "400000029533",
+    "printer_name": "Xerox Phaser 7500"
+  },
+  {
+    "printer_id": "400000028915",
+    "printer_name": "Brother FAX 8350"
+  },
+  {
+    "printer_id": "400000028353",
+    "printer_name": "HP LaserJet 3310mfp"
+  },
+  {
+    "printer_id": "400000028126",
+    "printer_name": "Brother HL-2070NR"
+  },
+  {
+    "printer_id": "400000028811",
+    "printer_name": "Canon i-SENSYS MF249dw"
+  },
+  {
+    "printer_id": "400000032401",
+    "printer_name": "Xerox Color 550"
+  },
+  {
+    "printer_id": "400000026401",
+    "printer_name": "HP LaserJet 3330mfp"
+  },
+  {
+    "printer_id": "400000029743",
+    "printer_name": "Samsung SL-M4075FR"
+  },
+  {
+    "printer_id": "400000029765",
+    "printer_name": "Brother DCP-L2560DWR"
+  },
+  {
+    "printer_id": "400000028897",
+    "printer_name": "Brother HL-1230"
+  },
+  {
+    "printer_id": "400000029034",
+    "printer_name": "HP Color LaserJet 9500hdn"
+  },
+  {
+    "printer_id": "400000026278",
+    "printer_name": "Kyocera Ecosys M3655idn"
+  },
+  {
+    "printer_id": "400000026421",
+    "printer_name": "Canon LaserBase MF5730"
+  },
+  {
+    "printer_id": "400000033384",
+    "printer_name": "Konica Minolta/Develop Ineo 501"
+  },
+  {
+    "printer_id": "400000026608",
+    "printer_name": "HP LaserJet Pro M1217nfw MFP"
+  },
+  {
+    "printer_id": "400000026222",
+    "printer_name": "Kyocera Ecosys FS-1025MFP"
+  },
+  {
+    "printer_id": "400000027766",
+    "printer_name": "HP Color LaserJet 2605"
+  },
+  {
+    "printer_id": "400000031032",
+    "printer_name": "Konica Minolta bizhub 284e"
+  },
+  {
+    "printer_id": "400000026979",
+    "printer_name": "Xerox WorkCentre 5020"
+  },
+  {
+    "printer_id": "400000031026",
+    "printer_name": "Konica Minolta bizhub PRESS C1100"
+  },
+  {
+    "printer_id": "400000033753",
+    "printer_name": "Pantum M7100DN"
+  },
+  {
+    "printer_id": "400000033653",
+    "printer_name": "Xerox Versalink B7025"
+  },
+  {
+    "printer_id": "400000032453",
+    "printer_name": "Konica Minolta Bizhub Pro C65hc"
+  },
+  {
+    "printer_id": "400000027873",
+    "printer_name": "HP Color LaserJet Pro M275"
+  },
+  {
+    "printer_id": "400000033539",
+    "printer_name": "Konica Minolta C3110"
+  },
+  {
+    "printer_id": "400000031022",
+    "printer_name": "Konica Minolta bizhub PRESS C1085"
+  },
+  {
+    "printer_id": "400000029498",
+    "printer_name": "Canon iR 1018"
+  },
+  {
+    "printer_id": "400000033816",
+    "printer_name": "Canon VarioPrint VP130"
+  },
+  {
+    "printer_id": "400000029542",
+    "printer_name": "Kyocera FS-C5250"
+  },
+  {
+    "printer_id": "400000030981",
+    "printer_name": "Ricoh Aficio SP111"
+  },
+  {
+    "printer_id": "400000027238",
+    "printer_name": "Pantum M6500"
+  },
+  {
+    "printer_id": "400000031018",
+    "printer_name": "Konica Minolta bizhub C654e"
+  },
+  {
+    "printer_id": "400000026455",
+    "printer_name": "HP LaserJet Pro M16w"
+  },
+  {
+    "printer_id": "400000026573",
+    "printer_name": "HP LaserJet 4200"
+  },
+  {
+    "printer_id": "400000028863",
+    "printer_name": "Xerox Phaser 3250DN"
+  },
+  {
+    "printer_id": "400000032390",
+    "printer_name": "Konica Minolta Bizhub 458e"
+  },
+  {
+    "printer_id": "400000028395",
+    "printer_name": "Canon Fax-L220"
+  },
+  {
+    "printer_id": "400000026831",
+    "printer_name": "Xerox Phaser 3200MFP"
+  },
+  {
+    "printer_id": "400000032356",
+    "printer_name": "Konica Minolta Bizhub PRO C1060L"
+  },
+  {
+    "printer_id": "400000028692",
+    "printer_name": "HP Laserjet Pro 400 Color MFP M475dn"
+  },
+  {
+    "printer_id": "400000026191",
+    "printer_name": "Kyocera FS-9130"
+  },
+  {
+    "printer_id": "400000028399",
+    "printer_name": "Canon Fax-L250"
+  },
+  {
+    "printer_id": "400000033213",
+    "printer_name": "Konica Minolta Bizhub Pro C6501EP"
+  },
+  {
+    "printer_id": "400000028970",
+    "printer_name": "Brother HL-2035R"
+  },
+  {
+    "printer_id": "400000029051",
+    "printer_name": "Canon i-SENSYS LBP6780"
+  },
+  {
+    "printer_id": "400000033524",
+    "printer_name": "Konica Minolta bizhub C3351i"
+  },
+  {
+    "printer_id": "400000033152",
+    "printer_name": "Xerox WorkCentre WC7655"
+  },
+  {
+    "printer_id": "400000028172",
+    "printer_name": "Canon i-SENSYS MF428x"
+  },
+  {
+    "printer_id": "400000032641",
+    "printer_name": "Xerox WorkCentre 7830"
+  },
+  {
+    "printer_id": "400000026662",
+    "printer_name": "Samsung ML-1750"
+  },
+  {
+    "printer_id": "400000032387",
+    "printer_name": "Konica Minolta Bizhub C368"
+  },
+  {
+    "printer_id": "400000026481",
+    "printer_name": "Canon i-SENSYS MF4150"
+  },
+  {
+    "printer_id": "400000028409",
+    "printer_name": "Canon Fax-L280"
+  },
+  {
+    "printer_id": "400000026190",
+    "printer_name": "Kyocera FS-9120"
+  },
+  {
+    "printer_id": "400000028807",
+    "printer_name": "Canon i-SENSYS LBP6030"
+  },
+  {
+    "printer_id": "400000032409",
+    "printer_name": "Xerox DocuColor DC242"
+  },
+  {
+    "printer_id": "400000029738",
+    "printer_name": "Samsung SL-M3825DW"
+  },
+  {
+    "printer_id": "400000033493",
+    "printer_name": "Konica Minolta Bizhub 4750"
+  },
+  {
+    "printer_id": "400000027767",
+    "printer_name": "HP Color LaserJet 2600"
+  },
+  {
+    "printer_id": "400000028965",
+    "printer_name": "Brother MFC-1815"
+  },
+  {
+    "printer_id": "400000029792",
+    "printer_name": "Kyocera KM-C3232"
+  },
+  {
+    "printer_id": "400000026273",
+    "printer_name": "Kyocera Ecosys P3045dn"
+  },
+  {
+    "printer_id": "400000027928",
+    "printer_name": "HP Color LaserJet CM1312"
+  },
+  {
+    "printer_id": "400000028680",
+    "printer_name": "HP Color LaserJet Pro MFP M176n"
+  },
+  {
+    "printer_id": "400000029770",
+    "printer_name": "Brother MFC-L2700DWR"
+  },
+  {
+    "printer_id": "400000026733",
+    "printer_name": "Xerox WorkCentre PE220"
+  },
+  {
+    "printer_id": "400000029769",
+    "printer_name": "Brother HL-L2365DWR"
+  },
+  {
+    "printer_id": "400000029474",
+    "printer_name": "Oki C9600"
+  },
+  {
+    "printer_id": "400000032371",
+    "printer_name": "Konica Minolta Bizhub C352"
+  },
+  {
+    "printer_id": "400000026167",
+    "printer_name": "Kyocera Mita FS-1920"
+  },
+  {
+    "printer_id": "400000026232",
+    "printer_name": "Kyocera Ecosys M2135dn"
+  },
+  {
+    "printer_id": "400000026509",
+    "printer_name": "Canon LaserBase MF6580PL"
+  },
+  {
+    "printer_id": "400000026644",
+    "printer_name": "HP LaserJet Enterprise M527dn"
+  },
+  {
+    "printer_id": "400000032358",
+    "printer_name": "Konica Minolta bizhub C258"
+  },
+  {
+    "printer_id": "400000033478",
+    "printer_name": "Konica Minolta bizhub 367"
+  },
+  {
+    "printer_id": "400000032471",
+    "printer_name": "Canon ImagePress C810"
+  },
+  {
+    "printer_id": "400000033591",
+    "printer_name": "Konica Minolta PagePro 5650EN"
+  },
+  {
+    "printer_id": "400000027110",
+    "printer_name": "Canon i-SENSYS MF6140dn"
+  },
+  {
+    "printer_id": "400000026981",
+    "printer_name": "Xerox WorkCentre 5021"
+  },
+  {
+    "printer_id": "400000026371",
+    "printer_name": "Kyocera TASKalfa 3011i"
+  },
+  {
+    "printer_id": "400000026265",
+    "printer_name": "Kyocera FS-4200dn"
+  },
+  {
+    "printer_id": "400000028996",
+    "printer_name": "Canon PC 920"
+  },
+  {
+    "printer_id": "400000028859",
+    "printer_name": "Samsung ML-2520"
+  },
+  {
+    "printer_id": "400000007108",
+    "printer_name": "Kyocera FS-6970DN"
+  },
+  {
+    "printer_id": "400000033488",
+    "printer_name": "Konica Minolta Bizhub 421"
+  },
+  {
+    "printer_id": "400000028121",
+    "printer_name": "Brother DCP-7010R"
+  },
+  {
+    "printer_id": "400000033396",
+    "printer_name": "Konica Minolta Bizhub 360"
+  },
+  {
+    "printer_id": "400000027221",
+    "printer_name": "Xerox WorkCentre 5335"
+  },
+  {
+    "printer_id": "400000026281",
+    "printer_name": "Kyocera Ecosys M3145idn"
+  },
+  {
+    "printer_id": "400000027875",
+    "printer_name": "HP Color LaserJet Pro CP1025"
+  },
+  {
+    "printer_id": "400000027930",
+    "printer_name": "HP Color LaserJet CP1518ni"
+  },
+  {
+    "printer_id": "400000032458",
+    "printer_name": "Konica Minolta AccurioPress 6120"
+  },
+  {
+    "printer_id": "400000027287",
+    "printer_name": "Brother DCP-7057R"
+  },
+  {
+    "printer_id": "400000026614",
+    "printer_name": "Canon i-SENSYS LBP6000B"
+  },
+  {
+    "printer_id": "400000028910",
+    "printer_name": "Brother HL-P2600"
+  },
+  {
+    "printer_id": "400000028914",
+    "printer_name": "Brother FAX 8300J"
+  },
+  {
+    "printer_id": "400000026503",
+    "printer_name": "Canon i-SENSYS MF4690PL"
+  },
+  {
+    "printer_id": "400000033654",
+    "printer_name": "Xerox Versalink B7030"
+  },
+  {
+    "printer_id": "400000032473",
+    "printer_name": "Canon ImagePress C910"
+  },
+  {
+    "printer_id": "400000026357",
+    "printer_name": "Kyocera Ecosys M4125idn"
+  },
+  {
+    "printer_id": "400000029480",
+    "printer_name": "Konica Minolta Bizhub C203"
+  },
+  {
+    "printer_id": "400000033501",
+    "printer_name": "Konica Minolta AccurioPrint 850i"
+  },
+  {
+    "printer_id": "400000028761",
+    "printer_name": "HP Color LaserJet CP2025x"
+  },
+  {
+    "printer_id": "400000026885",
+    "printer_name": "Samsung ML-3051ND"
+  },
+  {
+    "printer_id": "400000028022",
+    "printer_name": "Xerox Phaser 6120"
+  },
+  {
+    "printer_id": "400000028512",
+    "printer_name": "Canon i-SENSYS MF416dw"
+  },
+  {
+    "printer_id": "400000028693",
+    "printer_name": "HP LaserJet Pro 300 color M351a"
+  },
+  {
+    "printer_id": "400000032635",
+    "printer_name": "Konica Minolta Bizhub 750i"
+  },
+  {
+    "printer_id": "400000029784",
+    "printer_name": "Kyocera Ecosys M6526cdn"
+  },
+  {
+    "printer_id": "400000029496",
+    "printer_name": "HP LaserJet Pro MFP M130a"
+  },
+  {
+    "printer_id": "400000026895",
+    "printer_name": "Samsung SCX-5635FN"
+  },
+  {
+    "printer_id": "400000032377",
+    "printer_name": "Konica Minolta AccurioPress C4070"
+  },
+  {
+    "printer_id": "400000026242",
+    "printer_name": "Kyocera Ecosys M2235dn"
+  },
+  {
+    "printer_id": "400000033249",
+    "printer_name": "Konica Minolta Accurio Label 230"
+  },
+  {
+    "printer_id": "400000026400",
+    "printer_name": "HP LaserJet 3320mfp"
+  },
+  {
+    "printer_id": "400000026782",
+    "printer_name": "Xerox Phaser 3150"
+  },
+  {
+    "printer_id": "400000026591",
+    "printer_name": "HP LaserJet Enterprise M602dn"
+  },
+  {
+    "printer_id": "400000026192",
+    "printer_name": "Kyocera FS-9500"
+  },
+  {
+    "printer_id": "400000026775",
+    "printer_name": "Samsung SCX-4300"
+  },
+  {
+    "printer_id": "400000027872",
+    "printer_name": "Canon i-SENSYS LBP7010C"
+  },
+  {
+    "printer_id": "400000029001",
+    "printer_name": "Canon PC 980"
+  },
+  {
+    "printer_id": "400000026204",
+    "printer_name": "Kyocera FS-1350DN"
+  },
+  {
+    "printer_id": "400000032656",
+    "printer_name": "Konica Minolta AccurioPress C12000"
+  },
+  {
+    "printer_id": "400000026249",
+    "printer_name": "Kyocera FS-2020dn"
+  },
+  {
+    "printer_id": "400000026540",
+    "printer_name": "HP LaserJet 2410"
+  },
+  {
+    "printer_id": "400000026276",
+    "printer_name": "Kyocera Ecosys P3060DN"
+  },
+  {
+    "printer_id": "400000026760",
+    "printer_name": "Samsung SCX-3207"
+  },
+  {
+    "printer_id": "400000029801",
+    "printer_name": "Kyocera TASKalfa 552ci"
+  },
+  {
+    "printer_id": "400000031313",
+    "printer_name": "Panasonic KX MB1500"
+  },
+  {
+    "printer_id": "400000026868",
+    "printer_name": "Samsung SCX-4825FN"
+  },
+  {
+    "printer_id": "400000026333",
+    "printer_name": "Kyocera KM-2035"
+  },
+  {
+    "printer_id": "400000031066",
+    "printer_name": "Konica Minolta bizhub 552"
+  },
+  {
+    "printer_id": "400000026785",
+    "printer_name": "Samsung SCX-4520"
+  },
+  {
+    "printer_id": "400000026777",
+    "printer_name": "Samsung SCX-4521F"
+  },
+  {
+    "printer_id": "400000028836",
+    "printer_name": "HP LaserJet Ultra M230fdw"
+  },
+  {
+    "printer_id": "400000026627",
+    "printer_name": "Canon i-SENSYS MF4550d"
+  },
+  {
+    "printer_id": "400000033385",
+    "printer_name": "Konica Minolta 7145"
+  },
+  {
+    "printer_id": "400000033477",
+    "printer_name": "Konica Minolta bizhub 3622"
+  },
+  {
+    "printer_id": "400000032426",
+    "printer_name": "Konica Minolta Bizhub PRESS C71hc"
+  },
+  {
+    "printer_id": "400000028852",
+    "printer_name": "Samsung SCX-4725F"
+  },
+  {
+    "printer_id": "400000033269",
+    "printer_name": "Canon imageRUNNER ADVANCE C7270"
+  },
+  {
+    "printer_id": "400000029511",
+    "printer_name": "Pantum P2000"
+  },
+  {
+    "printer_id": "400000028871",
+    "printer_name": "Samsung Xpress SL-M2022"
+  },
+  {
+    "printer_id": "400000028715",
+    "printer_name": "Canon i-SENSYS MF9170"
+  },
+  {
+    "printer_id": "400000028834",
+    "printer_name": "HP LaserJet Pro M206dn"
+  },
+  {
+    "printer_id": "400000026606",
+    "printer_name": "HP LaserJet Pro M1212nf MFP"
+  },
+  {
+    "printer_id": "400000028853",
+    "printer_name": "Xerox WorkCentre PE120"
+  },
+  {
+    "printer_id": "400000033809",
+    "printer_name": "Xerox AltaLink C8135"
+  },
+  {
+    "printer_id": "400000026866",
+    "printer_name": "Samsung ML-2855ND"
+  },
+  {
+    "printer_id": "400000028764",
+    "printer_name": "HP LaserJet Enterprise 500 M575fw"
+  },
+  {
+    "printer_id": "400000026730",
+    "printer_name": "Xerox Phaser 3122"
+  },
+  {
+    "printer_id": "400000028831",
+    "printer_name": "HP LaserJet Ultra MFP M134a"
+  },
+  {
+    "printer_id": "400000028869",
+    "printer_name": "Samsung SF-760P"
+  },
+  {
+    "printer_id": "400000027688",
+    "printer_name": "Konica Minolta Bizhub C200"
+  },
+  {
+    "printer_id": "400000032398",
+    "printer_name": "Xerox Versant 2100 Press"
+  },
+  {
+    "printer_id": "400000028913",
+    "printer_name": "Unknown"
+  },
+  {
+    "printer_id": "400000031031",
+    "printer_name": "Konica Minolta bizhub 224e"
+  },
+  {
+    "printer_id": "400000032434",
+    "printer_name": "Konica Minolta Bizhub C360i"
+  },
+  {
+    "printer_id": "400000033500",
+    "printer_name": "Konica Minolta bizhub 266"
+  },
+  {
+    "printer_id": "400000026743",
+    "printer_name": "Samsung ML-1640"
+  },
+  {
+    "printer_id": "400000028907",
+    "printer_name": "Brother HL-1450"
+  },
+  {
+    "printer_id": "400000033534",
+    "printer_name": "Konica Minolta MagiColor 4750EN"
+  },
+  {
+    "printer_id": "400000028722",
+    "printer_name": "Canon i-SENSYS LBP5360"
+  },
+  {
+    "printer_id": "400000033483",
+    "printer_name": "Konica Minolta Bizhub 4020i"
+  },
+  {
+    "printer_id": "400000033658",
+    "printer_name": "Xerox Versalink B7125"
+  },
+  {
+    "printer_id": "400000028021",
+    "printer_name": "Xerox Phaser 6121MFP"
+  },
+  {
+    "printer_id": "400000028903",
+    "printer_name": "Brother HL-1430"
+  },
+  {
+    "printer_id": "400000028872",
+    "printer_name": "Samsung Xpress SL-M2026"
+  },
+  {
+    "printer_id": "400000026228",
+    "printer_name": "Kyocera Ecosys FS-1135MFP"
+  },
+  {
+    "printer_id": "400000033271",
+    "printer_name": "Canon imageRUNNER ADVANCE C7280"
+  },
+  {
+    "printer_id": "400000026935",
+    "printer_name": "Ricoh SP 203SFN"
+  },
+  {
+    "printer_id": "400000033557",
+    "printer_name": "Xerox D100"
+  },
+  {
+    "printer_id": "400000026351",
+    "printer_name": "Kyocera TASKAlfa 255b"
+  },
+  {
+    "printer_id": "400000033457",
+    "printer_name": "Konica Minolta Bizhub C301i"
+  },
+  {
+    "printer_id": "400000028030",
+    "printer_name": "Samsung CLX-3160"
+  },
+  {
+    "printer_id": "400000024357",
+    "printer_name": "Kyocera Ecosys M4132idn"
+  },
+  {
+    "printer_id": "400000027061",
+    "printer_name": "Canon i-SENSYS LBP6200d"
+  },
+  {
+    "printer_id": "400000029513",
+    "printer_name": "Pantum M6000"
+  },
+  {
+    "printer_id": "400000032432",
+    "printer_name": "Konica Minolta Bizhub C550i"
+  },
+  {
+    "printer_id": "400000033657",
+    "printer_name": "Xerox Versalink B7135"
+  },
+  {
+    "printer_id": "400000026505",
+    "printer_name": "Canon i-SENSYS LBP3000"
+  },
+  {
+    "printer_id": "400000026559",
+    "printer_name": "HP LaserJet M3035 mfp"
+  },
+  {
+    "printer_id": "400000026803",
+    "printer_name": "Samsung SCX-3400"
+  },
+  {
+    "printer_id": "400000028825",
+    "printer_name": "HP LaserJet Pro MFP M227sdn"
+  },
+  {
+    "printer_id": "400000030724",
+    "printer_name": "Kyocera Ecosys M8130cidn"
+  },
+  {
+    "printer_id": "400000028991",
+    "printer_name": "Canon PC 428"
+  },
+  {
+    "printer_id": "400000027124",
+    "printer_name": "HP LaserJet Pro M132a"
+  },
+  {
+    "printer_id": "400000026547",
+    "printer_name": "Canon i-SENSYS LBP352X"
+  },
+  {
+    "printer_id": "400000026951",
+    "printer_name": "Samsung SCX-6555N"
+  },
+  {
+    "printer_id": "400000033444",
+    "printer_name": "Konica Minolta MagiColor 3730DN"
+  },
+  {
+    "printer_id": "400000027092",
+    "printer_name": "Canon i-SENSYS MF4730"
+  },
+  {
+    "printer_id": "400000026630",
+    "printer_name": "HP LaserJet Pro MFP M125rnw"
+  },
+  {
+    "printer_id": "400000026235",
+    "printer_name": "Kyocera Ecosys P2040dn"
+  },
+  {
+    "printer_id": "400000028902",
+    "printer_name": "Brother HL-1420"
+  },
+  {
+    "printer_id": "400000026967",
+    "printer_name": "Xerox WorkCentre 3045B"
+  },
+  {
+    "printer_id": "400000032417",
+    "printer_name": "Konica Minolta Bizhub PRO 1200P"
+  },
+  {
+    "printer_id": "400000026654",
+    "printer_name": "Samsung ML-1250"
+  },
+  {
+    "printer_id": "400000029780",
+    "printer_name": "Kyocera Ecosys M6026cdn"
+  },
+  {
+    "printer_id": "400000033412",
+    "printer_name": "Konica Minolta bizhub 164"
+  },
+  {
+    "printer_id": "400000028812",
+    "printer_name": "Canon i-SENSYS MF231"
+  },
+  {
+    "printer_id": "400000033541",
+    "printer_name": "Konica Minolta MagiColor 7450 II GA"
+  },
+  {
+    "printer_id": "400000033494",
+    "printer_name": "Konica Minolta Bizhub 4751i"
+  },
+  {
+    "printer_id": "400000026211",
+    "printer_name": "Kyocera FS-1370DN"
+  },
+  {
+    "printer_id": "400000032428",
+    "printer_name": "Konica Minolta Bizhub C227i"
+  },
+  {
+    "printer_id": "400000026343",
+    "printer_name": "Kyocera TASKAlfa 220"
+  }
+]

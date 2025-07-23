@@ -196,19 +196,24 @@ def save_to_json_and_csv(data, json_filename, output_handler):
         
         # Save to CSV
         csv_filepath = os.path.join(output_dir, json_filename.replace('.json', '.csv'))
-        if json_filename == "PRINTERS_compatibility.json":
-            rows = []
-            for printer_id, value in data.items():
-                row = {
-                    'printer_id': printer_id,
-                    'printer_name': value.get('printer_name', ''),
-                    'cartridges': json.dumps(value.get('cartridges', []), ensure_ascii=False),
-                    'parts': json.dumps(value.get('parts', []), ensure_ascii=False)
-                }
-                rows.append(row)
-            df = pd.DataFrame(rows)
+        
+        if json_filename == "printers.json":
+            # Таблица Printers: printer_id, printer_name
+            df = pd.DataFrame(data)
             df.to_csv(csv_filepath, index=False, encoding='utf-8')
+        
+        elif json_filename == "printers_cartridges_compatibility.json":
+            # Таблица Printers-cartridges_compatibility: printer_id, cartridges
+            df = pd.DataFrame(data)
+            df.to_csv(csv_filepath, index=False, encoding='utf-8')
+        
+        elif json_filename == "printers_parts_compatibility.json":
+            # Таблица Printers-parts_compatibility: printer_id, parts
+            df = pd.DataFrame(data)
+            df.to_csv(csv_filepath, index=False, encoding='utf-8')
+        
         elif json_filename == "DATABASE_comcenter_products.json":
+            # Сохранение существующей логики для DATABASE_comcenter_products
             rows = []
             for product_id, value in data.items():
                 row = {
@@ -225,7 +230,8 @@ def save_to_json_and_csv(data, json_filename, output_handler):
             df = pd.DataFrame(rows)
             df.to_csv(csv_filepath, index=False, encoding='utf-8')
         
-        output_handler.log(f"Данные сохранены в {json_filepath}" + (f" и {csv_filepath}" if json_filename in ["PRINTERS_compatibility.json", "DATABASE_comcenter_products.json"] else ""))
+        output_handler.log(f"Данные сохранены в {json_filepath} и {csv_filepath}")
+    
     except Exception as e:
         output_handler.log(f"Ошибка при сохранении данных: {e}")
 
@@ -253,7 +259,9 @@ def parse_printer_compatibility(session, headers, output_handler, cancel_flag):
         output_handler.log(f"Ошибка при чтении файла {printers_output_file}: {e}")
         return
 
-    compatibility_data = {}
+    printers_data = []
+    cartridges_compatibility_data = []
+    parts_compatibility_data = []
     total = len(printer_ids)
     current = 0
 
@@ -277,6 +285,8 @@ def parse_printer_compatibility(session, headers, output_handler, cancel_flag):
             match = re.search(pattern, title)
             if match:
                 printer_name = match.group(2)
+            else:
+                printer_name = "Unknown"  # Запасное значение, если имя не удалось извлечь
 
             # Извлечение картриджей и запчастей
             cartridge_ids = []
@@ -314,11 +324,21 @@ def parse_printer_compatibility(session, headers, output_handler, cancel_flag):
             cartridge_ids = list(set(cartridge_ids))
             part_ids = list(set(part_ids))
 
-            compatibility_data[printer_id] = {
-                "printer_name": printer_name,
-                "cartridges": cartridge_ids,
-                "parts": part_ids
-            }
+            # Формирование данных для трех таблиц
+            printers_data.append({
+                "printer_id": printer_id,
+                "printer_name": printer_name
+            })
+
+            cartridges_compatibility_data.append({
+                "printer_id": printer_id,
+                "cartridges": ",".join(cartridge_ids) if cartridge_ids else ""
+            })
+
+            parts_compatibility_data.append({
+                "printer_id": printer_id,
+                "parts": ",".join(part_ids) if part_ids else ""
+            })
 
             output_handler.log(f"Принтер {printer_id} ({printer_name}): найдено картриджей: {len(cartridge_ids)}, запчастей: {len(part_ids)}")
 
@@ -326,8 +346,11 @@ def parse_printer_compatibility(session, headers, output_handler, cancel_flag):
             output_handler.log(f"Ошибка при загрузке страницы для принтера {printer_id}: {e}")
             continue
 
-    if compatibility_data:
-        save_to_json_and_csv(compatibility_data, "PRINTERS_compatibility.json", output_handler)
+    # Сохранение данных в три отдельных файла
+    if printers_data:
+        save_to_json_and_csv(printers_data, "printers.json", output_handler)
+        save_to_json_and_csv(cartridges_compatibility_data, "printers_cartridges_compatibility.json", output_handler)
+        save_to_json_and_csv(parts_compatibility_data, "printers_parts_compatibility.json", output_handler)
     else:
         output_handler.log("Не удалось собрать данные о совместимости")
 
